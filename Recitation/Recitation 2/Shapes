@@ -1,0 +1,18 @@
+1. What should be a suitable hierarchy for shapes?
+
+Shape -> Attribute -> xPos, yPos, center, 
+		 Method -> area, move, zoom, rotate, flip
+		 Child -> etc.
+		 
+Rectangle - Square Problem:
+In Rectangle class, there is a public method called void setSide(int a, int b)
+In Square class, what if we call setSide(3, 4)?
+An error will occur since all sides should the same length in a square.
+
+2. Cube Override Problem
+public class Queue {
+	public void add(int x) {
+	}
+}
+
+This is about the override problem between super class and subclass.

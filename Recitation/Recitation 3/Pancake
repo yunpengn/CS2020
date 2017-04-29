@@ -1,0 +1,25 @@
+=====================
+Pancake Sorting
+=====================
+Sort a disordered stack of pancakes in order of size when a spatula can be inserted at 
+any point in the stack and used to flip all pancakes above it. How many flips do we need
+to make the pancakes become a "hanoi-power"?
+2n - 3
+
+Algorithm:
+1. Let's denote all the pancakes from the bottom to the top as [0, 1, .., n - 1].
+2. Repeat the following steps for i times:
+	2.1 Find the maximum pancake from [0, n - i - 1], as indexed with p;
+	2.2 Flip the portion from [p, n - 1];
+	2.3 Flip all the pancakes.
+3. Done.
+
+OMG! The chef is quite careless, all of the pancakes are burnt at one side. So how many 
+flips do we need if all of the burnt sides must be at the bottom (so that the customer 
+cannot see it)?
+3n - 3
+
+=====================
+DNA Sorting
+=====================
+You can flip a segment of the DNA chain. How to sort all the things in alphabetical order?

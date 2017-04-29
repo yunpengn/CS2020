@@ -1,0 +1,19 @@
+=====================
+Height vs Grade
+=====================
+We know the height and grade for everyone in the class. For a student x in this class, find 
+the average grade of all the students who are taller than x.
+Use an augmented tree. For each node, store the number of nodes in its sub-trees and the sum
+of all grades in its sub-trees.
+The lower bound for the time complexity is O (logn).
+
+=====================
+Before or After
+=====================
+InsertBefore(A, B)
+InsertAfter(A, B)
+isAfter(A, B)
+
+1. LinkedList + HashTable
+2. AugmentedTree
+3. SkipList

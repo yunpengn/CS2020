@@ -1,0 +1,30 @@
+=====================
+Voting
+=====================
+We have n voters and k candidates.
+Input: An array of integers, each of which represents the candidate he votes for.
+Constraint: Time, space, read-only
+
+Approaches:
+1. Normal sort: first sort, then Herbert binary search;
+Time complexity: O(nlogn)
+Space complexity: O(k)
+
+2. Bucket sort: B[A[i]]++;
+Time complexity: O(n)
+Space complexity: O(k)
+
+3. Quick select: Try to find i * n / k each time
+Time complexity: O(n*k)
+Space complexity: O(1)
+
+4. Divide and conquer: 
+Claim: Either x or y is the winner overall.
+Time complexity: O(nlogn)
+Space complexity: O(1)
+
+5. Randomized: 
+
+6. Boyer-Moore algorithm:
+Time complexity: O(n)
+Space complexity: O(1)

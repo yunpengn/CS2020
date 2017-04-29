@@ -1,0 +1,27 @@
+=====================
+Cuckoo Hashing
+=====================
+See https://web.stanford.edu/class/cs166/lectures/13/Small13.pdf
+
+1. What goes wrong?
+Degree is 3 or double loop
+
+2. Advantages/ Disadvantages
+O(1) search / delete
+O(?) insert
+
+3. Amortized analysis for insert
+E(cost) = 1 + 1/2 * (1 + 1/2 * (1 + ...))
+        = O(1)
+        
+=====================
+Photo backup
+=====================
+1. Choose hash function h: photo => 1(1, ..., k)
+2. Let A = hash values of all photos locally
+   Let B = hash values of all photos in cloud
+3. For all photos, if h(p) is in B but not in A, download it from the cloud.
+
+How large is k?
+1. If k = 2n, O(n) collisions, O(logn) iterations
+2. If k = n^2, O(log), O(1) iterations

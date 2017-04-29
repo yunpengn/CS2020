@@ -1,0 +1,24 @@
+=====================
+Birthday Party
+=====================
+There are n children and n pairs of shoes, how to help them find their shoes?
+Notice: Shoes are not comparable, feet are not comparable.
+Find one child as a pivot so that the children can be partitioned into two groups. After 
+that, this child can be used to partition shoes into two groups.
+Time complexity: O(n logn)
+
+=====================
+Multiple Select
+=====================
+MultiSelect (arr, start, end) {
+	Select(arr, 0, size - 1, start);
+	Select(arr, start, size - 1, end);
+}
+
+=====================
+Matrix QuickSelect
+=====================
+There is a n*n matrix, find:
+1. a value that appears in every row;
+2. all the values that appear in every row;
+3. the maximum value that appears in every row.

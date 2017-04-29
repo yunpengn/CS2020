@@ -1,0 +1,20 @@
+CS2020 Data Structure and Algorithm Accelerated
+AY2016/2017 Semester 2
+Recitation 1 (Problem Session 1)
+
+Elevator Problem
+
+1. Most of the elevators in the world follow a similar set of algorithms. So what is it?
+a) Current Task - direction and destination level
+b) Priority of tasks
+The elevator should keep a listener, which listens to all buttons pressed on/down all the time.
+When a new press-button operation is done, it will be inserted into the task queue to a specific
+position according to its priority.
+
+2. What do you mean by "better"? How to measure better or not?
+Average, Standard Deviation, Maximum?
+Waiting Time, Distance traveled, Electric cost, Maintenance cost, Speed constraints, Perceived Time
+
+3. Improvements? Trade-offs?
+
+4. How to simulate the elevator?

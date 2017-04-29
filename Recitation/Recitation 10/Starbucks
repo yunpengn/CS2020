@@ -1,0 +1,25 @@
+=====================
+Starbucks
+=====================
+We have a map of all Starbucks shop on a urban area.
+"Least Bad path": equals to the longest edge on the path.
+Consider 3 factors: Pre-process, query, storage space complexity.
+
+If the length of all edges is within [1, ..., k], then let k = O(logn). What are 
+some alternative algorithms under this condition?
+
+1) Modified Dijkstra: Change the definition of priority.
+If max[est(u), w(u, v)] <= ets(v), est(v) = max[est(u), w(u, v)].
+Time complexity: O(E*logV)
+
+2) Pre-process all pairs of points n^2.
+Space: O(n^2)
+
+3) Minimum Spanning Tree: O(E*logV)
+
+4) Store MST: Space O(V) Time: O(V)
+
+5) Binary search: Can we go from A to B at cost <= c?
+Binary search on c which is within [1, ..., k]. Time: O(E*logK)
+
+6) Look up for connected components. Space: O(n*k) Time for query: O(logk)

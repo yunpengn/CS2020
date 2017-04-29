@@ -1,0 +1,13 @@
+=====================
+Rickety Bridge
+=====================
+Different people need different time to cross the bridge. For example, there are 4 people, 
+A 1min, B 2min, C 7min, D 10min.
+Use a graph to represent the state (who is where and torch is where)
+
+=====================
+Broken Car
+=====================
+Your car is broken. It can only go straight or turn left.
+1) Shortest path
+2) Least turns
