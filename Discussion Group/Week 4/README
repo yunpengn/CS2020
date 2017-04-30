@@ -1,0 +1,37 @@
+===========================
+Problem 1
+===========================
+1. The time complexity should be O(k*logn) or O (k(logn - logk));
+2. The time complexity should be O(n*logn).
+
+===========================
+Problem 2
+===========================
+It may overflow when you write (low + high), since integer is [-2^31, 2^31 - 1].
+
+===========================
+Problem 3
+===========================
+a) T(n) = 2 * T(n/2) + 1
+b) T(n) = O(n)
+c) No.
+
+===========================
+Problem 4
+===========================
+a) O(x^3)
+b) O(log(x))
+c) O(x * (2^(2x)))
+d) O(x^4)
+e) O(1)
+f) O(x^2)
+g) O(logx)
+h) O(x * logx)
+
+===========================
+Problem 5
+===========================
+a) O(n * logn)
+b) O(n * logn)
+c) O(logn)
+d) O(n)

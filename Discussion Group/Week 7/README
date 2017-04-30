@@ -1,0 +1,55 @@
+===========================
+Problem 1
+===========================
+We have 4 sets of past year papers in hand. They are from the year of 2011, 2014, 2015 
+and 2016. Please do them carefully using the skeleton programs provided.
+
+===========================
+Problem 2
+===========================
+Please draw it on a piece of paper and notice the difference between BST and AVL.
+
+===========================
+Problem 3
+===========================
+See PreOrder.java for the codes.
+Also, see InOrder.java and PostOrder.java for the codes.
+
+===========================
+Problem 4
+===========================
+In order to implement the feature of fast insert and delete, we just simply add two 
+pointers for each tree node, the predecessor node and the successor node. If this 
+node is the first or last one, we just set its predecessor / successor node as null.
+
+We also need to change the insert and delete operation. When we insert a new node 
+into the tree, we need to update its predecessor and successor; similarly, when we 
+delete a node, we need to update its predecessor and successor as well.
+
+===========================
+Problem 5
+===========================
+a) We first give a general sketch on how to merge two BSTs:
+1. Flatten each BST into a linear linked list, which is just in-order traversal.
+Time complexity: O(n1+n2)
+2. Merge these two linked lists.
+Time complexity: O(n1+n2)
+3. Create a perfect BST by selecting the mid node as the root node for the tree.
+Time complexity: O(n)=2*O(n/2)+1 => O(n)=N=n1+n2
+Overall time complexity: O(n) or O(n1+n2)
+
+If the largest element in tree T1 is smaller than the smallest element in tree T2.
+Then we can just make T1 and T2 be the left and right branch of Tout. However, the
+problem is we do not have a suitable element to be the root. Thus, we delete the 
+minimum element in T2, which takes time O(h). Then, use it as the new root.
+Time complexity: O(h1) or O(h2)
+
+When we want h <= max(h1, h2) + 1, we should do the followings:
+If n1 > n2, insert each element in T2 into T1, T1 will have at most one more level;
+If n1 < n2, insert each element in T1 into T2, T2 will have at most one more level;
+Time complexity: O(nlogn) or O(n1h2) or O(n2h1)
+
+b) We want to split a BST into two by value breakpoint at k. The steps are:
+Search for the value k in the BST. If we turn to the left subtree during the search,
+we should return the result of join(split(T.left, k), T.right); if we turn to the 
+right subtree, then we should return the result of join(T.left, split(T.right, k));

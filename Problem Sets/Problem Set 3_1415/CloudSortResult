@@ -1,0 +1,265 @@
+++++++++++++++++++++++++++++++++++++++++++
+              Cloud Sort - 1
+++++++++++++++++++++++++++++++++++++++++++
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+    >>>Data size too small!
+    >>>Change to another server.
+
+Shutting down connection to AmazonEC2...
+Connection closed.
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+==========================================
+Status report for AmazonEC2
+==========================================
+Number of servers used: 10
+Each server can handle 2 pages of length 5.
+Cost per phase: 32 SB
+==========================================
+Total data size: 10
+Number of pages: 2
+==========================================
+Number of phases: 1
+Total cost incurred: 32 SB
+==========================================
+The data have been sorted.
+
+Shutting down connection to AmazonEC2...
+Connection closed.
+++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++
+              Cloud Sort - 2
+++++++++++++++++++++++++++++++++++++++++++
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+    >>>Data size too small!
+    >>>Change to another server.
+
+Shutting down connection to AmazonEC2...
+Connection closed.
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+==========================================
+Status report for AmazonEC2
+==========================================
+Number of servers used: 10
+Each server can handle 2 pages of length 50.
+Cost per phase: 32 SB
+==========================================
+Total data size: 100
+Number of pages: 2
+==========================================
+Number of phases: 1
+Total cost incurred: 32 SB
+==========================================
+The data have been sorted.
+
+Shutting down connection to AmazonEC2...
+Connection closed.
+++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++
+              Cloud Sort - 3
+++++++++++++++++++++++++++++++++++++++++++
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+    >>>Data size too small!
+    >>>Change to another server.
+
+Shutting down connection to AmazonEC2...
+Connection closed.
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+==========================================
+Status report for AmazonEC2
+==========================================
+Number of servers used: 10
+Each server can handle 2 pages of length 500.
+Cost per phase: 32 SB
+==========================================
+Total data size: 1000
+Number of pages: 2
+==========================================
+Number of phases: 1
+Total cost incurred: 32 SB
+==========================================
+The data have been sorted.
+
+Shutting down connection to AmazonEC2...
+Connection closed.
+++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++
+              Cloud Sort - 4
+++++++++++++++++++++++++++++++++++++++++++
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+==========================================
+Status report for AmazonEC2
+==========================================
+Number of servers used: 10
+Each server can handle 2 pages of length 1000.
+Cost per phase: 32 SB
+==========================================
+Total data size: 10000
+Number of pages: 10
+==========================================
+Number of phases: 9
+Total cost incurred: 288 SB
+==========================================
+The data have been sorted.
+
+Shutting down connection to AmazonEC2...
+Connection closed.
+++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++
+              Cloud Sort - 5
+++++++++++++++++++++++++++++++++++++++++++
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+==========================================
+Status report for AmazonEC2
+==========================================
+Number of servers used: 10
+Each server can handle 2 pages of length 1000.
+Cost per phase: 32 SB
+==========================================
+Total data size: 100000
+Number of pages: 100
+==========================================
+Number of phases: 594
+Total cost incurred: 19008 SB
+==========================================
+The data have been sorted.
+
+Shutting down connection to AmazonEC2...
+Connection closed.
+++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++
+              Cloud Sort - 6
+++++++++++++++++++++++++++++++++++++++++++
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+==========================================
+Status report for AmazonEC2
+==========================================
+Number of servers used: 10
+Each server can handle 2 pages of length 1000.
+Cost per phase: 32 SB
+==========================================
+Total data size: 1000000
+Number of pages: 1000
+==========================================
+Number of phases: 50898
+Total cost incurred: 1628736 SB
+==========================================
+The data have been sorted.
+
+Shutting down connection to AmazonEC2...
+Connection closed.
+++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++
+              Cloud Sort - 7
+++++++++++++++++++++++++++++++++++++++++++
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+    >>>Data size too small!
+    >>>Change to another server.
+
+Shutting down connection to AmazonEC2...
+Connection closed.
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+==========================================
+Status report for AmazonEC2
+==========================================
+Number of servers used: 10
+Each server can handle 2 pages of length 52.
+Cost per phase: 32 SB
+==========================================
+Total data size: 103
+Number of pages: 2
+==========================================
+Number of phases: 1
+Total cost incurred: 32 SB
+==========================================
+The data have been sorted.
+
+Shutting down connection to AmazonEC2...
+Connection closed.
+++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++
+              Cloud Sort - 8
+++++++++++++++++++++++++++++++++++++++++++
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+    >>>Data size too small!
+    >>>Change to another server.
+
+Shutting down connection to AmazonEC2...
+Connection closed.
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+==========================================
+Status report for AmazonEC2
+==========================================
+Number of servers used: 10
+Each server can handle 2 pages of length 72.
+Cost per phase: 32 SB
+==========================================
+Total data size: 143
+Number of pages: 2
+==========================================
+Number of phases: 1
+Total cost incurred: 32 SB
+==========================================
+The data have been sorted.
+
+Shutting down connection to AmazonEC2...
+Connection closed.
+++++++++++++++++++++++++++++++++++++++++++
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Congratulations! All sorting finished.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

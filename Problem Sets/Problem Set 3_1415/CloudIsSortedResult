@@ -1,0 +1,235 @@
+Report Time: 2017-02-15 00:34:15
+
+++++++++++++++++++++++++++++++++++++++++++
+            IsSorted Test - 1
+        Test Data - 1000000IntsAlmostSorted100.txt
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+          Sorted or not: false
+++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++
+            IsSorted Test - 2
+        Test Data - 1000000IntsAlmostSorted50.txt
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+          Sorted or not: true
+++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++
+            IsSorted Test - 3
+        Test Data - 1000000IntsAlmostSorted500.txt
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+          Sorted or not: false
+++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++
+            IsSorted Test - 4
+        Test Data - 1000000IntsSorted.txt
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+          Sorted or not: true
+++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++
+            IsSorted Test - 5
+        Test Data - 100000IntsAlmostSorted10.txt
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+          Sorted or not: false
+++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++
+            IsSorted Test - 6
+        Test Data - 100000IntsAlmostSorted50.txt
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+          Sorted or not: false
+++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++
+            IsSorted Test - 7
+        Test Data - 100000IntsSorted.txt
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+          Sorted or not: true
+++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++
+            IsSorted Test - 8
+        Test Data - 10000IntsAlmostSorted10.txt
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+          Sorted or not: false
+++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++
+            IsSorted Test - 9
+        Test Data - 10000IntsAlmostSorted100.txt
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+          Sorted or not: false
+++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++
+            IsSorted Test - 10
+        Test Data - 10000IntsAlmostSorted5.txt
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+          Sorted or not: false
+++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++
+            IsSorted Test - 11
+        Test Data - 10000IntsSorted.txt
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+          Sorted or not: true
+++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++
+            IsSorted Test - 12
+        Test Data - 1000IntsAlmostSorted1.txt
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+          Sorted or not: false
+++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++
+            IsSorted Test - 13
+        Test Data - 1000IntsAlmostSorted10.txt
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+          Sorted or not: false
+++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++
+            IsSorted Test - 14
+        Test Data - 1000IntsAlmostSorted5.txt
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+          Sorted or not: false
+++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++
+            IsSorted Test - 15
+        Test Data - 1000IntsSorted.txt
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+          Sorted or not: true
+++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++
+            IsSorted Test - 16
+        Test Data - 100IntsAlmostSorted10.txt
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+          Sorted or not: false
+++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++
+            IsSorted Test - 17
+        Test Data - 100IntsAlmostSorted100.txt
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+          Sorted or not: false
+++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++
+            IsSorted Test - 18
+        Test Data - 100IntsAlmostSorted50.txt
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+          Sorted or not: false
+++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++
+            IsSorted Test - 19
+        Test Data - 100IntsSorted.txt
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+          Sorted or not: true
+++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++
+            IsSorted Test - 20
+        Test Data - 10IntsAlmostSorted1.txt
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+          Sorted or not: false
+++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++
+            IsSorted Test - 21
+        Test Data - 10IntsAlmostSorted20.txt
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+          Sorted or not: false
+++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++
+            IsSorted Test - 22
+        Test Data - 10IntsAlmostSorted5.txt
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+          Sorted or not: false
+++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++
+            IsSorted Test - 23
+        Test Data - 10IntsSorted.txt
+Connecting to Cloud Provider.
+AmazonEC2 connected.
+Opening connection to AmazonEC2 ...
+10 cloud servers started.
+          Sorted or not: true
+++++++++++++++++++++++++++++++++++++++++++
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Congratulations! All tests finished.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

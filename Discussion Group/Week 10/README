@@ -1,0 +1,30 @@
+===========================
+Problem 1
+===========================
+1) A graph is a tree <=> V= E + 1;
+
+2) A Depth-first search is good enough for this problem. During DFS, keep updating a table 
+to see whether we have visited this node before. Then, we basically try to traverse each 
+edge, add the two nodes to the table if they have not been visited before. If they have been
+visited before, that means we have already found a cycle.
+Since we at most can add O(V) nodes to the table, the time complexity is O(V).
+
+===========================
+Problem 2
+===========================
+Bi-coloring problem:
+We run BFS, but also label the node with the level it is first visited. If any mode with an 
+even level has a neighbor with an even level, then data is inconsistent. If any node is not 
+visited, it is insufficient. Then, assign good/bad students based on whether their level is 
+odd/even.
+
+===========================
+Problem 3
+===========================
+For-loops
+
+===========================
+Problem 4
+===========================
+If the length path is defined to be the product of all edges.
+Solution: Use log(ABCD) = log(A) + log(B) + log(C) + log(D).

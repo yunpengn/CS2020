@@ -1,0 +1,278 @@
+In mathematics, management science, economics, computer science, and bioinformatics, dynamic programming (also known as dynamic optimization) is a method for solving a complex problem by breaking it down into a collection of simpler subproblems, solving each of those subproblems just once, and storing their solutions - ideally, using a memory-based data structure. The next time the same subproblem occurs, instead of recomputing its solution, one simply looks up the previously computed solution, thereby saving computation time at the expense of a (hopefully) modest expenditure in storage space. (Each of the subproblem solutions is indexed in some way, typically based on the values of its input parameters, so as to facilitate its lookup.) The technique of storing solutions to subproblems instead of recomputing them is called "memoization".
+
+Dynamic programming algorithms are often used for optimization. A dynamic programming algorithm will examine the previously solved subproblems and will combine their solutions to give the best solution for the given problem. In comparison, a greedy algorithm treats the solution as some sequence of steps and picks the locally optimal choice at each step. Using a greedy algorithm does not guarantee an optimal solution, because picking locally optimal choices may result in a bad global solution, but it is often faster to calculate. Fortunately, some greedy algorithms (such as Kruskal's or Prim's for minimum spanning trees) are proven to lead to the optimal solution.
+
+For example, in the coin change problem of finding the minimum number of coins of given denominations needed to make a given amount, a dynamic programming algorithm would find an optimal solution for each amount by first finding an optimal solution for each smaller amount and then using these solutions to construct an optimal solution for the larger amount. In contrast, a greedy algorithm might treat the solution as a sequence of coins, starting from the given amount and at each step subtracting the largest possible coin denomination that is less than the current remaining amount. If the coin denominations are 1,4,5,15,20 and the given amount is 23, this greedy algorithm gives a non-optimal solution of 20+1+1+1, while the optimal solution is 15+4+4.
+
+In addition to finding optimal solutions to some problem, dynamic programming can also be used for counting the number of solutions, for example counting the number of ways a certain amount of change can be made from a given collection of coins, or counting the number of optimal solutions to the coin change problem described above.
+
+Sometimes, applying memoization to the naive recursive algorithm (namely the one obtained by a direct translation of the problem into recursive form) already results in a dynamic programming algorithm with asymptotically optimal time complexity, but for optimization problems in general the optimal algorithm might require more sophisticated algorithms. Some of these may be recursive (and hence can be memoized) but parametrized differently from the naive algorithm. For other problems the optimal algorithm may not even be a memoized recursive algorithm in any reasonably natural sense. An example of such a problem is the Egg Dropping puzzle described below.
+
+Overview
+
+Dynamic programming is both a mathematical optimization method and a computer programming method. In both contexts it refers to simplifying a complicated problem by breaking it down into simpler sub-problems in a recursive manner. While some decision problems cannot be taken apart this way, decisions that span several points in time do often break apart recursively; Bellman called this the "Principle of Optimality". Likewise, in computer science, a problem that can be solved optimally by breaking it into sub-problems and then recursively finding the optimal solutions to the sub-problems is said to have optimal substructure.
+
+If sub-problems can be nested recursively inside larger problems, so that dynamic programming methods are applicable, then there is a relation between the value of the larger problem and the values of the sub-problems. In the optimization literature this relationship is called the Bellman equation.
+
+Dynamic programming in mathematical optimization
+
+In terms of mathematical optimization, dynamic programming usually refers to simplifying a decision by breaking it down into a sequence of decision steps over time. This is done by defining a sequence of value functions V1, V2, ..., Vn, with an argument y representing the state of the system at times i from 1 to n. The definition of Vn(y) is the value obtained in state y at the last time n. The values Vi at earlier times i = n 1, n 2, ..., 2, 1 can be found by working backwards, using a recursive relationship called the Bellman equation. For i = 2, ..., n, Vi1 at any state y is calculated from Vi by maximizing a simple function (usually the sum) of the gain from a decision at time i 1 and the function Vi at the new state of the system if this decision is made. Since Vi has already been calculated for the needed states, the above operation yields Vi1 for those states. Finally, V1 at the initial state of the system is the value of the optimal solution. The optimal values of the decision variables can be recovered, one by one, by tracking back the calculations already performed.
+
+Dynamic programming in bioinformatics
+
+Dynamic programming is widely used in bioinformatics for the tasks such as sequence alignment, protein folding, RNA structure prediction and protein-DNA binding. The first dynamic programming algorithms for protein-DNA binding were developed in the 1970s independently by Charles DeLisi in USA and Georgii Gurskii and Alexander Zasedatelev in USSR. Recently these algorithms have become very popular in bioinformatics and computational biology, particularly in the studies of nucleosome positioning and transcription factor binding.
+
+Dynamic programming in computer programming
+
+There are two key attributes that a problem must have in order for dynamic programming to be applicable: optimal substructure and overlapping sub-problems. If a problem can be solved by combining optimal solutions to non-overlapping sub-problems, the strategy is called "divide and conquer" instead. This is why merge sort and quick sort are not classified as dynamic programming problems.
+
+Optimal substructure means that the solution to a given optimization problem can be obtained by the combination of optimal solutions to its sub-problems. Such optimal substructures are usually described by means of recursion. For example, given a graph G=(V,E), the shortest path p from a vertex u to a vertex v exhibits optimal substructure: take any intermediate vertex w on this shortest path p. If p is truly the shortest path, then it can be split into sub-paths p1 from u to w and p2 from w to v such that these, in turn, are indeed the shortest paths between the corresponding vertices (by the simple cut-and-paste argument described in Introduction to Algorithms). Hence, one can easily formulate the solution for finding shortest paths in a recursive manner, which is what the BellmanFord algorithm or the FloydWarshall algorithm does.
+
+Overlapping sub-problems means that the space of sub-problems must be small, that is, any recursive algorithm solving the problem should solve the same sub-problems over and over, rather than generating new sub-problems. For example, consider the recursive formulation for generating the Fibonacci series: Fi = Fi1 + Fi2, with base case F1 = F2 = 1. Then F43 = F42 + F41, and F42 = F41 + F40. Now F41 is being solved in the recursive sub-trees of both F43 as well as F42. Even though the total number of sub-problems is actually small (only 43 of them), we end up solving the same problems over and over if we adopt a naive recursive solution such as this. Dynamic programming takes account of this fact and solves each sub-problem only once.
+
+This can be achieved in either of two ways:
+Top-down approach: This is the direct fall-out of the recursive formulation of any problem. If the solution to any problem can be formulated recursively using the solution to its sub-problems, and if its sub-problems are overlapping, then one can easily memoize or store the solutions to the sub-problems in a table. Whenever we attempt to solve a new sub-problem, we first check the table to see if it is already solved. If a solution has been recorded, we can use it directly, otherwise we solve the sub-problem and add its solution to the table. Bottom-up approach: Once we formulate the solution to a problem recursively as in terms of its sub-problems, we can try reformulating the problem in a bottom-up fashion: try solving the sub-problems first and use their solutions to build-on and arrive at solutions to bigger sub-problems. This is also usually done in a tabular form by iteratively generating solutions to bigger and bigger sub-problems by using the solutions to small sub-problems. For example, if we already know the values of F41 and F40, we can directly calculate the value of F42. 
+Some programming languages can automatically memoize the result of a function call with a particular set of arguments, in order to speed up call-by-name evaluation (this mechanism is referred to as call-by-need). Some languages make it possible portably (e.g. Scheme, Common Lisp or Perl). Some languages have automatic memoization built in, such as tabled Prolog and J, which supports memoization with the M. adverb. In any case, this is only possible for a referentially transparent function.
+
+Example: Economic optimization
+
+Optimal consumption and saving
+
+A mathematical optimization problem that is often used in teaching dynamic programming to economists (because it can be solved by hand) concerns a consumer who lives over the periods t = 0 , 1 , 2 , ... , T {\displaystyle t=0,1,2,\ldots ,T} and must decide how much to consume and how much to save in each period.
+
+Let c t {\displaystyle c_{t}} be consumption in period t, and assume consumption yields utility u ( c t ) = ln ( c t ) {\displaystyle u(c_{t})=\ln(c_{t})} as long as the consumer lives. Assume the consumer is impatient, so that he discounts future utility by a factor b each period, where 0 < b < 1 {\displaystyle 0<b<1} . Let k t {\displaystyle k_{t}} be capital in period t. Assume initial capital is a given amount k 0 > 0 {\displaystyle k_{0}>0} , and suppose that this period's capital and consumption determine next period's capital as k t + 1 = A k t a c t {\displaystyle k_{t+1}=Ak_{t}^{a}-c_{t}} , where A is a positive constant and 0 < a < 1 {\displaystyle 0<a<1} . Assume capital cannot be negative. Then the consumer's decision problem can be written as follows:
+max t = 0 T b t ln ( c t ) {\displaystyle \max \sum _{t=0}^{T}b^{t}\ln(c_{t})} subject to k t + 1 = A k t a c t 0 {\displaystyle k_{t+1}=Ak_{t}^{a}-c_{t}\geq 0} for all t = 0 , 1 , 2 , ... , T {\displaystyle t=0,1,2,\ldots ,T} 
+Written this way, the problem looks complicated, because it involves solving for all the choice variables c 0 , c 1 , c 2 , ... , c T {\displaystyle c_{0},c_{1},c_{2},\ldots ,c_{T}} . (Note that k 0 {\displaystyle k_{0}} is not a choice variablethe consumer's initial capital is taken as given.)
+
+The dynamic programming approach to solve this problem involves breaking it apart into a sequence of smaller decisions. To do so, we define a sequence of value functions V t ( k ) {\displaystyle V_{t}(k)} , for t = 0 , 1 , 2 , ... , T , T + 1 {\displaystyle t=0,1,2,\ldots ,T,T+1} which represent the value of having any amount of capital k at each time t. Note that V T + 1 ( k ) = 0 {\displaystyle V_{T+1}(k)=0} , that is, there is (by assumption) no utility from having capital after death.
+
+The value of any quantity of capital at any previous time can be calculated by backward induction using the Bellman equation. In this problem, for each t = 0 , 1 , 2 , ... , T {\displaystyle t=0,1,2,\ldots ,T} , the Bellman equation is
+V t ( k t ) = max ( ln ( c t ) + b V t + 1 ( k t + 1 ) ) {\displaystyle V_{t}(k_{t})\,=\,\max \left(\ln(c_{t})+bV_{t+1}(k_{t+1})\right)} subject to k t + 1 = A k t a c t 0 {\displaystyle k_{t+1}=Ak_{t}^{a}-c_{t}\geq 0} 
+This problem is much simpler than the one we wrote down before, because it involves only two decision variables, c t {\displaystyle c_{t}} and k t + 1 {\displaystyle k_{t+1}} . Intuitively, instead of choosing his whole lifetime plan at birth, the consumer can take things one step at a time. At time t, his current capital k t {\displaystyle k_{t}} is given, and he only needs to choose current consumption c t {\displaystyle c_{t}} and saving k t + 1 {\displaystyle k_{t+1}} .
+
+To actually solve this problem, we work backwards. For simplicity, the current level of capital is denoted as k. V T + 1 ( k ) {\displaystyle V_{T+1}(k)} is already known, so using the Bellman equation once we can calculate V T ( k ) {\displaystyle V_{T}(k)} , and so on until we get to V 0 ( k ) {\displaystyle V_{0}(k)} , which is the value of the initial decision problem for the whole lifetime. In other words, once we know V T j + 1 ( k ) {\displaystyle V_{T-j+1}(k)} , we can calculate V T j ( k ) {\displaystyle V_{T-j}(k)} , which is the maximum of ln ( c T j ) + b V T j + 1 ( A k a c T j ) {\displaystyle \ln(c_{T-j})+bV_{T-j+1}(Ak^{a}-c_{T-j})} , where c T j {\displaystyle c_{T-j}} is the choice variable and A k a c T j 0 {\displaystyle Ak^{a}-c_{T-j}\geq 0} .
+
+Working backwards, it can be shown that the value function at time t = T j {\displaystyle t=T-j} is
+V T j ( k ) = a i = 0 j a i b i ln k + v T j {\displaystyle V_{T-j}(k)\,=\,a\sum _{i=0}^{j}a^{i}b^{i}\ln k+v_{T-j}} 
+where each v T j {\displaystyle v_{T-j}} is a constant, and the optimal amount to consume at time t = T j {\displaystyle t=T-j} is
+c T j ( k ) = 1 i = 0 j a i b i A k a {\displaystyle c_{T-j}(k)\,=\,{\frac {1}{\sum _{i=0}^{j}a^{i}b^{i}}}Ak^{a}} 
+which can be simplified to
+c T ( k ) = A k a c T 1 ( k ) = A k a 1 + a b c T 2 ( k ) = A k a 1 + a b + a 2 b 2 ... c 2 ( k ) = A k a 1 + a b + a 2 b 2 + ... + a T 2 b T 2 c 1 ( k ) = A k a 1 + a b + a 2 b 2 + ... + a T 2 b T 2 + a T 1 b T 1 c 0 ( k ) = A k a 1 + a b + a 2 b 2 + ... + a T 2 b T 2 + a T 1 b T 1 + a T b T {\displaystyle {\begin{aligned}c_{T}(k)&=Ak^{a}\\c_{T-1}(k)&={\frac {Ak^{a}}{1+ab}}\\c_{T-2}(k)&={\frac {Ak^{a}}{1+ab+a^{2}b^{2}}}\\&\dots \\c_{2}(k)&={\frac {Ak^{a}}{1+ab+a^{2}b^{2}+\ldots +a^{T-2}b^{T-2}}}\\c_{1}(k)&={\frac {Ak^{a}}{1+ab+a^{2}b^{2}+\ldots +a^{T-2}b^{T-2}+a^{T-1}b^{T-1}}}\\c_{0}(k)&={\frac {Ak^{a}}{1+ab+a^{2}b^{2}+\ldots +a^{T-2}b^{T-2}+a^{T-1}b^{T-1}+a^{T}b^{T}}}\end{aligned}}} 
+We see that it is optimal to consume a larger fraction of current wealth as one gets older, finally consuming all remaining wealth in period T, the last period of life.
+
+Examples: Computer algorithms
+
+Dijkstra's algorithm for the shortest path problem
+
+From a dynamic programming point of view, Dijkstra's algorithm for the shortest path problem is a successive approximation scheme that solves the dynamic programming functional equation for the shortest path problem by the Reaching method.
+
+In fact, Dijkstra's explanation of the logic behind the algorithm, namely
+
+Problem 2. Find the path of minimum total length between two given nodes P {\displaystyle P} and Q {\displaystyle Q} .
+
+We use the fact that, if R {\displaystyle R} is a node on the minimal path from P {\displaystyle P} to Q {\displaystyle Q} , knowledge of the latter implies the knowledge of the minimal path from P {\displaystyle P} to R {\displaystyle R} .
+
+is a paraphrasing of Bellman's famous Principle of Optimality in the context of the shortest path problem.
+
+Fibonacci sequence
+
+Here is a naive implementation of a function finding the nth member of the Fibonacci sequence, based directly on the mathematical definition:
+
+function fib(n) if n <= 1 return n return fib(n 1) + fib(n 2) 
+
+Notice that if we call, say, fib(5), we produce a call tree that calls the function on the same value many different times:
+fib(5) fib(4) + fib(3) (fib(3) + fib(2)) + (fib(2) + fib(1)) ((fib(2) + fib(1)) + (fib(1) + fib(0))) + ((fib(1) + fib(0)) + fib(1)) (((fib(1) + fib(0)) + fib(1)) + (fib(1) + fib(0))) + ((fib(1) + fib(0)) + fib(1)) 
+In particular, fib(2) was calculated three times from scratch. In larger examples, many more values of fib, or subproblems, are recalculated, leading to an exponential time algorithm.
+
+Now, suppose we have a simple map object, m, which maps each value of fib that has already been calculated to its result, and we modify our function to use it and update it. The resulting function requires only O(n) time instead of exponential time (but requires O(n) space):
+
+var m := map(0 0, 1 1) function fib(n) if key n is not in map m m[n] := fib(n 1) + fib(n 2) return m[n] 
+
+This technique of saving values that have already been calculated is called memoization; this is the top-down approach, since we first break the problem into subproblems and then calculate and store values.
+
+In the bottom-up approach, we calculate the smaller values of fib first, then build larger values from them. This method also uses O(n) time since it contains a loop that repeats n 1 times, but it only takes constant (O(1)) space, in contrast to the top-down approach which requires O(n) space to store the map.
+
+function fib(n) if n = 0 return 0 else var previousFib := 0, currentFib := 1 repeat n 1 times // loop is skipped if n = 1 var newFib := previousFib + currentFib previousFib := currentFib currentFib := newFib return currentFib 
+
+In both examples, we only calculate fib(2) one time, and then use it to calculate both fib(4) and fib(3), instead of computing it every time either of them is evaluated.
+
+Note that the above method actually takes ( n 2 ) {\displaystyle \Omega (n^{2})} time for large n because addition of two integers with ( n ) {\displaystyle \Omega (n)} bits each takes ( n ) {\displaystyle \Omega (n)} time. (The nth fibonacci number has ( n ) {\displaystyle \Omega (n)} bits.) Also, there is a closed form for the Fibonacci sequence, known as Binet's formula, from which the n {\displaystyle n} -th term can be computed in approximately O ( n ( log n ) 2 ) {\displaystyle O(n(\log n)^{2})} time, which is more efficient than the above dynamic programming technique. However, the simple recurrence directly gives the matrix form that leads to an approximately O ( n log n ) {\displaystyle O(n\log n)} algorithm by fast matrix exponentiation.
+
+A type of balanced 01 matrix
+
+Consider the problem of assigning values, either zero or one, to the positions of an n n matrix, with n even, so that each row and each column contains exactly n / 2 zeros and n / 2 ones. We ask how many different assignments there are for a given n {\displaystyle n} . For example, when n = 4, four possible solutions are
+[ 0 1 0 1 1 0 1 0 0 1 0 1 1 0 1 0 ] and [ 0 0 1 1 0 0 1 1 1 1 0 0 1 1 0 0 ] and [ 1 1 0 0 0 0 1 1 1 1 0 0 0 0 1 1 ] and [ 1 0 0 1 0 1 1 0 0 1 1 0 1 0 0 1 ] . {\displaystyle {\begin{bmatrix}0&1&0&1\\1&0&1&0\\0&1&0&1\\1&0&1&0\end{bmatrix}}{\text{ and }}{\begin{bmatrix}0&0&1&1\\0&0&1&1\\1&1&0&0\\1&1&0&0\end{bmatrix}}{\text{ and }}{\begin{bmatrix}1&1&0&0\\0&0&1&1\\1&1&0&0\\0&0&1&1\end{bmatrix}}{\text{ and }}{\begin{bmatrix}1&0&0&1\\0&1&1&0\\0&1&1&0\\1&0&0&1\end{bmatrix}}.} 
+There are at least three possible approaches: brute force, backtracking, and dynamic programming.
+
+Brute force consists of checking all assignments of zeros and ones and counting those that have balanced rows and columns (n / 2 zeros and n / 2 ones). As there are ( n n / 2 ) n {\displaystyle {\tbinom {n}{n/2}}^{n}} possible assignments, this strategy is not practical except maybe up to n = 6 {\displaystyle n=6} .
+
+Backtracking for this problem consists of choosing some order of the matrix elements and recursively placing ones or zeros, while checking that in every row and column the number of elements that have not been assigned plus the number of ones or zeros are both at least n / 2. While more sophisticated than brute force, this approach will visit every solution once, making it impractical for n larger than six, since the number of solutions is already 116,963,796,250 for n = 10, as we shall see.
+
+Dynamic programming makes it possible to count the number of solutions without visiting them all. Imagine backtracking values for the first row what information would we require about the remaining rows, in order to be able to accurately count the solutions obtained for each first row value? We consider k n boards, where 1 k n, whose k {\displaystyle k} rows contain n / 2 {\displaystyle n/2} zeros and n / 2 {\displaystyle n/2} ones. The function f to which memoization is applied maps vectors of n pairs of integers to the number of admissible boards (solutions). There is one pair for each column, and its two components indicate respectively the number of zeros and ones that have yet to be placed in that column. We seek the value of f ( ( n / 2 , n / 2 ) , ( n / 2 , n / 2 ) , ... ( n / 2 , n / 2 ) ) {\displaystyle f((n/2,n/2),(n/2,n/2),\ldots (n/2,n/2))} ( n {\displaystyle n} arguments or one vector of n {\displaystyle n} elements). The process of subproblem creation involves iterating over every one of ( n n / 2 ) {\displaystyle {\tbinom {n}{n/2}}} possible assignments for the top row of the board, and going through every column, subtracting one from the appropriate element of the pair for that column, depending on whether the assignment for the top row contained a zero or a one at that position. If any one of the results is negative, then the assignment is invalid and does not contribute to the set of solutions (recursion stops). Otherwise, we have an assignment for the top row of the k n board and recursively compute the number of solutions to the remaining (k 1) n board, adding the numbers of solutions for every admissible assignment of the top row and returning the sum, which is being memoized. The base case is the trivial subproblem, which occurs for a 1 n board. The number of solutions for this board is either zero or one, depending on whether the vector is a permutation of n / 2 ( 0 , 1 ) {\displaystyle (0,1)} and n / 2 ( 1 , 0 ) {\displaystyle (1,0)} pairs or not.
+
+For example, in the first two boards shown above the sequences of vectors would be
+
+((2, 2) (2, 2) (2, 2) (2, 2)) ((2, 2) (2, 2) (2, 2) (2, 2)) k = 4 0 1 0 1 0 0 1 1 ((1, 2) (2, 1) (1, 2) (2, 1)) ((1, 2) (1, 2) (2, 1) (2, 1)) k = 3 1 0 1 0 0 0 1 1 ((1, 1) (1, 1) (1, 1) (1, 1)) ((0, 2) (0, 2) (2, 0) (2, 0)) k = 2 0 1 0 1 1 1 0 0 ((0, 1) (1, 0) (0, 1) (1, 0)) ((0, 1) (0, 1) (1, 0) (1, 0)) k = 1 1 0 1 0 1 1 0 0 ((0, 0) (0, 0) (0, 0) (0, 0)) ((0, 0) (0, 0), (0, 0) (0, 0)) 
+
+The number of solutions (sequence A058527 in the OEIS) is
+1 , 2 , 90 , 297200 , 116963796250 , 6736218287430460752 , ... {\displaystyle 1,\,2,\,90,\,297200,\,116963796250,\,6736218287430460752,\ldots } 
+Links to the MAPLE implementation of the dynamic programming approach may be found among the external links.
+
+Checkerboard
+
+Consider a checkerboard with n n squares and a cost-function c(i, j) which returns a cost associated with square i, j (i being the row, j being the column). For instance (on a 5 5 checkerboard),
+
+Thus c(1, 3) = 5
+
+Let us say there was a checker that could start at any square on the first rank (i.e., row) and you wanted to know the shortest path (sum of the costs of the visited squares are at a minimum) to get to the last rank, assuming the checker could move only diagonally left forward, diagonally right forward, or straight forward. That is, a checker on (1,3) can move to (2,2), (2,3) or (2,4).
+
+This problem exhibits optimal substructure. That is, the solution to the entire problem relies on solutions to subproblems. Let us define a function q(i, j) as
+q(i, j) = the minimum cost to reach square (i, j). 
+If we can find the values of this function for all the squares at rank n, we pick the minimum and follow that path backwards to get the shortest path.
+
+Note that q(i, j) is equal to the minimum cost to get to any of the three squares below it (since those are the only squares that can reach it) plus c(i, j). For instance:
+q ( A ) = min ( q ( B ) , q ( C ) , q ( D ) ) + c ( A ) {\displaystyle q(A)=\min(q(B),q(C),q(D))+c(A)\,} 
+Now, let us define q(i, j) in somewhat more general terms:
+q ( i , j ) = { j < 1 or j > n c ( i , j ) i = 1 min ( q ( i 1 , j 1 ) , q ( i 1 , j ) , q ( i 1 , j + 1 ) ) + c ( i , j ) otherwise. {\displaystyle q(i,j)={\begin{cases}\infty &j<1{\text{ or }}j>n\\c(i,j)&i=1\\\min(q(i-1,j-1),q(i-1,j),q(i-1,j+1))+c(i,j)&{\text{otherwise.}}\end{cases}}} 
+The first line of this equation is there to make the recursive property simpler (when dealing with the edges, so we need only one recursion). The second line says what happens in the last rank, to provide a base case. The third line, the recursion, is the important part. It is similar to the A,B,C,D example. From this definition we can make a straightforward recursive code for q(i, j). In the following pseudocode, n is the size of the board, c(i, j) is the cost-function, and min() returns the minimum of a number of values:
+
+function minCost(i, j) if j < 1 or j > n return infinity else if i = 1 return c(i, j) else return min( minCost(i-1, j-1), minCost(i-1, j), minCost(i-1, j+1) ) + c(i, j) 
+
+It should be noted that this function only computes the path-cost, not the actual path. We will get to the path soon. This, like the Fibonacci-numbers example, is horribly slow since it wastes time recomputing the same shortest paths over and over. However, we can compute it much faster in a bottom-up fashion if we store path-costs in a two-dimensional array q[i, j] rather than using a function. This avoids recomputation; before computing the cost of a path, we check the array q[i, j] to see if the path cost is already there.
+
+We also need to know what the actual shortest path is. To do this, we use another array p[i, j], a predecessor array. This array implicitly stores the path to any square s by storing the previous node on the shortest path to s, i.e. the predecessor. To reconstruct the path, we lookup the predecessor of s, then the predecessor of that square, then the predecessor of that square, and so on, until we reach the starting square. Consider the following code:
+
+function computeShortestPathArrays() for x from 1 to n q[1, x] := c(1, x) for y from 1 to n q[y, 0] := infinity q[y, n + 1] := infinity for y from 2 to n for x from 1 to n m := min(q[y-1, x-1], q[y-1, x], q[y-1, x+1]) q[y, x] := m + c(y, x) if m = q[y-1, x-1] p[y, x] := -1 else if m = q[y-1, x] p[y, x] := 0 else p[y, x] := 1 
+
+Now the rest is a simple matter of finding the minimum and printing it.
+
+function computeShortestPath() computeShortestPathArrays() minIndex := 1 min := q[n, 1] for i from 2 to n if q[n, i] < min minIndex := i min := q[n, i] printPath(n, minIndex) 
+
+function printPath(y, x) print(x) print("<-") if y = 2 print(x + p[y, x]) else printPath(y-1, x + p[y, x]) 
+
+Sequence alignment
+
+In genetics, sequence alignment is an important application where dynamic programming is essential. Typically, the problem consists of transforming one sequence into another using edit operations that replace, insert, or remove an element. Each operation has an associated cost, and the goal is to find the sequence of edits with the lowest total cost.
+
+The problem can be stated naturally as a recursion, a sequence A is optimally edited into a sequence B by either:
+inserting the first character of B, and performing an optimal alignment of A and the tail of B deleting the first character of A, and performing the optimal alignment of the tail of A and B replacing the first character of A with the first character of B, and performing optimal alignments of the tails of A and B. 
+The partial alignments can be tabulated in a matrix, where cell (i,j) contains the cost of the optimal alignment of A[1..i] to B[1..j]. The cost in cell (i,j) can be calculated by adding the cost of the relevant operations to the cost of its neighboring cells, and selecting the optimum.
+
+Different variants exist, see SmithWaterman algorithm and NeedlemanWunsch algorithm.
+
+Tower of Hanoi puzzle
+
+The Tower of Hanoi or Towers of Hanoi is a mathematical game or puzzle. It consists of three rods, and a number of disks of different sizes which can slide onto any rod. The puzzle starts with the disks in a neat stack in ascending order of size on one rod, the smallest at the top, thus making a conical shape.
+
+The objective of the puzzle is to move the entire stack to another rod, obeying the following rules:
+Only one disk may be moved at a time. Each move consists of taking the upper disk from one of the rods and sliding it onto another rod, on top of the other disks that may already be present on that rod. No disk may be placed on top of a smaller disk. 
+The dynamic programming solution consists of solving the functional equation
+S(n,h,t) = S(n-1,h, not(h,t)) ; S(1,h,t) ; S(n-1,not(h,t),t) 
+where n denotes the number of disks to be moved, h denotes the home rod, t denotes the target rod, not(h,t) denotes the third rod (neither h nor t), ";" denotes concatenation, and
+S(n, h, t) := solution to a problem consisting of n disks that are to be moved from rod h to rod t. 
+Note that for n=1 the problem is trivial, namely S(1,h,t) = "move a disk from rod h to rod t" (there is only one disk left).
+
+The number of moves required by this solution is 2n 1. If the objective is to maximize the number of moves (without cycling) then the dynamic programming functional equation is slightly more complicated and 3n 1 moves are required.
+
+Egg dropping puzzle
+
+The following is a description of the instance of this famous puzzle involving n=2 eggs and a building with H=36 floors:
+Suppose that we wish to know which stories in a 36-story building are safe to drop eggs from, and which will cause the eggs to break on landing (using U.S. English terminology, in which the first floor is at ground level). We make a few assumptions: An egg that survives a fall can be used again. A broken egg must be discarded. The effect of a fall is the same for all eggs. If an egg breaks when dropped, then it would break if dropped from a higher window. If an egg survives a fall, then it would survive a shorter fall. It is not ruled out that the first-floor windows break eggs, nor is it ruled out that eggs can survive the 36th-floor windows. If only one egg is available and we wish to be sure of obtaining the right result, the experiment can be carried out in only one way. Drop the egg from the first-floor window; if it survives, drop it from the second-floor window. Continue upward until it breaks. In the worst case, this method may require 36 droppings. Suppose 2 eggs are available. What is the least number of egg-droppings that is guaranteed to work in all cases? 
+To derive a dynamic programming functional equation for this puzzle, let the state of the dynamic programming model be a pair s = (n,k), where
+n = number of test eggs available, n = 0, 1, 2, 3, ..., N 1. k = number of (consecutive) floors yet to be tested, k = 0, 1, 2, ..., H 1. 
+For instance, s = (2,6) indicates that two test eggs are available and 6 (consecutive) floors are yet to be tested. The initial state of the process is s = (N,H) where N denotes the number of test eggs available at the commencement of the experiment. The process terminates either when there are no more test eggs (n = 0) or when k = 0, whichever occurs first. If termination occurs at state s = (0,k) and k > 0, then the test failed.
+
+Now, let
+W(n,k) = minimum number of trials required to identify the value of the critical floor under the worst-case scenario given that the process is in state s = (n,k). 
+Then it can be shown that
+W(n,k) = 1 + min{max(W(n 1, x 1), W(n,k x)): x = 1, 2, ..., k } 
+with W(n,0) = 0 for all n > 0 and W(1,k) = k for all k. It is easy to solve this equation iteratively by systematically increasing the values of n and k.
+
+An interactive online facility is available for experimentation with this model as well as with other versions of this puzzle (e.g. when the objective is to minimize the expected value of the number of trials.)
+
+Faster DP solution using a different parametrization
+
+Notice that the above solution takes O ( n k 2 ) {\displaystyle O(nk^{2})} time with a DP solution. This can be improved to O ( n k log k ) {\displaystyle O(nk\log k)} time by binary searching on the optimal x {\displaystyle x} in the above recurrence, since W ( n 1 , x 1 ) {\displaystyle W(n-1,x-1)} is increasing in x {\displaystyle x} while W ( n , k x ) {\displaystyle W(n,k-x)} is decreasing in x {\displaystyle x} , thus a local minimum of max ( W ( n 1 , x 1 ) , W ( n , k x ) ) {\displaystyle \max(W(n-1,x-1),W(n,k-x))} is a global minimum. Also, by storing the optimal x {\displaystyle x} for each cell in the DP table and referring to its value for the previous cell, the optimal x {\displaystyle x} for each cell can be found in constant time, improving it to O ( n k ) {\displaystyle O(nk)} time. However, there is an even faster solution that involves a different parametrization of the problem:
+
+Let k {\displaystyle k} be the total number of floors such that the eggs break when dropped from the k {\displaystyle k} th floor (The example above is equivalent to taking k = 37 {\displaystyle k=37} ).
+
+Let m {\displaystyle m} be the minimum floor from which the egg must be dropped to be broken.
+
+Let f ( t , n ) {\displaystyle f(t,n)} be the maximum number of values of m {\displaystyle m} that are distinguishable using t {\displaystyle t} tries and n {\displaystyle n} eggs.
+
+Then f ( t , 0 ) = f ( 0 , n ) = 1 {\displaystyle f(t,0)=f(0,n)=1} for all t , n 0 {\displaystyle t,n\geq 0} .
+
+Let a {\displaystyle a} be the floor from which the first egg is dropped in the optimal strategy.
+
+If the first egg broke, m {\displaystyle m} is from 1 {\displaystyle 1} to a {\displaystyle a} and distinguishable using at most t 1 {\displaystyle t-1} tries and n 1 {\displaystyle n-1} eggs.
+
+If the first egg did not break, m {\displaystyle m} is from a + 1 {\displaystyle a+1} to k {\displaystyle k} and distinguishable using t 1 {\displaystyle t-1} tries and n {\displaystyle n} eggs.
+
+Therefore, f ( t , n ) = f ( t 1 , n 1 ) + f ( t 1 , n ) {\displaystyle f(t,n)=f(t-1,n-1)+f(t-1,n)} .
+
+Then the problem is equivalent to finding the minimum x {\displaystyle x} such that f ( x , n ) k {\displaystyle f(x,n)\geq k} .
+
+To do so, we could compute { f ( t , i ) : 0 i n } {\displaystyle \{f(t,i):0\leq i\leq n\}} in order of increasing t {\displaystyle t} , which would take O ( n x ) {\displaystyle O(nx)} time.
+
+Thus, if we separately handle the case of n = 1 {\displaystyle n=1} , the algorithm would take O ( n k ) {\displaystyle O(n{\sqrt {k}})} time.
+
+But the recurrence relation can in fact be solved, giving f ( t , n ) = i = 0 n ( t i ) {\displaystyle f(t,n)=\sum _{i=0}^{n}{\binom {t}{i}}} , which can be computed in O ( n ) {\displaystyle O(n)} time using the identity ( t i + 1 ) = ( t i ) t i i + 1 {\displaystyle {\binom {t}{i+1}}={\binom {t}{i}}{\frac {t-i}{i+1}}} for all i 0 {\displaystyle i\geq 0} .
+
+Since f ( t , n ) f ( t + 1 , n ) {\displaystyle f(t,n)\leq f(t+1,n)} for all t 0 {\displaystyle t\geq 0} , we can binary search on t {\displaystyle t} to find x {\displaystyle x} , giving an O ( n log k ) {\displaystyle O(n\log k)} algorithm. 
+
+Matrix chain multiplication
+
+Matrix chain multiplication is a well-known example that demonstrates utility of dynamic programming. For example, engineering applications often have to multiply a chain of matrices. It is not surprising to find matrices of large dimensions, for example 100100. Therefore, our task is to multiply matrices A 1 , A 2 , . . . . A n {\displaystyle A_{1},A_{2},....A_{n}} . As we know from basic linear algebra, matrix multiplication is not commutative, but is associative; and we can multiply only two matrices at a time. So, we can multiply this chain of matrices in many different ways, for example:
+((A1 A2) A3) ... An A1(((A2A3) ... ) An) (A1 A2) (A3 ... An) 
+and so on. There are numerous ways to multiply this chain of matrices. They will all produce the same final result, however they will take more or less time to compute, based on which particular matrices are multiplied. If matrix A has dimensions mn and matrix B has dimensions nq, then matrix C=AB will have dimensions mq, and will require m*n*q scalar multiplications (using a simplistic matrix multiplication algorithm for purposes of illustration).
+
+For example, let us multiply matrices A, B and C. Let us assume that their dimensions are mn, np, and ps, respectively. Matrix ABC will be of size ms and can be calculated in two ways shown below:
+Ax(BC) This order of matrix multiplication will require nps + mns scalar multiplications. (AB)C This order of matrix multiplication will require mnp + mps scalar calculations. 
+Let us assume that m = 10, n = 100, p = 10 and s = 1000. So, the first way to multiply the chain will require 1,000,000 + 1,000,000 calculations. The second way will require only 10,000+100,000 calculations. Obviously, the second way is faster, and we should multiply the matrices using that arrangement of parenthesis.
+
+Therefore, our conclusion is that the order of parenthesis matters, and that our task is to find the optimal order of parenthesis.
+
+At this point, we have several choices, one of which is to design a dynamic programming algorithm that will split the problem into overlapping problems and calculate the optimal arrangement of parenthesis. The dynamic programming solution is presented below.
+
+Let's call m[i,j] the minimum number of scalar multiplications needed to multiply a chain of matrices from matrix i to matrix j (i.e. Ai .... Aj, i.e. i<=j). We split the chain at some matrix k, such that i <= k < j, and try to find out which combination produces minimum m[i,j].
+
+The formula is:
+
+if i = j, m[i,j]= 0 if i < j, m[i,j]= min over all possible values of k (m[i,k]+m[k+1,j] + p i 1 p k p j {\displaystyle p_{i-1}*p_{k}*p_{j}} ) 
+
+where k is changed from i to j 1.
+p i 1 {\displaystyle p_{i-1}} is the row dimension of matrix i, p k {\displaystyle p_{k}} is the column dimension of matrix k, p j {\displaystyle p_{j}} is the column dimension of matrix j. 
+This formula can be coded as shown below, where input parameter "chain" is the chain of matrices, i.e. A 1 , A 2 , . . . A n {\displaystyle A_{1},A_{2},...A_{n}} :
+
+function OptimalMatrixChainParenthesis(chain) n = length(chain) for i = 1, n m[i,i] = 0 //since it takes no calculations to multiply one matrix for len = 2, n for i = 1, n - len + 1 for j = i, len -1 m[i,j] = infinity //so that the first calculation updates for k = i, j-1 q = m[i, k] + m[k+1, j] + p i 1 p k p j {\displaystyle p_{i-1}*p_{k}*p_{j}} if q < m[i, j] // the new order of parenthesis is better than what we had m[i, j] = q //update s[i, j] = k //record which k to split on, i.e. where to place the parenthesis 
+
+So far, we have calculated values for all possible m[i, j], the minimum number of calculations to multiply a chain from matrix i to matrix j, and we have recorded the corresponding "split point"s[i, j]. For example, if we are multiplying chain A1A2A3A4, and it turns out that m[1, 3] = 100 and s[1, 3] = 2, that means that the optimal placement of parenthesis for matrices 1 to 3 is ( A 1 A 2 ) A 3 {\displaystyle (A_{1}\times A_{2})\times A_{3}} and to multiply those matrices will require 100 scalar calculation.
+
+This algorithm will produce "tables" m[, ] and s[, ] that will have entries for all possible values of i and j. The final solution for the entire chain is m[1, n], with corresponding split at s[1, n]. Unraveling the solution will be recursive, starting from the top and continuing until we reach the base case, i.e. multiplication of single matrices.
+
+Therefore, the next step is to actually split the chain, i.e. to place the parenthesis where they (optimally) belong. For this purpose we could use the following algorithm:
+
+function PrintOptimalParenthesis(s, i, j) if i = j print "A"i else print "(" PrintOptimalParenthesis(s, i, s[i, j]) PrintOptimalParenthesis(s, s[i, j] + 1, j) ")" 
+
+Of course, this algorithm is not useful for actual multiplication. This algorithm is just a user-friendly way to see what the result looks like.
+
+To actually multiply the matrices using the proper splits, we need the following algorithm:
+
+History
+
+The term dynamic programming was originally used in the 1940s by Richard Bellman to describe the process of solving problems where one needs to find the best decisions one after another. By 1953, he refined this to the modern meaning, referring specifically to nesting smaller decision problems inside larger decisions, and the field was thereafter recognized by the IEEE as a systems analysis and engineering topic. Bellman's contribution is remembered in the name of the Bellman equation, a central result of dynamic programming which restates an optimization problem in recursive form.
+
+Bellman explains the reasoning behind the term dynamic programming in his autobiography, Eye of the Hurricane: An Autobiography (1984). He explains:
+"I spent the Fall quarter (of 1950) at RAND. My first task was to find a name for multistage decision processes. An interesting question is, Where did the name, dynamic programming, come from? The 1950s were not good years for mathematical research. We had a very interesting gentleman in Washington named Wilson. He was Secretary of Defense, and he actually had a pathological fear and hatred of the word research. Im not using the term lightly; Im using it precisely. His face would suffuse, he would turn red, and he would get violent if people used the term research in his presence. You can imagine how he felt, then, about the term mathematical. The RAND Corporation was employed by the Air Force, and the Air Force had Wilson as its boss, essentially. Hence, I felt I had to do something to shield Wilson and the Air Force from the fact that I was really doing mathematics inside the RAND Corporation. What title, what name, could I choose? In the first place I was interested in planning, in decision making, in thinking. But planning, is not a good word for various reasons. I decided therefore to use the word programming. I wanted to get across the idea that this was dynamic, this was multistage, this was time-varying. I thought, let's kill two birds with one stone. Let's take a word that has an absolutely precise meaning, namely dynamic, in the classical physical sense. It also has a very interesting property as an adjective, and that it's impossible to use the word dynamic in a pejorative sense. Try thinking of some combination that will possibly give it a pejorative meaning. It's impossible. Thus, I thought dynamic programming was a good name. It was something not even a Congressman could object to. So I used it as an umbrella for my activities." 
+The word dynamic was chosen by Bellman to capture the time-varying aspect of the problems, and because it sounded impressive. The word programming referred to the use of the method to find an optimal program, in the sense of a military schedule for training or logistics. This usage is the same as that in the phrases linear programming and mathematical programming, a synonym for mathematical optimization.
+
+Algorithms that use dynamic programming
+Recurrent solutions to lattice models for protein-DNA binding Backward induction as a solution method for finite-horizon discrete-time dynamic optimization problems Method of undetermined coefficients can be used to solve the Bellman equation in infinite-horizon, discrete-time, discounted, time-invariant dynamic optimization problems Many string algorithms including longest common subsequence, longest increasing subsequence, longest common substring, Levenshtein distance (edit distance) Many algorithmic problems on graphs can be solved efficiently for graphs of bounded treewidth or bounded clique-width by using dynamic programming on a tree decomposition of the graph. The CockeYoungerKasami (CYK) algorithm which determines whether and how a given string can be generated by a given context-free grammar Knuth's word wrapping algorithm that minimizes raggedness when word wrapping text The use of transposition tables and refutation tables in computer chess The Viterbi algorithm (used for hidden Markov models) The Earley algorithm (a type of chart parser) The NeedlemanWunsch algorithm and other algorithms used in bioinformatics, including sequence alignment, structural alignment, RNA structure prediction Floyd's all-pairs shortest path algorithm Optimizing the order for chain matrix multiplication Pseudo-polynomial time algorithms for the subset sum, knapsack and partition problems The dynamic time warping algorithm for computing the global distance between two time series The Selinger (a.k.a. System R) algorithm for relational database query optimization De Boor algorithm for evaluating B-spline curves DuckworthLewis method for resolving the problem when games of cricket are interrupted The value iteration method for solving Markov decision processes Some graphic image edge following selection methods such as the "magnet" selection tool in Photoshop Some methods for solving interval scheduling problems Some methods for solving the travelling salesman problem, either exactly (in exponential time) or approximately (e.g. via the bitonic tour) Recursive least squares method Beat tracking in music information retrieval Adaptive-critic training strategy for artificial neural networks Stereo algorithms for solving the correspondence problem used in stereo vision Seam carving (content-aware image resizing) The BellmanFord algorithm for finding the shortest distance in a graph Some approximate solution methods for the linear search problem Kadane's algorithm for the maximum subarray problem 
+See also
+Convexity in economics Greedy algorithm Non-convexity (economics) Stochastic programming 
+References
+
+Further reading
+Adda, Jerome; Cooper, Russell (2003), Dynamic Economics, MIT Press . An accessible introduction to dynamic programming in economics. The link contains sample programs. Bellman, Richard (1954), "The theory of dynamic programming", Bulletin of the American Mathematical Society, 60 (6): 503516, doi:10.1090/S0002-9904-1954-09848-8, MR 0067459 . Includes an extensive bibliography of the literature in the area, up to the year 1954. Bellman, Richard (1957), Dynamic Programming, Princeton University Press . Dover paperback edition (2003), ISBN 0-486-42809-5. Bertsekas, D. P. (2000), Dynamic Programming and Optimal Control (2nd ed.), Athena Scientific, ISBN 1-886529-09-4 . In two volumes. Cormen, Thomas H.; Leiserson, Charles E.; Rivest, Ronald L.; Stein, Clifford (2001), Introduction to Algorithms (2nd ed.), MIT Press & McGrawHill, ISBN 0-262-03293-7 . Especially pp. 32369. Dreyfus, Stuart E.; Law, Averill M. (1977), The Art and Theory of Dynamic Programming, Academic Press, ISBN 978-0-12-221860-6 . Giegerich, R.; Meyer, C.; Steffen, P. (2004), "A Discipline of Dynamic Programming over Sequence Data" (PDF), Science of Computer Programming, 51 (3): 215263, doi:10.1016/j.scico.2003.12.005 . Meyn, Sean (2007), Control Techniques for Complex Networks, Cambridge University Press, ISBN 978-0-521-88441-9 . S. S. Sritharan (1991), "Dynamic Programming of the Navier-Stokes Equations", Systems and Control Letters, 16(4), 299307. Stokey, Nancy; Lucas, Robert E.; Prescott, Edward (1989), Recursive Methods in Economic Dynamics, Harvard Univ. Press, ISBN 978-0-674-75096-8 . 
+External links
+An Introduction to Dynamic Programming Dynamic Optimization Online Course Dyna, a declarative programming language for dynamic programming algorithms Wagner, David B., 1995, "Dynamic Programming." An introductory article on dynamic programming in Mathematica. Ohio State University: CIS 680: class notes on dynamic programming, by Eitan M. Gurari A Tutorial on Dynamic programming MIT course on algorithms Includes a video lecture on DP along with lecture notes More DP Notes King, Ian, 2002 (1987), "A Simple Introduction to Dynamic Programming in Macroeconomic Models." An introduction to dynamic programming as an important tool in economic theory. Dynamic Programming: from novice to advanced A TopCoder.com article by Dumitru on Dynamic Programming Algebraic Dynamic Programming a formalized framework for dynamic programming, including an entry-level course to DP, University of Bielefeld Dreyfus, Stuart, "Richard Bellman on the birth of Dynamic Programming." Dynamic programming tutorial A Gentle Introduction to Dynamic Programming and the Viterbi Algorithm Tabled Prolog BProlog and XSB Online interactive dynamic programming modules including, shortest path, traveling salesman, knapsack, false coin, egg dropping, bridge and torch, replacement, chained matrix products, and critical path problem.

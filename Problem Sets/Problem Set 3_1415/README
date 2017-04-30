@@ -1,0 +1,101 @@
+Problem Set 3.1415
+Name: Niu Yunpeng
+Matric Number: A0162492A
+
+
+===============================
+Exercise
+===============================
+a) See QuickSelect.java for the codes.
+
+b) In fact, there are basically four approaches when selecting the nth smallest element on 
+a given collection of items, sorted array, unsorted array, sorted linked list and unsorted 
+linked list. The time complexity for operations on them are listed below:
+Operation           Sort       Select      Insertion      Deletion
+Sorted Array      O(nlogn)      O(1)         O(n)           O(n)
+Unsorted Array       -          O(n)		 O(1)           O(1)
+Sorted LL		  o(nlogn)	    O(n)         O(n)           O(1)
+Unsorted LL			 - 			O(n)		 O(1)			O(1)
+* You may get different results because of different understandings for these 4 kinds of 
+operations, but that's not the point here.
+When we need to make multiply queries, quickSelect may not be preferred. If we use a sorted
+array, we only need to sort once and after that, we only need O(1) time to select a certain
+item. However, if the array is unsorted, we need O(n) time to select each time. Therefore, 
+it is better to sort first and then directly access by index.
+If there are lots of insertions and deletions on this array, things become more complicated.
+When there are more inserts than selects, we will prefer to use an unsorted array; however,
+when there are more selects than inserts, we will prefer to use a sorted array. Anyway, the
+(relatively) best way is to use an augmented balance tree. At each tree node, we will record
+the weight of this node (the number of nodes in its left subtree + in its right subtree + 1
+). In this way, insert, delete and select will all need O(logn) time.
+
+
+===============================
+Problem 1
+===============================
+a) An even-odd sorting network is used for cloud sorting here. Basically, this algorithm 
+will keep repeating the following two steps until the whole array is sorted:
+		(Assuming the number of pages is k, the size of each page is n)
+1. Odd sort: if k is even, sort in pair of [0,1], [2,3], [4,5], ..., [k-2,k-1]; if k is odd,
+sort in pair of [0,1], [2,3], ..., [k-3,k-2];
+2. Even sort: if k is even, sort in pair of [0,k-1], [1,2], [3,4]...; if k is odd, sort in 
+pair of [1,2], [3,4], ..., [k-2,k-1].
+
+Correctness: For each time, a server will put two pages together and sort them. That ensures
+the larger half of elements from these two pages will go to the later page after this. Also,
+the smaller half of elements from these two pages will go to the earlier page after this.
+Also notice that, every page will be sorted together with its left neighbor in either odd or
+even sort, and them sorted together with its right neighbor during the other one. Therefore,
+as long as we have did enough times of these two steps repeatedly (till the whole array is 
+sorted), every element in the whole array will have the opportunity to go either forward or
+backward to its desired position. In a word, the whole array will be sorted eventually.
+Loop invariant: After the number of phases (k * j / 2m), the elements in the page[1,2,..,j] 
+have been shifted to the desired position.
+(k is the number of pages, m is the number of servers. Since k / m may not be an integer, 
+this is only an approximation.)
+
+Number of phases used: We try to consider the best case and the worst case respectively.
+We first assume that there are enough (at least k / 2) servers.
+1. Best case: The array is already sorted. No phase needed.
+2. Worst case: The array is inversely sorted. Let's focus on the largest element. At first, 
+it is the first element in the array. After each phase, its position will shift to the right
+for 1 page. In the end, it is the last element. We expect O(k) phases.
+If there are fewer servers, we define that we need t phases to complete an odd or even sort.
+Thus, we need t phases to make it shift to the right for 1 page. Since it needs to traverse
+n pages in total, we expect O(t * k) phases.
+Further, we define the number of servers to be m. => k/2=m*t => t=k/2m => We expect the 
+number of phases O(t * k) = O(k * k / 2m) = O(k^2 / 2m).
+
+b) See CloudSort.java for the codes.
+
+
+===============================
+Problem 2
+===============================
+a) First, let me paraphrase this question: "In order to get a blue ball with 99% certainty,
+how many times should you get balls from the bag at least?".
+The inverse form of this statement is: "In order to get only red balls with 1% certainty, 
+how many times should you get balls from the bag at most?".
+For the inverse form, we have 0.99^k > 0.01 (by multiply theorem).
+Therefore, k > log0.99(0.01) = 458.2105 => k = 459.
+
+b) When the array is sorted, s1 < s2 means s1 is in front of s2, thus k1 < k2.
+When the array is not sorted, let us consider what makes s1 still in front of s2. In fact, 
+k1 and k2 both try to compare with the same mid until once the results of the comparison are
+different. At that time, we have k1 < A[mid] < k2. Thus, s1 falls into the interval before 
+mid, s2 falls into the interval after mid. Therefore, we conclude that: when s1 < s2, there 
+is always k1 < k2.
+
+c) We explain this question according to the three scenarios:
+1. When the array is 100% sorted, i is always equal to j. Thus, the answer is always true;
+2. When the array is <99% sorted, it is similar to the condition in Part a. Now, 99% of the 
+array are "sorted" elements (red balls), 1% of the array are unsorted elements (blue balls).
+When we have did the operation for 459 times, we have 99% confidence that one of them may be
+the "unsorted" ones (a blue ball). Thus, 99% of the time, the answer is false;
+3. When the array is 99%~100% sorted, you cannot guarantee with 99% confidence that you will
+surely get a blue ball (an "unsorted" element) after 459 times.
+For example, the array is 99.5% sorted, the equation is in Part a becomes k > log0.995(0.01)
+= 918.729 => k = 919.
+Therefore, not 99% of the time the result will be false.
+
+d) See CloudSort.java for the codes.

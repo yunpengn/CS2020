@@ -1,0 +1,26 @@
+Problem Set 7
+Name: Niu Yunpeng
+Matric Number: A0162492A
+
+
+===============================
+Exercise
+===============================
+See UnionFind.java and UFDS_test.java for the codes.
+
+===============================
+Problem 1
+===============================
+a) No. Joe is using Depth-first search (DFS) method. Although DFS can check whether there is
+a path from the source to the destination, it cannot guarantee the  path is the shortest. In
+other words, this will be only right when there is no path or there is only 1 possible path.
+Instead, he should adopt BFS to search level-by-level, which will yield the shortest one.
+In addition, Joe's method also did not implement the numReachable method. 
+b) See MazeSolver.java for the codes.
+c) See MazeSolverWithPower.java for the codes.
+d) See MazeGenerator.java for the codes and MazeGeneratorTestResult for the samples.
+
+===============================
+Problem 2
+===============================
+See TSPGraph.java for the codes.

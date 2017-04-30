@@ -1,0 +1,114 @@
+Problem Set 3
+Name: Niu Yunpeng
+Matric Number: A0162492A
+
+
+===============================
+Exercise
+===============================
+a) See MergeSort.java for the codes and see MergeSortTest.java for tests.
+
+b) See MergeSortReverse.java for the codes and see MergeSortReverseTest.java for tests.
+When you compare MergeSort and MergeSortReverse, you will notice that there seems to be
+no difference between these two classes. Actually, you are almost correct. There is only
+a minor change on Line 42. The operator was changed from <= to <.
+We are in fact talking about the stability of a sorting algorithm here. In other words,
+we are trying to distinguish whether the order changes before and after sorting for the
+elements who have the same value (compareTo or comparator returns 0).
+Let's imagine the situation when the method merge needs to operator on two arrays, each 
+of which starts with the element of the same value. If the operator is <=, the element 
+from the first half will be given priority to merge into the result array. In opposite,
+if the operator is <, the element from the second half will be given priority.
+
+
+===============================
+Problem 1
+===============================
+See SortDetective.java for the codes and SortDetectiveData for the test result.
+
+The strategy of distinguishing these 6 sorting algorithms are as follows:
+1. Test whether the result is sorted: Dr. Evil (unsorted), others (sorted)
+2. Test the time complexity of sorting: 
+	2.1 O(n * logn) - Fast: QuickSort, MergeSort
+	2.2 O(n ^ 2) - Slow: SelectionSort, InsertionSort, BubbleSort
+	Notice: We are talking about asymptomatic runtime here, "fast" and "slow" referring
+	here is aoubt how fast the runtime grows rather than absolute value.
+3. Test whether the sorting is stable:
+	3.1 Stable: InsertionSort, BubbleSort, MergeSort
+	3.2 Not stable: QuickSort, SelectionSort
+4. Use almost sorted data to distinguish BubbleSort and InsertionSort
+
+NOTICE: Multiply sizes of data have been applied and multiply times of experiments have
+been done for higher accuracy. Please see the file named SortDetectiveData.
+
+Therefore, the conclusion is:
+A => selection sort
+B => quick sort
+C => Dr. Evil
+D => insertion sort
+E => merge sort
+
+
+===============================
+Problem 2
+===============================
+a) See CoverageCalculator.java for the codes. See CellularTestCases.java for tests. See 
+LargeCellularTestCases.java for more tests.
+
+b) Our goal is to make the time complexity of addPower to be O(logt) and getCoverage to 
+be O(1). We first look at the method getCoverage. In order to make it time complexity be
+a constant, we'd better store it as an instance variable and access it each time when we
+need. Therefore, the problem is, we need to update its value whenever we add a new tower.
+So, let's switch to addPower now.
+If we want to update the value of coverage instantly, we need to compare this new range 
+with the range of all existing towers. In order to obtain a logarithmic time complexity, 
+we have to avoid using linear search. Instead, a binary search (or at least similar to) 
+may be a good choice. That means, we have to keep the collection of towers sorted. 
+Below are a few key points:
+1. Re-define the compareTo method of towers. As long as there is any overlap of ranges, 
+two towers are equal to each other. If there is no overlap, we return -1 or 1.
+2. When we add one new tower, we search for it in the existing collection of towers. If
+it is found, that means it has overlapped with another existing tower. We will change 
+the range of that existing tower and modify the value of coverage. No new tower is added.
+If it is not found, we will add a new tower to the appropriate position in the collection.
+Also, the value of coverage will be updated.
+3. You may notice that I keep using the term "collection" instead of "array". That is a
+good observation. In order to add a new item without shifting everything to the right, we
+need a linked list instead of an array.
+4. But how can we perform a binary search on a linked list? This certainly cannot be done
+by a normal list, please look for skip list or binary search tree instead.
+
+References
+Binary Search Trees (Lecture Notes). CSC 282. Retrieved from https://www.cs.rochester.edu/
+~gildea/csc282/slides/C12-bst.pdf
+How to apply binary search on a sorted linked list? Stack overflow. Retrieved from http://
+stackoverflow.com/questions/5281053/how-to-apply-binary-search-olog-n-on-a-sorted-linked
+-list
+Skip List (Lecture Notes). CMSC 420. Retrieved from https://www.cs.umd.edu/class/spring
+2008/cmsc420/L12.SkipLists.pdf
+
+Add-on Information:
+1. One practical difficulty of this approach is, when the new tower has overlapped with 
+an existing tower, we had to extend the range. However, when you extend the range, it may
+again overlap with the the existing tower on the left and the one on the right. If such 
+scenario happens, please merge these two or three existing towers into one. Since this can
+only happen to at most 3 towers, the overall time complexity will not be affected.
+2. To help you understand better, please remember the central idea is to never allow two 
+towers with overlapping range to exist in the collection of towers at the same time.
+
+c) In order to implement the removeTower, we basically have to store the history of each 
+range. Since we may modify the range of existing towers, the information for the original
+tower has already disappeared. Therefore, we had to check the history (a bit like what the
+operating system sometimes does, to backup the data).
+Below are a few key points:
+1. The parameter of removeTower method should be the tower that we wants to remove.
+2. We will first get the location of this tower, and search through all of the existing
+ranges. The location must be within one and only one of them since there should be never 
+overlapping between existing ranges.
+3. We then check the history of that range. Notice: the history should be stored in a 
+sorted way such that it is in the order of locations. Therefore, binary search can be 
+applied here to look for that tower.
+4. Please note that there may be multiply towers on the same location. In such situation, 
+we have to use something similar to 3-way partition during the search. Then, check again
+for all the towers at that location.
+5. Update the range which that location is in and also update the value of coverage.

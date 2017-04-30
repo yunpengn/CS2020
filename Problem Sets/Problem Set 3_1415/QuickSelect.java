@@ -1,0 +1,177 @@
+package sg.edu.nus.cs2020;
+
+import java.util.Random;
+
+/**
+ * Class: QuickSelect
+ * 
+ * Description: This class implements a quick select method. Using quick select,
+ * you can find the nth smallest element in an unsorted array. The running time
+ * is O(n) by randomized analysis.
+ * 
+ * @author Niu Yunpeng
+ */
+public class QuickSelect {
+	// For the use of generating a random pivot index.
+	private static Random generator = new Random();
+
+    /**
+	 * Public Static Method: int select(int[], int)
+	 * 
+	 * Description: Finds the nth smallest element in an unsorted array in O(n)
+	 * time. If the index given is not possible, it will throw a not - found -
+	 * exception.
+	 *
+	 * @param arr
+	 *            The unsorted array to select from
+	 * @param k
+	 *            The index that we are looking for (starting from 1)
+	 * 
+	 * @return the nth smallest element in the array
+	 */
+	public static int select(int[] arr, int k) throws NotFoundException {
+		if (arr == null || k < 1 || k > arr.length) {
+			throw new NotFoundException();
+		}
+		
+		// array counts from 0 but k counts from 1.
+		return select(arr, k - 1, 0, arr.length - 1);
+    }
+
+	/**
+	 * Private Static Method: int selection(int[], int, int, int)
+	 * 
+	 * Description: This method is the actual recursive part of the quick select
+	 * algorithm. It uses divide-and-conquer to reduce the size of the problem
+	 * gradually. The average running time is O(n). The partition used by this
+	 * method will have a random-selected pivot.
+	 * 
+	 * @return the value of nth smallest element in the array
+	 */
+	private static int select(int[] arr, int key, int start, int end) {
+		// Generate a random (absolute) index in [start, end] for pivot.
+		int pIndex = start + generator.nextInt(end - start + 1);
+
+		int newpIndex = packDuplicates(arr, start, pIndex);
+		int numDuplicates = pIndex - newpIndex + 1;
+
+		// This position is the absolute index of the pivot after partition.
+		int position = partition(arr, key, start, end, newpIndex);
+
+		if (key <= position && key >= position - numDuplicates + 1) {
+			// The duplicating area is seen as already sorted, directly access
+			// the value by key index.
+			return arr[key];
+		} else if (key < position) {
+			// After partition, the pivot will become the last element in the
+			// duplicating area. We will skip the duplicating area in the next
+			// round of iteration.
+			return select(arr, key, start, position - numDuplicates);
+		} else {
+			return select(arr, key, position + 1, end);
+		}
+	}
+
+	/**
+	 * Private Static Method: int partition(int[], int, int, int, int)
+	 * 
+	 * Description: Use the same routine as the partition in the quick sort.
+	 * Since two-pass partition nor three-way partition is used, This method
+	 * works well when there are too many duplicates. However, it may slow down
+	 * the program when there are only a few duplicates or even no duplicate at
+	 * all.
+	 * 
+	 * Property: Absolute index means the actual position in the whole array. It
+	 * does not change with the value of start and end.
+	 * 
+	 * @return the absolute index of the pivot after partition operation.
+	 */
+	private static int partition(int[] arr, int key, int start, int end, int pIndex) {
+		int pivot = arr[pIndex];
+		int low = start + 1;
+		int high = end;
+		int seperated = -1;
+
+		// Swaps the pivot to the 1st position first.
+		swap(arr, pIndex, start);
+
+		// Move until low and high meet each other. There may be a potential
+		// stack overflow problem here.
+		while (low < high) {
+			// Low pointer will keep moving to the right until it meets an
+			// element greater than the pivot.
+			while (low < high && arr[low] <= pivot) {
+				low++;
+			}
+
+			// High point will keep moving to the left until it meets an
+			// element smaller than or equal to the pivot.
+			while (low < high && arr[high] > pivot) {
+				high--;
+			}
+
+			// When low < high and arr[high] <= pivot < arr[low], swap these two
+			// elements. After that, low and high pointers continue moving.
+			if (low < high) {
+				swap(arr, low, high);
+			}
+		}
+
+		// The start and end may both be the last element originally. Do special
+		// consideration for this case to avoid array-out-of-bound-exception.
+		if (low >= arr.length) {
+			return start;
+		}
+
+		// When low and high meets each other, swap the pivot (1st element in
+		// the array) with arr[low] or arr[low - 1], depending on which pointer
+		// moves the last step.
+		if (arr[low] >= pivot) {
+			seperated = low - 1;
+		} else {
+			seperated = low;
+		}
+
+		swap(arr, start, seperated);
+
+		return seperated;
+	}
+
+	/**
+	 * Private Static Method: int packDulicates(int[], int, int)
+	 * 
+	 * Description: This method will pack all the duplicates before the pivot
+	 * index and swap them to the middle part. After that, all duplicates will
+	 * be next to each other.
+	 * 
+	 * Property: partition method will use its return value to be the new index
+	 * for pivot.
+	 * 
+	 * @return the first index of the duplicating area.
+	 */
+	private static int packDuplicates(int[] arr, int start, int pivotIndex) {
+		int pivot = arr[pivotIndex];
+		int i = start;
+
+		while (i < pivotIndex) {
+			if (arr[i] == pivot) {
+				swap(arr, i, --pivotIndex);
+			} else {
+				i++;
+			}
+		}
+
+		// Return the first index of the duplicating area to be used as the new
+		// pivot index.
+		return pivotIndex;
+	}
+
+	/**
+	 * This method swaps two elements in a given array.
+	 */
+	private static void swap(int[] arr, int a, int b) {
+		int temp = arr[a];
+		arr[a] = arr[b];
+		arr[b] = temp;
+	}
+}

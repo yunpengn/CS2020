@@ -1,0 +1,47 @@
+Problem Set 4
+Name: Niu Yunpeng
+Matric Number: A0162492A
+
+
+===============================
+Explanation
+===============================
+a) See the codes in QuestionTree.java
+
+b) Theorem: In a binary tree, the number of leaf nodes is n. If n > 1, prove that there is
+a node in this tree such that the leaf nodes of its subtree is within (n/3, 2n/3].
+Explanation:
+1. Notice that when we travel from a leaf node to the root, count(v) increases gradually, 
+from 1 to n.
+2. Assume that there is no such node that count(v) is within (n/3, 2n/3].
+3. Since count(v) keeps increasing, there must be a jump from n/3 to 2n/3 so that none of 
+count(v) falls inside this range. In other words, there is 2 values of count(v) such that
+count(p) <= n/3 and count(p+1) > 2n/3.
+4. Denote the sibling of p as q. We understand that count(q) > n/3
+	1) If count(q) <= 2n/3, then it satisfies the claim;
+	2) If count(q) > 2n/3, then we repeat step 3-4 in the subtree of q. We repeat again 
+	   and again, the upper bound for count(?) decreases. At last, it will turn to the 
+	   first situation.
+   Therefore, this is contradictory to the assumption in step 2.
+5. Thus, finally we will find a node such that count(v) is within (n/3, 2n/3] anyway. The
+theorem is correct.
+
+c) See the codes in QuestionTree.java
+
+d) See the codes in QuestionGame.java
+See the codes in QuestionGameTest.java to understand how to use it.
+
+e) See the codes in TreeVisualizer.java and TreeNodeComponent.java
+Please note that there is a restraint due to JFrame library. This visualizer only works
+well when the height of the tree is smaller than 6. If the height is larger than that, most
+of the devices will not have a large enough screen (because JFrame does not support scroll 
+bar well). Typically, please use SmallExample in the given test database to test.
+
+Ways to extend the game:
+1. We can ask even more compound questions, that means: instead of all && and ! operators in
+the questions, we can have || operators as well. In this way, as long as the node satisfy 
+one of the operand of the ||, the answer will be true.
+2. The method buildTree may also be improved. The decision tree may keep balanced when we 
+try to insert new elements. We may need to rotate during the insertion.
+3. The other player may also lie under a certain probability. Therefore, we may need to do 
+multiply confirmation and remember the questionHistory so that we can revert back. 

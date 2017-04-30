@@ -1,0 +1,45 @@
+===========================
+Problem 1
+===========================
+Please go through the solutions for coding quiz in AY2016-2017 Semester 2.
+
+===========================
+Problem 2
+===========================
+See JavaHashing.java for the codes.
+
+a) The % operator returns a negative integer when the hashCode return code is negative.
+Surprisingly, sometimes Math.abs also returns a negative value when hashCode returns a value
+of -2^31. Therefore, it may be wrong rarely.
+
+b) This will result in more collisions when we use skip instead of ++.
+
+===========================
+Problem 3
+===========================
+We can simplify this problem to:
+There are 4 sets, select one element from each of them, find a combination so that the sum 
+is 100. Come up with the fastest algorithm.
+
+1. Find all pairs from the first two sets, there are n^2 pairs. Insert all of them (meaning 
+the two names and their sum) into a hashTable, it takes time of O(n^2);
+2. Do the same thing for the last two sets. It takes time of O(n^2);
+3. For each element in the first hashTable, search for 100 - i in the second hashTable. It 
+takes time of O(n^2);
+4. In total, it takes time of O(n^2).
+
+===========================
+Problem 4
+===========================
+See GameLoc.java for the codes.
+
+===========================
+Problem 5
+===========================
+This is because each node will be visited at most once. Therefore, there should never be 
+cycles when performing DFS or BFS.
+
+===========================
+Problem 6
+===========================
+Keep a counter when doing DFS or BFS.

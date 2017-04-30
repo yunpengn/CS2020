@@ -1,0 +1,66 @@
+==========================================================
+              CheckSorted - Multiply sizes
+                    Running Time: 2017-01-31 20:58:38
+Size    SortA    SortB    SortC   SortD   SortE   SortF
+    10    true    true    true    true    true    true
+   100    true    true    true    true    true    true
+  1000    true    true    true    true    true    true
+ 10000    true    true    true    true    true    true
+100000    true    true   false    true    true    true
+==========================================================
+Therefore, C is Dr. Evil.
+
+
+==========================================================
+              Measure Time - Multiply sizes
+                    Running Time: 2017-01-31 21:45:11
+ Size    SortA      SortB      SortC     SortD     SortE     SortF
+    10  0.000022  0.000078  0.000059  0.000016  0.000041  0.000020
+   100  0.000161  0.001077  0.000161  0.000302  0.000185  0.000594
+  1000  0.005153  0.001758  0.001395  0.008848  0.002112  0.019546
+ 10000  0.110851  0.008642  0.002423  0.124156  0.021219  0.412913
+100000  7.026473  0.099467  0.021725  9.745445  0.163398 40.473576
+==========================================================
+Therefore, B and E are fast (quickSort and mergeSort);
+A, D and F are slow (selectionSort, insertionSort and bubbleSort).
+
+
+==========================================================
+              Measure Time - Multiply sizes
+                    Running Time: 2017-01-31 22:07:36
+ Size   SortA     SortB   SortC   SortD   SortE   SortF
+    10    true    true    true    true    true    true
+   100   false   false   false    true    true    true
+  1000   false   false   false    true    true    true
+ 10000   false   false   false    true    true    true
+100000   false   false   false    true    true    true
+==========================================================
+Therefore, D, E and F are stable; A and B are not stable.
+A is slow and not stable => selectionSort;
+B is fast but not stable => quickSort;
+E is fast and stable => mergeSort.
+
+
+==========================================================
+              Measure Time - Multiply sizes
+                    Running Time: 2017-01-31 22:37:10
+ Size    SortA      SortB      SortC     SortD     SortE     SortF
+    10  0.000041  0.000110  0.000083  0.000031  0.000042  0.000030
+   100  0.000279  0.001637  0.000487  0.000051  0.000231  0.000881
+  1000  0.005565  0.002621  0.001401  0.000334  0.002266  0.014735
+ 10000  0.144968  0.036205  0.021444  0.000888  0.013290  0.247461
+100000  5.983785  0.255021  0.094071  0.003833  0.090033 21.107159
+==========================================================
+When the elements are almost sorted, bubble sort reaches the worst
+case, insertion sort meets nearly the best case.
+Therefore, D is insertion sort, F is bubble sort.
+
+
+==========================================================
+Conclusion
+==========================================================
+A => selection sort
+B => quick sort
+C => Dr. Evil
+D => insertion sort
+E => merge sort

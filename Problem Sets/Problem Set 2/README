@@ -1,0 +1,137 @@
+Problem Set 2
+Name: Niu Yunpeng
+Matric Number: A0162492A
+
+===============================
+Exercise
+===============================
+See BinarySearch.java for the codes in this exercise.
+In my version of binary search, the method will first check whether the array is sorted. If it is not 
+sorted, it will sort it first. After that, it will check the position where x appears in the array for
+the first time. If x is not in the array, it will return a dummy value of -1.
+
+What should we do if the element is not in the array?
+1) Returns -1 to indicate that it is not in the array;
+2) Returns i, where i is the insertion index for x. Insertion index means that, the point where it is
+appropriate to insert this x to the array. In other words, it is the index of the first element that 
+is greater than x;
+3) Catch this error and outputs its information to the command line.
+
+What should we do if the array is not sorted?
+1) Sort the array first;
+2) Returns undefined;
+3) Catch this error and outputs its information to the command line.
+
+In Java's official Arrays.binarySearch, it uses 2 and 2. In addition, Java's official version support a 
+lot more features. For example, it can search for arrays of all elementary data types. We can also get
+this done by generics.
+
+===============================
+Problem 1
+===============================
+a) See MoveToFrontList.java for the codes.
+
+b) See MyFastList.java for the codes.
+
+c) See CompareThreeKinds.java for the codes.
+Notice a few methods are added to related classes for comparison:
+- Add a public method "void simulate()" to ListSimulator.java;
+- Add a public method "void compare()" to FixedLengthList.java;
+- Add a public method "void compare()" to MoveToFrontList.java;
+- Add a public method "void compare()" to MyFastList.java;
+
+The Move-to-Front heuristic is quite helpful. As what I explain in the example of
+Google search, we try to arrange the list in such a way that the more frequently 
+it is visited, the frontier its position is. 
+
+MyFastList.java performs the best. Because MyFastList is actually using the move-
+to-front strategy ultimately. It quantitatively measures how often each element 
+is visited.  
+
+d) See NotFoundList.java and CompareNotFound.java for the codes.
+Notice a few methods are added to related classes for comparison:
+- Add a public method "void compareNotFound()" to FixedLengthList.java;
+- Add a public method "void simulatNotFound()" to ListSimulator.java;
+- Add a private method "int chooseRandomIncludeNotFound()" to ListSimulator.java;
+- Add a private method "boolean searchNotFound(int key)" to ListSimulator.java;
+
+From the result of this comparison, we can conclude that there is no significant
+improvement for this implementation. This can be explained when we think carefully
+again: why did we use the MoveToFront strategy? We have claimed that some elements
+are so popular that they are searched for frequently.In the other way, that means
+the less popular elements are rarely searched for.
+To be more extreme, the least popular elements are the ones who even do not exist 
+in the list. Therefore, we cannot find them. If we move it to the front, it may not
+be much helpful since we may not search for it anymore.
+Theoretically, we all know that this implementation will be helpful if we always
+keep searching for the same elements which are not in the list for many times. But, 
+such scenario rarely happens. To understand the reason why this usually does not
+happen, think in the following two ways:
+1. Our algorithm: chooseRandomIncludeNotFound is based on chooseRandom. Even if we
+multiply it by a very large constant, we only give those who are not in the list 
+some possibility to be searched for. No matter how large this possibility is, their
+individual possibility is always small. In other words, we may often search for the
+things that are not in the list. But, we never search for the same thing which is
+not in the list continuously.
+2. Social engineering analysis: We use the example of Google in MyFastList. Many
+people may have experienced the situation that Google cannot find what they want.
+However, have ever been such a thing that many people are looking for and Google
+still does not have? Never. Thus, if something is not in the list, usually it will
+not be searched for repeatedly.
+
+e) This idea (negation of a key as a signal) is bad since we cannot input negative
+values into the list anymore. If we input negative values, the program will be 
+confused. It is a more severe issue if this bug is used intentionally by someone. 
+Actually, this is a little similar to a typical SQL insertion attack.
+A better idea is opening another list, and use that list to store all the values 
+which have been searched for, but have not been found.
+
+===============================
+Problem 2
+===============================
+I have written 3 versions for both calculateSalary() and calculateMinimumWork() in
+this question. They are named as XXXX, XXXXFast and XXXXEvenFaster.
+
+a) See the 3 versions in the separate source files:
+1. calculateSalary() in HerbertLog.java should be tested in HerbertLogBonusTest.java, it 
+is a simple method by reading every line in the file;
+2. calculateSalaryFast() in HerbertLogFast.java should be tested in
+HerbertLogBonusFastTest.java, it improves a lot by adopting the idea of binary search;
+3. calculateSalaryEvenFaster() in HerbertLogEvenFaster.java should be tested in 
+HerbertLogBonusEvenFasterTest.java, it avoids most of the duplicate query operations 
+in 2nd version.
+
+b) See the 3 versions in the separate source files:
+1. calculateMinimumWork() in HerbertLog.java should be tested in HerbertLogBonusTest.java,
+it is a simple method by reading every line in the file;
+2. calculateMinimumWorkFast() in HerbertLogFast.java should be tested in
+HerbertLogBonusFastTest.java, it improves a lot by adopting the idea of binary search;
+3. calculateMinimumWorkEvenFaster() in HerbertLogEvenFaster.java should be tested in 
+HerbertLogBonusEvenFasterTest.java, it avoids most of the duplicate query operations in
+2nd version.
+
+SPECIAL NOTICE:
+Although you may notice the improvement from 2nd version to 3rd version, there should 
+be no sense of achievement. In fact, we are using space complexity (memory) to exchange 
+time complexity (times of queries => m_numGets).
+In reality, our application may be slower in 2nd version; however, it may become more
+dangerous in 3rd version. In the worst scenario, all of the customers only hire Herbert
+for 1 minute, and there are a lot of customers. In such cases, our application may lead 
+to an overflow or memory leak and the software may suddenly shut down. Thus, 2nd version
+is the safer one.
+However, when we go back to this question, we may notice that such situations do not 
+appear in the data, so I still write the 3rd version anyway.
+
+						Table for Number of Get Operations
+manyNamesGoalIncome - 14792
+longNamesGoalIncome - 1459
+veryShortNamesGoalIncome - 18
+shortNamesGoalIncome - 203
+(correct as test on my own computer and using HerbertLogBonusEvenFasterTest.java)
+
+c) For Friday Herbert Log:
+There seems to be something wrong with the storage. The order of logs for each customer is 
+not increasing. Therefore, to calculate the total salary, the maximum value for each interval
+(every interval means all of the logs from the same employer) should be found and then add
+them up together. To calculate the minimum working time, we have to sort the values in each
+interval. Then, do the same as what we do for normal logs.

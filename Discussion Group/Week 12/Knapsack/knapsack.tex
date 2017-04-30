@@ -1,0 +1,80 @@
+%-----------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%-----------------------------------------------------------------------------
+
+\documentclass[12pt]{article} % Default font size is 12pt
+
+\usepackage{geometry} % Required to change the page size to A4
+\geometry{a4paper} % Set the page size to be A4
+\geometry{left=2.2cm, right=2.2cm, top=3cm, bottom=3cm} % Set bolder sizes
+
+\usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
+\usepackage{wrapfig} % Allows in-line images such as the example fish picture
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage{indentfirst}
+
+\linespread{1.2} % Line spacing
+
+\setlength{\parindent}{2em} %indentation before each paragraph
+
+%\setlength\parindent{0pt} % Uncomment to remove all indentation from paragraphs
+
+%---------------------------------------------------------------------------
+%	Document Information
+%---------------------------------------------------------------------------
+\begin{document}
+
+\title{0 - 1 Knapsack Problem}
+\author{Niu Yunpeng, Wang Junming}
+\date{today}
+
+%---------------------------------------------------------------------------
+%	Title
+%---------------------------------------------------------------------------
+\begin{center}
+
+{\large\bf
+0 - 1 Knapsack Problem\\
+}
+\vspace{0.2cm}
+\emph{\textbf{Niu Yunpeng A0162492A}}
+\end{center}
+
+%---------------------------------------------------------------------------
+%	Body Content
+%---------------------------------------------------------------------------
+
+\section{Problem}
+Given \emph{n} items, each has a weight and a value; and a bag that can hold up to \emph{W kg}. How do you put items in the bag to maximize the total value, but does not exceed weight \emph{W}. Return this value.
+
+%------------------------------------------------
+\section{Recurrence Function}
+1. Relationship\par
+\begin{center}
+$V[n, w] = max(V[n - 1, w], value[n] + V[n - 1, w - weight[n]])$\par
+\end{center}\par
+2. Explanation\par
+Assume that there are n items, and we traverse them one by one as [1,..,n]. For each item, we have only two choices, to \emph{put it in the bag} or \emph{not put it in the bag}. So let's consider these two situations seperately:\par
+To make things easier, we consider the last item first, that is, the item with index \emph{n}, and with \emph{value[n]} and \emph{weight[n]}.\par
+1) If we put it the bag, then the other items should have a total weight of no more than \emph{W - weight[n]} kg. And the total value of the bag is the value of this item plus the total value of the other items.\par
+2) If we do not put it in the bag, then the other items should have a total weight of no more than \emph{W} kg. And the total value of the bag is the total value of the other items.\par
+Therefore, for the first condition, the problem changes from $V[n, w]$ to $V[n - 1, w - weight[n]]$, since the other items should be chosen from the first \emph{n - 1} elements in the array; for the second condition, the problem changes from $V[n, w]$ to $V[n - 1, w]$. For both, the scale of the problem has decreased. Therefore, use some wishful thinking, we believe this problem can be solved. Hence, the recurrence function is proven to be correct.\par
+Furthermore, the initial condition should be addressed. When $n = 0$, that means there is no item to choose, so \emph{V[0, w]} should always be 0; when $w = 0$, the capacity of the bag is 0. In other words, the bag cannot contain any item, so \emph{V[n, 0]} should always be 0. Additionally, it should return 0 when $weight[n] > w$ as well. This is because the bag cannot hold another item into it at this time.
+
+%------------------------------------------------
+\section{Implementation}
+Please see Knapsack.java attached for a java implementation.
+
+
+%------------------------------------------------
+\begin{center}
+--- End ---
+\end{center}\par
+
+%----------------------------------------------------------------------------
+%	End
+%----------------------------------------------------------------------------
+
+\end{document}

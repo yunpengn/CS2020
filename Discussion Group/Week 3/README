@@ -1,0 +1,116 @@
+===========================
+Problem 1
+===========================
+a) A few things to take note for private in Java:
+1. Class and interface cannot be declared as private;
+2. Private methods or fields can only be accessed within the 
+current class.
+
+b) A few things to take note for static in Java:
+1. Static variables and methods belong to class instead of any
+objects instantiated by the class;
+2. Local variables can not become static;
+3. Static methods cannot use non-static variables in its class;
+4. Main method must be static.
+
+c) A few things to take note for interface in Java:
+1. unless abstract class, The class who implements an interface 
+must implement all methods in that interface (meanwhile, the
+return value type and signature should be compatible);
+2. A class can implement multiply interfaces;
+3. An interface can inherit multiply interfaces;
+4. All methods in an interface must be abstract, no implementation
+should be written in the interface;
+5. No constructor should appear in an interface;
+6. All fields in an interface are public static final, no matter 
+being declared explicitly or implicitly;
+7. No static method or code block should be used in an interface.
+8. All interfaces, methods in an interface, static fields in an 
+interface are abstract implicitly by default.
+
+
+===========================
+Problem 2
+===========================
+This problem is asking how to implement a mechanism of multiply 
+inheritance. Although this feature is officially not allowed in 
+Java, we can have the following two ways to do it:
+1. We can use two interfaces to define the methods in the Art 
+Class and Food Class. Then, let this new class implement both 
+Art Interface and Food Interface. Notice, the two interfaces can 
+not have fields / methods of the same name. Otherwise, it results
+in a compilation error.
+
+2. Creates two interior classes in the new class, which inherits 
+from Art and Food respectively. Therefore, other methods can use
+the methods from them.
+
+3. Use multiply generation inheritance. Let Food inherits from Art,
+and then, the new class inherits from Food.
+
+4. Instantiate an object of Food and Art in the constructor of the
+new class. Re-define getCritique() and getFlavor() in the new class,
+and let them call the methods from these two objects.
+
+
+===========================
+Problem 3
+===========================
+a) The parameters for super constructor are not enough. Thus, there 
+is no constructor available in the superclass. It will report an 
+error since no constructor has been declared explicitly as well.
+
+b) It will not report a compilation error. Although it is stated 
+that "the return type cannot be changed when we override a method", 
+we actually do not violate this rule.
+During compilation phase, Java only does static data-type check; the
+actual (dynamic) data-type check is done during runtime.
+In such cases, the compiler does not the actual data type of Coke when
+the program is being compiled. Therefore, Java will wait until runtime
+to see whether the data type is compatible.
+
+A few things to take note for override in Java:
+1. The signature (parameter list) and return type must be the same;
+2. Methods of static and / or final cannot be override (thus, such 
+method will undergo static compilation);
+3. Access control for the method in subclass must be equal or higher 
+than that for the method in superclass;
+4. Constructor cannot be override, but can be overload.
+
+A few things to take note for overload in Java:
+1. Only constructors can be overload;
+2. Overload can happen in the current class and / or subclass;
+3. Access modifier, return type, signature and exception can all be 
+changed when a constructor is overload.
+
+c) It is totally okay to change the access control modifier no matter 
+in superclass or subclass. Anyway, static method cannot be override.
+They are being called within the same class in this problem.
+
+d) This program outputs:
+Drink constructor.
+Ugh! 
+Drinking a coke.
+Coketype = null
+Done with super; on to myself.
+Drinking a coke.
+Coketype = black
+Coke constructor done!
+
+
+===========================
+Problem 4
+===========================
+The result should be 7 8 7.
+1. For the method addOne, the increment is on the local variable. This 
+is about the scoping of variables, local variables will block instance
+variables when they have the same identifier. If you really want to 
+change the value of the instance variable, use this.i instead. Anyway,
+since the parameter is only a single integer, you cannot modify the 
+value of i in the main method as well;
+
+2. For myIntAddOne, the increment applies on the instance variable;
+
+3. For myOtherIntAddOne, the method instantiates a new object of class
+myInteger. And then, the local variable is asked to point to the new
+object instead. However, none of these did any change to the main method.

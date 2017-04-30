@@ -1,0 +1,678 @@
+From: =?gb2312?B?0tHTySBJbnRlcm5ldCBFeHBsb3JlciAxMSCxo7Tm?=
+Subject: Greedy Algorithms
+Date: Tue, 28 Feb 2017 21:45:42 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01D2920C.02361F90"
+X-MimeOLE: Produced By Microsoft MimeOLE
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01D2920C.02361F90
+Content-Type: text/html;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/Greedy/activity.htm
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><META content=3D"IE=3D5.0000" =
+http-equiv=3D"X-UA-Compatible">
+<TITLE>Greedy Algorithms</TITLE> =20
+<META http-equiv=3D"Content-Type" content=3D"text/html; =
+charset=3Dgb2312">
+<META name=3D"author" content=3D"Rashid Bin Muhammad">=20
+<META name=3D"GENERATOR" content=3D"MSHTML 11.00.10570.1001"></HEAD>  =20
+<BODY =
+background=3D"http://www.personal.kent.edu/~rmuhamma/Maingif/Bck2.gif" =
+link=3D"#0000ff"=20
+alink=3D"#ff0000" vlink=3D"#0000ff">
+<CENTER>
+<P><FONT size=3D"4"><IMG width=3D"640" height=3D"2" =
+src=3D"http://www.personal.kent.edu/~rmuhamma/Maingif/redline.gif"></FONT=
+></P>
+<H2><FONT size=3D"6">An Activity Selection Problem</FONT></H2>
+<P><FONT size=3D"4"><IMG width=3D"640" height=3D"2" =
+src=3D"http://www.personal.kent.edu/~rmuhamma/Maingif/redline.gif"></FONT=
+></P></CENTER>
+<H3>&nbsp;</H3>
+<P><FONT color=3D"#ff0000" face=3D"Blackadder ITC" =
+size=3D"6">A</FONT><FONT size=3D"4">n=20
+ activity-selection is the problem of scheduling a resource among =
+several=20
+ competing activity.<BR>&nbsp;</FONT></P>
+<P><B><FONT color=3D"#cc0000" size=3D"5">Problem =
+Statement</FONT></B><FONT=20
+size=3D"4">&nbsp;&nbsp;&nbsp;  </FONT>  </P>
+<P><FONT size=3D"4">Given a set <I>S</I> of <I>n</I> activities with and =
+start=20
+time, <I>S</I><SUB><I>i</I> </SUB>and <I>f<SUB>i</SUB></I>, finish time =
+of an=20
+i<SUP>th</SUP> activity. Find  the maximum size set of mutually =
+compatible=20
+activities.</FONT></P>
+<P>&nbsp;</P>
+<P><B><FONT color=3D"#cc0000" size=3D"5">Compatible =
+Activities</FONT></B></P>
+<BLOCKQUOTE>
+  <P><FONT size=3D"4">Activities <I>i</I> and <I>j</I> are compatible if =
+the=20
+  half-open internal [<I>s<SUB>i</SUB>,  f<SUB>i</SUB></I>) and=20
+  [<I>s<SUB>j</SUB>, f<SUB>j</SUB></I>) <BR>do not overlap,  that is, =
+<I>i</I>=20
+  and <I>j</I> are compatible if <I>s<SUB>i </SUB></I>=A1=DD<I>=20
+  f</I><SUB><I>j</I>&nbsp;</SUB>and <I>s</I><SUB><I>j</I> </SUB>=A1=DD =
+</FONT>=20
+  <I><FONT size=3D"4">&nbsp;f</FONT><SUB><FONT size=3D"4">i  </FONT>=20
+</SUB></I></P></BLOCKQUOTE>
+<H3>&nbsp;</H3>
+<BLOCKQUOTE>
+  <BLOCKQUOTE>
+    <H3><FONT color=3D"#ff00ff" size=3D"5">Greedy Algorithm for =
+Selection=20
+    Problem</FONT></H3>
+    <P><FONT size=3D"5">I.&nbsp;&nbsp;&nbsp;&nbsp; Sort the input =
+activities by=20
+    increasing finishing =
+time.<BR><I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+    f<SUB>1</SUB></I> =A1=DC&nbsp; 		 <I>f<SUB>2</SUB></I> =A1=DC&nbsp; =
+. . . =A1=DC<I>&nbsp;=20
+    f</I></FONT><SUB><FONT size=3D"5"><I>n</I>		 </FONT></SUB></P>
+    <P><FONT size=3D"5">II.&nbsp;&nbsp;&nbsp; Call =
+<B>GREEDY-ACTIVITY-SELECTOR</B>=20
+    (s, f)</FONT></P>
+    <OL>
+      <LI><I><FONT size=3D"5">n</FONT></I><FONT size=3D"5"> =3D length =
+[<I>s</I>]=20
+      			 </FONT></LI>
+      <LI><I><FONT size=3D"5">A</FONT></I><FONT size=3D"5">=3D{<I>i</I>} =
+</FONT>
+      			 </LI>
+      <LI><I><FONT size=3D"5">j</FONT></I><FONT size=3D"5"> =3D 1 =
+</FONT></LI>
+      <LI><FONT size=3D"5"><B>for</B> <I>&nbsp;i</I> =3D 2 =
+<B>&nbsp;to</B>&nbsp; n=20
+      			 </FONT></LI>
+      <LI><FONT size=3D"5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+<B>do=20
+      			if</B>&nbsp; <I>&nbsp;s<SUB>i</SUB></I>   =A1=DD =
+<I>f<SUB>j</SUB></I>=20
+      </FONT></LI>
+      <LI><FONT=20
+      =
+size=3D"5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;=20
+      			<B>&nbsp;then</B>&nbsp; A=3D AU{<I>i</I>} </FONT></LI>
+      <LI><FONT=20
+      =
+size=3D"5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>&nbsp;&nbsp;=20
+      j</I> =3D 			 <I>i</I> </FONT></LI>
+      <LI><FONT size=3D"5"><B>return</B> <I>&nbsp;set A</I>=20
+  </FONT></LI></OL></BLOCKQUOTE></BLOCKQUOTE>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P><B><FONT color=3D"#cc0000" size=3D"5">Operation of the =
+algorithm</FONT></B></P>
+<P><FONT size=3D"4">Let 11 activities are given <I>S</I> =3D {<I>p, q, =
+r, s, t, u,=20
+v, w, x, y, z</I>}  start and finished times for proposed activities are =
+(1, 4),=20
+(3, 5), (0, 6), 5,  7), (3, 8), 5, 9), (6, 10), (8, 11), (8, 12), (2, =
+13) and=20
+(12, 14).</FONT></P>
+<BLOCKQUOTE>
+  <P><FONT size=3D"4">A =3D {p} Initialization at line 2<BR>  A =3D {p, =
+s} line 6 -=20
+  1<SUP>st</SUP> iteration of FOR - loop<BR>  A =3D {p, s, w} line 6=20
+  -2<SUP>nd</SUP> iteration of FOR - loop<BR>  A =3D {p, s, w, z} line 6 =
+-=20
+  3<SUP>rd</SUP> iteration of FOR-loop<BR>  Out of the FOR-loop and =
+Return A =3D=20
+  {p, s, w, z}</FONT></P></BLOCKQUOTE>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P><B><FONT color=3D"#cc0000" size=3D"5">Analysis</FONT></B></P>
+<BLOCKQUOTE>
+  <P><FONT size=3D"4">Part I requires </FONT><FONT size=3D"5">O<I>(n lg=20
+  n)</I></FONT><FONT size=3D"4"> time (use merge of heap sort).<BR>Part =
+II=20
+  requires </FONT><FONT size=3D"5"> <FONT=20
+  face=3D"Times New Roman">=A6=C8</FONT><I>(n)</I></FONT><FONT =
+size=3D"4"> time assuming=20
+  that activities were already  sorted in part I by their finish=20
+time.</FONT></P></BLOCKQUOTE>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P><B><FONT color=3D"#cc0000" size=3D"5">Correctness</FONT></B></P>
+<P><FONT size=3D"4"><FONT color=3D"#ff00ff">Note that</FONT> Greedy =
+algorithm do not=20
+always produce optimal solutions but  GREEDY-ACTIVITY-SELECTOR =
+does.</FONT></P>
+<P>&nbsp;</P>
+<P><B><FONT size=3D"5">Theorem&nbsp;&nbsp;&nbsp; </FONT> </B> <I><FONT =
+color=3D"#ff0000"=20
+size=3D"5">Algorithm GREED-ACTIVITY-SELECTOR produces  solution of =
+maximum size=20
+for the activity-selection problem</FONT><FONT =
+size=3D"4">.</FONT></I></P>
+<BLOCKQUOTE>
+  <P>&nbsp;</P>
+  <P><B><FONT size=3D"4"><FONT color=3D"#ff00ff">Proof =
+Idea</FONT>&nbsp;&nbsp;&nbsp;
+  </FONT> </B><FONT size=3D"4">Show the activity problem =
+satisfied</FONT></P>
+  <BLOCKQUOTE>
+    <OL type=3D"I">
+      <LI><FONT size=3D"4">Greedy choice property.</FONT></LI>
+      <LI><FONT size=3D"4">Optimal substructure=20
+property.</FONT></LI></OL></BLOCKQUOTE></BLOCKQUOTE>
+<P>&nbsp;</P>
+<P><I><B><FONT color=3D"#cc0000" size=3D"5">Proof</FONT></B></I></P>
+<OL type=3D"I">
+  <LI><FONT size=3D"4">Let <I>S =3D {1, 2, . . . , n}</I> be the set of =
+activities.=20
+  Since  activities are in order by finish time. It implies that =
+activity 1 has=20
+  the  earliest finish time. <BR>Suppose, </FONT><FONT size=3D"5"> =
+<I>A<IMG width=3D"16"=20
+  height=3D"16" align=3D"middle" src=3D"" border=3D"0">S</I></FONT><FONT =
+size=3D"4"> is an=20
+  optimal solution and let activities in	 </FONT><FONT size=3D"5">=20
+  <I>A</I></FONT><FONT size=3D"4"> are ordered by finish time. Suppose, =
+the first=20
+  activity in 	 </FONT><FONT size=3D"5"> <I>A</I></FONT><FONT =
+size=3D"4"> is=20
+  </FONT><FONT size=3D"5"> <I>k</I></FONT><FONT size=3D"4">.<BR>If =
+</FONT><FONT=20
+  color=3D"#ff00ff" size=3D"5"><I>k =3D 1</I></FONT><FONT size=3D"4">, =
+then A begins=20
+  with greedy choice and we are done (or to be very  precise, there is =
+nothing=20
+  to proof here).<BR>If </FONT>	 <FONT color=3D"#ff00ff" size=3D"5"><I>k	=
+ <IMG=20
+  width=3D"12" height=3D"19" align=3D"top" =
+src=3D"http://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/Mat=
+hSymbols/ne.gif"=20
+  border=3D"0">1</I></FONT><FONT size=3D"4">, we want to show that there =
+is another=20
+  solution 	 </FONT><FONT size=3D"5"> 	<I>B</I></FONT><FONT size=3D"4"> =
+that  begins=20
+  with greedy choice, activity 1.<BR>Let </FONT><FONT size=3D"5"><I>B =
+=3D&nbsp;=20
+  A</I> - {<I>k</I>}<IMG width=3D"10" height=3D"15" =
+src=3D"http://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/Mat=
+hSymbols/union.gif"=20
+  border=3D"0">{1}</FONT><FONT size=3D"4">. Because	 </FONT> <FONT=20
+  size=3D"5"><I>f</I><SUB><I>1</I> 	<IMG width=3D"12" height=3D"14" =
+src=3D"http://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/Mat=
+hSymbols/leq.gif"=20
+  border=3D"0"></SUB>&nbsp; <I>f<SUB>k</SUB></I></FONT><FONT =
+size=3D"4">,  the=20
+  activities in </FONT> <FONT size=3D"5"><I>B</I></FONT><FONT =
+size=3D"4"> are=20
+  disjoint and since </FONT> 	<FONT size=3D"5">B</FONT><FONT size=3D"4"> =
+has same=20
+  number of  activities as </FONT> <FONT size=3D"5"><I>A</I></FONT><FONT =
+
+  size=3D"4">, i.e., <I>|</I></FONT><I><FONT size=3D"5">A| =3D =
+|B|</FONT></I><FONT=20
+  size=3D"4">, </FONT> 	<FONT size=3D"5"><I>B</I></FONT><FONT =
+size=3D"4"> is also=20
+  optimal. </FONT> </LI>
+  <LI><FONT size=3D"4">Once the greedy choice is made, the problem =
+reduces to=20
+  finding an  optimal solution for the problem. If  </FONT><FONT =
+size=3D"5">=20
+  <I>A</I></FONT><FONT size=3D"4"> is an optimal solution to the  =
+original problem=20
+   </FONT><FONT size=3D"5"> <I>S</I></FONT><FONT size=3D"4">, then  =
+</FONT><FONT=20
+  size=3D"5"> <I>A` =3D A - {1}</I></FONT><FONT size=3D"4"> is an =
+optimal solution to=20
+   the activity-selection problem  </FONT><FONT size=3D"5"> <I>S` =3D {i	=
+ <IMG=20
+  width=3D"13" height=3D"13" align=3D"middle" =
+src=3D"http://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/Mat=
+hSymbols/belong.gif"=20
+  border=3D"0"> S: S<SUB>i 	 <IMG width=3D"12" height=3D"14" =
+src=3D"http://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/Mat=
+hSymbols/geq.gif"=20
+  border=3D"0"></SUB>&nbsp; f<SUB>i</SUB>}</I></FONT><FONT size=3D"4">.=20
+  <BR></FONT><FONT color=3D"#ff00ff" size=3D"5">why?</FONT><FONT =
+size=3D"4"> Because=20
+  if we could find a solution <I>B`</I> to <I>S`</I> with more =
+activities then=20
+  <I>A`</I>, adding 1 to <I>B`</I> would yield a solution <I>B</I> to =
+<I>S</I>=20
+  with more activities than A, there by contradicting the optimality.=20
+  </FONT><FONT face=3D"Times New Roman" =
+size=3D"4">=A1=F5</FONT></LI></OL>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P><FONT size=3D"4">As an example consider the example.<B></B>Given a =
+set of=20
+activities to among lecture halls. Schedule  all the activities using =
+minimal=20
+lecture halls.<BR>In order to determine which activity should use which =
+lecture=20
+hall, the  algorithm uses the GREEDY-ACTIVITY-SELECTOR to calculate the=20
+activities in the  first lecture hall. If there are some activities yet =
+to be=20
+scheduled, a new  lecture hall is selected and GREEDY-ACTIVITY-SELECTOR =
+is=20
+called again. This  continues until all activities have been scheduled. =
+</FONT>=20
+</P>
+<P>&nbsp;</P>
+<BLOCKQUOTE>
+  <BLOCKQUOTE>
+    <P><B><FONT size=3D"5"><FONT =
+color=3D"#ff00ff">LECTURE-HALL-ASSIGNMENT</FONT>=20
+    (<I>s, f</I>)</FONT></B></P>
+    <BLOCKQUOTE>
+      <P><I><FONT size=3D"5">n</FONT></I><FONT size=3D"5"> =3D length =
+[<I>s</I>)<BR>
+      			for&nbsp; <I>i</I> =3D 1 to=20
+      <I>n</I><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 			do HALL=20
+      [<I>i</I>] =3D NIL<BR><I>k</I> =3D 1<BR>while (Not empty=20
+      (<I>s</I>))<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 			do =
+HALL=20
+      [<I>k</I>] =3D GREEDY-ACTIVITY-SELECTOR (<I>s, t,=20
+      =
+n</I>)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      			<I>k</I> =3D <I>k</I> + 1<BR>return=20
+HALL</FONT></P></BLOCKQUOTE></BLOCKQUOTE></BLOCKQUOTE>
+<P>&nbsp;</P>
+<P><I><FONT size=3D"4">Following changes can be made in the=20
+GREEDY-ACTIVITY-SELECTOR (s, f) (see  <FONT=20
+color=3D"#ff00ff">CLR</FONT>).</FONT></I></P>
+<BLOCKQUOTE>
+  <BLOCKQUOTE>
+    <BLOCKQUOTE>
+      <P><I><FONT size=3D"5">j </FONT></I><FONT size=3D"5">=3D first=20
+      (<I>s</I>)<BR><I>A</I> =3D <I>i</I><BR>for <I>i</I> =3D <I>j</I> + =
+1 to=20
+      <I>n</I><BR>&nbsp;&nbsp;&nbsp; 			do if <I>s(i)</I> not=3D=20
+      =
+"-"<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+=20
+      			then if&nbsp; </FONT></P></BLOCKQUOTE>
+    <P><FONT size=3D"5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+GREED-ACTIVITY-SELECTOR=20
+    (<I>s, f, n</I>)</FONT></P>
+    <BLOCKQUOTE>
+      <P><I><FONT size=3D"5">j </FONT></I><FONT size=3D"5">=3D first=20
+      (<I>s</I>)<BR><I>A</I> =3D <I>i</I> =3D <I>j + 1</I> to=20
+      <I>n</I><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 			if=20
+      <I>s</I>(<I>i</I>]<I></I>not =3D "-"=20
+      =
+then<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;=20
+      			if <I>s</I>[<I>i</I>]   =A1=DD&nbsp;=20
+      =
+<I>f</I>[<I>j</I>]|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;=20
+      			 =
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;=20
+      			then <I>A</I> =3D=20
+      =
+<I>A</I>U{<I>i</I>}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      			<I>s</I>[<I>i</I>] =3D&nbsp;=20
+      =
+"-"<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      			<I>&nbsp;j </I>=3D<I> i</I><BR>return </FONT><I><FONT=20
+      size=3D"5">A</FONT></I></P></BLOCKQUOTE></BLOCKQUOTE></BLOCKQUOTE>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P><B><FONT color=3D"#cc0000" size=3D"5">Correctness</FONT></B><FONT =
+size=3D"4">&nbsp;=20
+ </FONT>  </P>
+<P><FONT size=3D"4">The algorithm can be shown to be correct and  =
+optimal. As a=20
+contradiction, assume the number of lecture halls are not optimal,  that =
+is, the=20
+algorithm allocates more hall than necessary. Therefore, there  exists a =
+set of=20
+activities </FONT><FONT size=3D"5"> <I>B</I></FONT><FONT size=3D"4"> =
+which have been=20
+wrongly allocated. An  activity b belonging to <I>B</I> which has been =
+allocated=20
+to hall </FONT> <FONT size=3D"5"><I>H</I>[<I>i</I>]</FONT><FONT =
+size=3D"4"> should=20
+have optimally been allocated to </FONT><FONT size=3D"5">=20
+<I>H</I>[<I>k</I>]</FONT><FONT size=3D"4">. This implies that  the =
+activities for=20
+lecture hall </FONT><FONT size=3D"5"> <I>H</I>[<I>k</I>]</FONT><FONT =
+size=3D"4">=20
+have not been allocated  optimally, as the <FONT=20
+color=3D"#ff00ff">GREED-ACTIVITY-SELECTOR produces the optimal set of =
+activities=20
+ for a particular lecture hall</FONT>.</FONT></P>
+<P>&nbsp;</P>
+<P><B><FONT color=3D"#cc0000" size=3D"5">Analysis</FONT></B></P>
+<P><FONT size=3D"4">In the worst case, the number of lecture halls =
+require is  n.=20
+GREED-ACTIVITY-SELECTOR runs in </FONT><FONT size=3D"5"> <I><FONT =
+face=3D"Times New Roman">=A6=C8</FONT>(n)</I></FONT><FONT=20
+size=3D"4">. The running time of this  algorithm is </FONT><FONT=20
+size=3D"5">O(<I>n</I><SUP>2</SUP>)</FONT><FONT size=3D"4">.</FONT></P>
+<P><B><FONT color=3D"#ff00ff" size=3D"4">Two important =
+Observations</FONT></B></P>
+<UL>
+  <LI><FONT size=3D"4">Choosing the activity of&nbsp; least duration =
+will not=20
+  always produce  an optimal solution. For example, we have a set of =
+activities=20
+  {(3, 5), (6, 8),  (1, 4), (4, 7), (7, 10)}. Here, either (3, 5) or (6, =
+8) will=20
+  be picked first,  which will be picked first, which will prevent the =
+optimal=20
+  solution of {(1, 4),  (4, 7), (7, 10)} from being =
+found.<BR>&nbsp;</FONT></LI>
+  <LI><FONT size=3D"4">Choosing the activity with the least overlap will =
+not=20
+  always  produce solution. For example, we have a set of activities =
+{(0, 4),=20
+  (4, 6), (6,  10), (0, 1), (1, 5), (5, 9), (9, 10), (0, 3), (0, 2), (7, =
+10),=20
+  (8, 10)}. Here  the one with the least overlap with other activities =
+is (4,=20
+  6), so it will be  picked first. But that would prevent the optimal =
+solution=20
+  of&nbsp; {(0, 1), (1, 5),  (5, 9), (9, 10)} from being =
+found.</FONT></LI></UL>
+<P>&nbsp;</P>
+<P><FONT size=3D"+1"><A =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/Gr=
+eedy/actSelectionGreedy.htm">Dynamic-Programming=20
+ Algorithm for the Activity-Selection Problem</A></FONT></P>
+<P>&nbsp;</P>
+<CENTER>
+<P><FONT size=3D"4"><IMG width=3D"640" height=3D"2" =
+src=3D"http://www.personal.kent.edu/~rmuhamma/Maingif/redline.gif"></FONT=
+></P>
+<P><A=20
+href=3D"http://www.personal.kent.edu/~rmuhamma/Algorithms/algorithm.html"=
+><FONT=20
+size=3D"4"><IMG width=3D"49" height=3D"47" =
+src=3D"http://www.personal.kent.edu/~rmuhamma/Maingif/back.gif"=20
+border=3D"0"></FONT></A></P></CENTER>
+<P>&nbsp;</P></BODY></HTML>
+
+------=_NextPart_000_0000_01D2920C.02361F90
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.personal.kent.edu/~rmuhamma/Maingif/redline.gif
+
+R0lGODdhgAIEAPYAAAAAAEMDA0YDA04DA1YEBFkEBGEEBGgEBG8FBXMFBXoFBX0FBYQGBogGBosG
+Bo4GBpEGBpUHB5gHB5sHB54HB6EHB6QHB6cICKoICK0ICLAICLUJCbgJCbsJCcAJCcUKCsoKCswK
+Cs4KCtAKCtMLC9cLC9sLC9wLC+AMDOIMDOUMDOgNDeoNDesNDewNDe4ODu8ODvAODvIODvMPD/QP
+D/UQEPQQEPEODt4MDNkLC9ULC8cKCr0JCbMICPIREe8SEuwSEukTE+UTE+IUFN8UFNoUFNcVFdMV
+Fc8VFc4WFsoWFsgWFsYWFsQWFsMXF8EXF78XF70XF7sXF7kXF7gYGLYYGLIYGLAYGK8YGK0ZGaoZ
+GagZGaYZGaUaGqIaGqEaGp8aGp4aGp0bGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwA
+AAAAgAIEAAAH/oAAgoOEhYaHiImKi4yNjo+QkZKTlJWWl5iZmpucnZ6foKGio4sBpgECqQOrrASu
+BAWxBrMGB7a3CLkJCQoKC7+/DMIMDcUNDsgPDxDMERES0BPSFBQV1hYWFxcY3BgZGRrhGxscHB3n
+HukeH+wfICAh8SIiI/UkJCX5JvsnJyj/KVKoULGiIIuDLRK6cPHiBYyHMWLImEhxhkWLNDJq3Kix
+hkePNkKKHEmypMiNJD+q5Miy5cWXFylOvHEjYoyHMBq+WLgwYYuDQAsKHUg0YIp/OHD067cvh9N8
+OnTcI1Fv3rx473ZoZZeOh9dzYDuM60E2XDdu2NJasMbWGrW3/m+lyZ1LF5rdu3jz6o02gVpbbNq2
+YQhHeFw5c+e8qkvXTuu7x5AjS55MubLlyFbvOV0aUOiKhA0rzshY0ofpHz+AAAnCWoiQIbCJyC5C
+24iRI0eQ6E6SRIlvJUuWMGHSpLgTJ0+eQFm+PIrzKFKiS5cyZQqV61WyW9m+/coVLOCzZNGiZYv5
+LVy4dFnvxcuXL2DihwkjRtApVKpYrXoFSxatW7jowosvwCwwDDHGIOOAMsxA4Ixdcvl1TTaCcfNN
+YeQg1sFi7bgDjzz02IOPPvz4A5BABBmEkEIMOQSRRDLJAFNLLKlUg0k45ojSSDZ6ROOPNMAEU4w0
+2YSTTjy5suATUAd5tgJRAxmFlFJLNfVUCVFNVZVVWIGg1Q5ceeAVD2GdM1ZZGpyFgVrYtMUWXHDR
+Jadce9VpJ18SThgYN4SJk6GGinHIjmOXFWrooZRlRsJm/XQmFGgviEYaSab5gJpqrAXhGmxDyEYE
+bUXYhptuSPD2G3DCEWcccsoxB8Vz0E0XXXXXUZFdFdx1911445V3XnrrddHee/GBMV99pCSr7LLM
+Nuvss9BGK+201FYbbSAAOw==
+
+------=_NextPart_000_0000_01D2920C.02361F90
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/MathSymbols/ne.gif
+
+R0lGODlhDAATAIAAAAAAAP///yH+FUNyZWF0ZWQgd2l0aCBUaGUgR0lNUAAh+QQBCgABACwAAAAA
+DAATAAACGoyPqcvtBl5sk7oKgd57Ya9w4heQiHle0tMUADs=
+
+------=_NextPart_000_0000_01D2920C.02361F90
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/MathSymbols/union.gif
+
+R0lGODlhCgAPAPcAAAAAAAAAAAAAYAAAAOiF11qwAwoAaQBtAGEAZwBlADAAMAAxAC4AZwBpAGYA
+AAASAGgEFACxi9R3aADadwB8TQDE+BIAVB7VdzEe1XfM+BIAAAAUADIHkXwkAAAASA0UAAAAFAAQ
+dRQApPgSAEAGFADo+hIAGO6QfDgHkXz/////MgeRfKsGkXzrBpF8AAAAAAAAQAA4hkgAyAWRfEh9
+GAC4+RIAUQWRfHgHFABtBZF8cH0YAFB9GAAsfRgAHwAAABEAAAAEAAAAKHGPADCPYwAOAAAA/orU
+dzCPYwDs////RQmRfE4JkXwIfRgAJAACAET6EgACAAAAkEGRfFj5EgAAAAAAyAWRfGT5EgAAAAAA
+yAWRfBB9GAAw+hIAUQWRfNgHFABtBZF8LH0YABh9GAAAAAAAAAAUAAAAAAA4hkgAAHsYAAAAAABe
+AAAAOQABAAUAAAD8+BIA8M8UAOT5EgAY7pB8cAWRfP////9tBZF8YhmRfJMZkXyAwJd8cBmRfHB9
+GAA4AAAALH0YAADw/X/M+RIAGAIAACj6EgAY7pB8eBmRfP////9wGZF8AAAUAAIZkXwsfRgAGH0Y
+AAAAAACgchgAyMABAAcAAAB0+RIAAAAAAHT6EgAY7pB8cAWRfP////9tBZF8W/CAfAAAFAAAAAAA
+Z/CAfN7U1HcAAEAAAQAAAADw/X8BAAAAAAAAAAwBAAAYfRgAAHsYAAAAAABE+hIAAAAAALD/EgDz
+mYN8cPCAfP////9n8IB8XFdDABh9GADe1NR3JAAAACAAAAAaQH5U8vHEARpAflTy8cQBGkB+VPLx
+xAEAAAAAYAAAAOiF11qwAwoAAAAAABB1FAAuZ2lmAIfUdyABAACwAwAAAAAUANj4EgABAAAANPsS
+ABjukHzwBpF8/////+sGkXwPmoB8AAAUAAgAFAAgmoB83tTUdwAAAAAAAAAAAAAAAAAAAABE2kQA
+RnUUAAziFgBKdRQAcoZIAP////8QdRQAntpEAEZ1FABz0EQAEHUUACH5BAEAAAAALAAAAAAKAA8A
+QAgvAAMAGEhwYACBBQkeTKgQAMKCAh8mXMjQoUSICg8+vJixokWPFBmGnMjR4MeOAQEAOw==
+
+------=_NextPart_000_0000_01D2920C.02361F90
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/MathSymbols/leq.gif
+
+R0lGODlhDAAOAPcAAAAAAAAAABIAGO6QfHAFkXz/////bQWRfIiZgHwAABQAAAAAAJuZgHyQHhQA
+XZmAfAEAAAAM6xIAvOsSAClXRADVGQAA2OgSAJDkEgCI9RIA85mDfIiehXz/////GJ6FfL3UQQC0
++kcAZgAAABB1FABmAAAAc7CFfAEAAACQHhQACMAZAEwAAACwAwoAAADuPAjAGQAAAAAAAAAAAAEA
+AACUHxQABAEAAAAAAAAAAAAAkB4UAJzrEgBsAAgALQA2AAAAAAAQdRQAgPJEAGz7RwBPcGVuAIwa
+AODrEgAY7pB845TUd9Wy1HewAwoAIAAAAEM6XERvY3VtZW50cyBhbmQgU2V0dGluZ3Ncc3R1ZGVu
+dFxEb2MxX2ZpbGVzAGltYWdlMDA0LmdpZgAKAIDsEgAY7BIAEODUd7ADCgAgAAAALgMLAAAAAAAB
+AAAAsYvUd2gA2nes6xIAYOwSACTg1HfS39R3MI9jAEjfFgBAY2MAAAAAAAEAAAAAAAAAMOwSAAAA
+AADM8BIAlATXd9jf1Hf/////0t/Ud5N11XewAwoAIAAAAC4DCwAAAAAA4OwSAL9D1ncwj2MAIAAA
+AC4DCwAAAAAAAQAAAAAAAABzsIV8IAAAALTTbfVeXIC/GDCO4RggMeEBAAAAWQAQAQMAAAABAAAA
+QzpcRG9jdW1lbnRzIGFuZCBTZXR0aW5nc1xzdHVkZW50XERvYzFfZmlsZXNcaW1hZ2UwMDQuZ2lm
+AAAADO0SAJa11HeQYmMALgMLANeFRQBI7RIAKwAAACQAAACw8BIAIHtFAHTwEgAAAAAAAAAAACsA
+AAA8AAAA0O0SAAUAAADU7hIAJnAJXQAAAAAQdRQAAAUAAEkAAAAgAQAAcnAAXQAAFABc6xIAAAUA
+ALjtEgAY7pB88AaRfP/////rBpF8D5qAfAAAFAAIABQAIJqAfGYAAABmAAAAc7CFfAIAAAAAAAAA
+AQAAAAMAAAAIAAAAkO0SAP///wCI9RIA85mDfCiagHyk0UQAsAMKACH5BAEAAAAALAAAAAAMAA4A
+QAgsAAEIHEgQQICCAQ4WFJhwocOHCBUabAjxIUWLEgdeZLgRY0WCHSEmHEmSZEAAOw==
+
+------=_NextPart_000_0000_01D2920C.02361F90
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/MathSymbols/belong.gif
+
+R0lGODlhCgALAPcAAAAAAAAAAAAAWgAAAOiF11r+Ai4AaQBtAGEAZwBlADAAMAAxAC4AZwBpAGYA
+AAASAGgEFACxi9R3aADad8CbTQDE+BIAVB7VdzEe1XfM+BIAAAAUADIHkXwkAAAASA0UAAAAFAAQ
+dRQApPgSAEAGFADo+hIAGO6QfDgHkXz/////MgeRfKsGkXzrBpF8AAAAAAAAQAA4hkgAyAWRfEh9
+GAC4+RIAUQWRfHgHFABtBZF8cH0YAFB9GAAsfRgAHwAAABEAAAAEAAAAKHGPAJA4YwAOAAAA/orU
+d5A4YwDs////RQmRfE4JkXwIfRgAJAACAET6EgACAAAAkEGRfFj5EgAAAAAAyAWRfGT5EgAAAAAA
+yAWRfBB9GAAw+hIAUQWRfNgHFABtBZF8LH0YABh9GAAAAAAAAAAUAAAAAAA4hkgAAHsYAAAAAABe
+AAAAOQABAAUAAAD8+BIA8M8UAOT5EgAY7pB8cAWRfP////9tBZF8YhmRfJMZkXyAwJd8cBmRfHB9
+GAA4AAAALH0YAADw/X/M+RIAGAIAACj6EgAY7pB8eBmRfP////9wGZF8AAAUAAIZkXwsfRgAGH0Y
+AAAAAACgchgAyMABAAcAAAB0+RIAAAAAAHT6EgAY7pB8cAWRfP////9tBZF8W/CAfAAAFAAAAAAA
+Z/CAfN7U1HcAAEAAAQAAAADw/X8BAAAAAAAAAAwBAAAYfRgAAHsYAAAAAABE+hIAAAAAALD/EgDz
+mYN8cPCAfP////9n8IB8XFdDABh9GADe1NR3JAAAACAAAAC4J7S2EPLEAbgntLYQ8sQBuCe0thDy
+xAEAAAAAWgAAAOiF11r+Ai4AAAAAABB1FAAuZ2lmAIfUdyABAAD+AgAAAAAUANj4EgABAAAANPsS
+ABjukHzwBpF8/////+sGkXwPmoB8AAAUAAgAFAAgmoB83tTUdwAAAAAAAAAAAAAAAAAAAABE2kQA
+RnUUAAziFgBKdRQAcoZIAP////8QdRQAntpEAEZ1FABz0EQAEHUUACH5BAEAAAAALAAAAAAKAAsA
+QAgkAAEIDECwYAAABwUqHLiwIUKHDCEuNFgwYsOEEClqlKgQ48KAADs=
+
+------=_NextPart_000_0000_01D2920C.02361F90
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/MathSymbols/geq.gif
+
+R0lGODlhDAAOAPcAAAAAAAAAABIAGO6QfHAFkXz/////bQWRfIiZgHwAABQAAAAAAJuZgHyQHhQA
+XZmAfAEAAAAM6xIAvOsSAClXRADVGQAA2OgSAJDkEgCI9RIA85mDfIiehXz/////GJ6FfL3UQQC0
++kcAZgAAABB1FABmAAAAc7CFfAEAAACQHhQACMAZAEwAAACwAwoAAADuPAjAGQAAAAAAAAAAAAEA
+AACUHxQABAEAAAAAAAAAAAAAkB4UAJzrEgBsAAgALQA2AAAAAAAQdRQAgPJEAGz7RwBPcGVuAIwa
+AODrEgAY7pB845TUd9Wy1HewAwoAIAAAAEM6XERvY3VtZW50cyBhbmQgU2V0dGluZ3Ncc3R1ZGVu
+dFxEb2MxX2ZpbGVzAGltYWdlMDA1LmdpZgAKAIDsEgAY7BIAEODUd7ADCgAgAAAALgMLAAAAAAAB
+AAAAsYvUd2gA2nes6xIAYOwSACTg1HfS39R3MI9jAEjfFgBAY2MAAAAAAAEAAAAAAAAAMOwSAAAA
+AADM8BIAlATXd9jf1Hf/////0t/Ud5N11XewAwoAIAAAAC4DCwAAAAAA4OwSAL9D1ncwj2MAIAAA
+AC4DCwAAAAAAAQAAAAAAAABzsIV8IAAAALTTbfVeXIC/GDCO4RjQMuEBAAAAWQAQAQMAAAABAAAA
+QzpcRG9jdW1lbnRzIGFuZCBTZXR0aW5nc1xzdHVkZW50XERvYzFfZmlsZXNcaW1hZ2UwMDUuZ2lm
+AAAADO0SAJa11HeQYmMALgMLANeFRQBI7RIAMwAAACQAAACw8BIAIHtFAHTwEgAAAAAAAAAAADMA
+AAA6AAAA0O0SAAUAAADU7hIAJnAJXQAAAAAQdRQAAAUAAEkAAAAgAQAAcnAAXQAAFABc6xIAAAUA
+ALjtEgAY7pB88AaRfP/////rBpF8D5qAfAAAFAAIABQAIJqAfGYAAABmAAAAc7CFfAIAAAAAAAAA
+AQAAAAMAAAAIAAAAkO0SAP///wCI9RIA85mDfCiagHyk0UQAsAMKACH5BAEAAAAALAAAAAAMAA4A
+QAgsAAMAGEiwoEEAAQQeNJhwoUOCDR8ubBjRYUWJCBVizKixYMKOGSdi/EiyZEAAOw==
+
+------=_NextPart_000_0000_01D2920C.02361F90
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.personal.kent.edu/~rmuhamma/Maingif/back.gif
+
+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
+dXAsIFRhaXBlaSwgVGFpd2FuLgA7
+
+------=_NextPart_000_0000_01D2920C.02361F90
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.personal.kent.edu/~rmuhamma/Maingif/Bck2.gif
+
+R0lGODlhMgAyALMAAOjk/+rs/Njo/vD3/OX4/tb4/tX+9OX+9QAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAACwAAAAAMgAyAAAE/xAMcegYRRBydgCEIAZHQWCbeB5dZlxC0amEGQRDUNxAUF8FgGogHLBu
+hEAMOMkIQALSASea+AREZ5Sy8xRxt1v2ZAhplBRNt3zadEChXqxjlD2tPdSToszUDkIAAAZCJgcv
+FT4AB0YfgTcaUTpwJESCkRU7mQNJnBJ8IRNYBUEiJhh+pAFlTotIOaRbWAIvAAUYaTlJGidXbbcY
+nCKmQ5NWJ4WcGTu3ISQhZpxlxllbBsA1IZpRLzujtomMOCBGnBwmpEFo6423trRCLH4EBh+HgDNx
+fmBmIFMxNWL0IKGGgJAt0GIoSdJD1QVO5qLIIHVOyLUeU7z5SBQPx0Q/Uf9yRLElCpm3EhoMxChg
+4N8ygDx2VYGkY8MuVWZ8MBShUoQtLXOUvOMlg56OSGp8aKlxC0uvTLRCMEr4JJaQKxPMlBmVZhYd
+iaWcjRCSZBUpQLdKTGBRT5zBmnAK0cOoxNytDzkWSfiwAUWInndwnRhQTyGFP7RGnBlVgZAkP2RF
+LV2o8sMwDbaScHCDbnG2oxSVwkjS7AenFmGCnOLy5OiHdQEnmNN8NcpmOFUtj7iwUIkOFis4+UbD
+CxKWHFNKkGV6Yp+Jc+guldBBWBOhDFM4+P6KYTqJpjXe/UTewYxPOwAPGmCFXdWVhc+voTlXk1EF
+ZYwqK8yQOqRvVfUwo8H/BYLYRFAFIzS3DEU7UIeENovk0JJNrSwzhUolRPOETdBQFEiHg62UnSh9
+eKUDCevNoZJFq9Q1ywTXAGQCKIIwYpFBWNygVnF9KULLjAZFZ44oORw1CAhI0nDBNX3NqAdpw5AC
+hUg3rfSCSiqVdVkQyGBGBBczXqKSk7qkkN8TtniEyQ07ZOUNFhZ96WYVKimjDVPJSYJBjKsc8cJb
+REAJlkRtpHDCLBQQAgKX9ChEWHlZ8QZQCRkQAdEiU1gBy3xNFEdMQvChwkEdW83EyDA/mcIXgt7w
+Ng+dPmXHUy/x8aScNlVxUE8NBxLEH394sTQMh3jZAgISglCRAVlTDWtQ/wvpXDDFiQYdFAMvuOxa
+F0EqoLFND465I4FRLW44wVVI5OgUdldE4gpJpYDHZRESnHTtFguRVcx6H2x1qKamzMjgc+8ltSF1
+UXJQYJZorWpQc40ItMxD6hDGZhll1kNWM4mEBsoo0mwRj0BCMdlFRi35sB4zgGjDEpL7rEJBCeWl
+wN+A/X6SzS2pqIWhqA2V4ikO//SAkXBYtHShau4oRAVKMhDmqAdlxXIbmgsxdcaxxBRST2+WbkDW
+inwNMw11vCpFSQc8uGabBOeu94Ovvp1zh0T+WHiBVDkQ6VcTv57Gy0FnArQzIIuaggua85iBJz0V
+aHOIhWKsBJDlO0Lk0FWAp0BjdJi8SFJnEOLI9rBNh6EihxGRLNOGcNBg8AE6vA6YxAxbEMGGSGLI
+cAQkmgyUQmJYy16XB4Ovc9AnqpqTmUTAsfSC7Gc8xwwVWWoT4w/DABEBADs=
+
+------=_NextPart_000_0000_01D2920C.02361F90--

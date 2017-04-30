@@ -1,0 +1,82 @@
+===========================
+Problem 1
+===========================
+Review CS2020 Final Examination in 2015 and 2016.
+
+===========================
+Problem 2
+===========================
+1. Use adjacency matrix instead.
+
+2. First, sort all nodes according to their degrees. From the highest degree to the lowest, 
+for each node, do the following for adjacent edges which has not been marked: mark at most 6
+of them as oriented towards the current node.
+When we query neighbors(u, v), we check for both directions. 
+Time complexity for pre-process: O(n * logn), since there are at most 3n edges.
+
+3. Do not need to sort all nodes. Just pick a random node to start, do DFS traversal. But, 
+for each node, only recurse for at most 6 of the neighbors.
+Alternative: Use a hash table (with pairs as keys).
+Time complexity: O(n)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Part b)
+
+1) Maintain the vertices in increasing vertex degree ordering in a priority queue
+2) Pop smallest degree vertex u
+3) For all neigbors of u, decreasing vertex degree in the priority queue, and assign edge direction u -> v
+4) There are at most 5 such neighbors, this takes O(5log(n)) as we are popping from priority queue
+5) Repeat until the priority queue is empty, O(nlog(n))
+
+Part c) We need to reduce the cost of orienting, we don't use a priority queue anymore, we use a NORMAL queue
+
+1) Have an O(n) sized array A tracking the degree of each vertex
+2) Maintain a normal queue Q that contains vertices with < 6 degree, populate it with at least 1 item.
+3) Pop the front vertex u from the queue (this does not need to be the one with the smallest degree like in part b, but we know the degree < 6 as it's in the queue)
+4) For all neigbors of u, decreasing vertex degree in the array A, and assign edge direction u -> v, and if deg(v) drops below 6, add it to the queue Q
+5) This takes O(5) as there are at most 5 neighbors
+6) Repeat until the queue is empty, O(n)
+
+Compared to part b, part c uses a normal queue and an array that keeps track of the degree. We won't be able to pop the smallest degree vertex, but the vertex we pop out still has degree < 6. Popping from normal queue takes O(1)
+
+===========================
+Problem 3
+===========================
+If the problem is "a set of k elements whose sum is t", then it is simply a standard k-sum 
+problem. However, the question states "a set of k elements that sum to at most t".
+A simple solution would be: sort the array first, and check the sum of first k elements;
+A better one would use quick select: quickSelect can find the kst smallest element in the 
+array in O(n) time. An important note is that, after quick select, all the elements within 
+A[1..k] are all smaller than A[k] (although they are not sorted). However, we can kind of 
+use this property: add the first k elements and check whether the sum is at most t.
+
+===========================
+Problem 4
+===========================
+a) We first sort all students according to their strength and store in an array. Then, we 
+traverse this sorted array from the strongest to the weakest.
+Along the way, we will keep updating the fastest up to now. If the next student does better
+at speed than the fastest up to now, he/she will still be qualified as an athlete.
+
+b) We should clarify first, you cannot do partA for three times by pairwise combination of 
+properties. This algorithm has a counterexample:
+2 2 1
+1 3 3
+3 1 3
+3 3 1
+
+Correct implementation 1:
+1. Sort all students by strength, speed and stamina;
+2. Record the 3 results of ranking for each student;
+3. Record one more thing: for each student, his/her best result (the worst of 3 ranking);
+4. Among all students, find the one whose worst result is the best, name his index as t.
+5. Find t's position in 3 sorted arrays, everyone who is better than him ("better than" is 
+referring to better than him only in 1 of 3 property) is an athlete.
+
+Correct implementation 2:
+1. Sort by strength and store in an array;
+2. Create an empty AVL tree, sort by speed, augment the tree into a ranking tree, and the 
+augmented information is the maximum stamina in the subtree rooted at each node.
+2. Traverse from the strongest to the weakest in the array: for each student, insert it into
+that tree. Check whether his stamina is better the augmented information at right child.

@@ -1,0 +1,32 @@
+===========================
+Problem 1
+===========================
+Given a roadMap of Singapore as a connected, undirected graph G = (V, E), find the maximum 
+spanning tree (MaxST) of G, noted as H. Then, create a new graph that K = G - H. Deploy 
+cameras on all edges in K. In order to form a cycle, the car has to pass some edges in K 
+twice.
+
+===========================
+Problem 2
+===========================
+Use BFS / DFS without keeping a "visited" set.
+This will be quite bad for a complete graph. Even worse, what if the graph has a cycle?
+
+===========================
+Problem 3
+===========================
+a) Run Floyd-Warshall in O(V^3). For every pair of (u, v), check the shortest path from u to
+v and the shortest path from v to u. These two shortest paths will form the shortest cycle 
+containing u and v. The minimum over all pairs yields the minimum cost directed cycle.
+b) Assign each edge (v, w) as weight of 1 - weight(v, w). Run partA, if the result is < 1, 
+then the original one should be < c - 1.
+
+===========================
+Problem 4
+===========================
+a) This is a DAG, it is possible to find the longest path by negating all edges and using 
+topological sort.
+b) Use dynamic programming. Traverse in the inverse order. Count the possible number of 
+careers at each node and store the values in an array.
+In such a way, for each node, the possible number of careers is just the sum of all the 
+possible number of careers of its adjacent nodes.

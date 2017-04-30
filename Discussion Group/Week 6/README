@@ -1,0 +1,45 @@
+===========================
+Problem 1
+===========================
+a) Algorithm for counting the number of inversions in a given list.
+Basically, there are 4 approaches for this problem:
+1. Brute-force approach: O (n^2)
+For each element, examine each element on the right of it and check whether they can make 
+a pair of inversion. Sum up the number of pairs.
+2. Merge-sort-enhanced approach: O (n * logn)
+Undergo the same process as the normal merge sort for the list. However, the number of 
+inversions will be counted in the merge process.
+Notice: This approach is implemented in CountInversion.java
+3. Binary-indexed Tree (BIT)
+4. AVL Tree - Self-balanced Binary Search Tree
+
+b) The running time of insertion sort on a list of n elements with I inversions 
+is O (n + I).
+
+Two conventions in CS2020:
+1) "sorted" means in the increasing order;
+2) "binary tree" usually means "binary search tree".
+
+Bonus problem:
+1. Mirror BST: Given a binary tree, find a (recursive) solution to swap the left sub-tree
+and right sub-tree for all nodes.
+2. In a BST, mode is the element that has the highest frequency. Find the mode of a BST.
+3. In a binary tree, two siblings are inversed. Find them.
+
+===========================
+Problem 2
+===========================
+Divide the whole big square into 4 parts, each called a quarter. One of the quarter has 
+the black block. The other three are complete. Since 4 % 3 = 1, the other three quarters 
+always has one block left that we cannot fill. So we just put all three missing blocks at
+the cross. Then, we use one more to fill these three once.
+
+===========================
+Problem 3
+===========================
+a) Simply use binary search
+
+b) Ask every question twice. If the answers are different, ask for the third time. Since 
+you can only lie once, the third answer must be correct. Here, Q = 2 * logn + 1.
+
+c) I need to optimize the binary search process.

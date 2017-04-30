@@ -1,0 +1,757 @@
+Chosen Object: C
+Properties: 1,3,5,6
+Query: -1,2
+Answer: false
+Query: -1
+Answer: false
+Query: 1,-2
+Answer: true
+You guess: C
+You win!
+You made 3 guesses.
+Number of queries in round 0: 3
+Chosen Object: F
+Properties: 5
+Query: -1,2
+Answer: false
+Query: -1
+Answer: true
+Query: -1,-2,-4
+Answer: true
+You guess: F
+You win!
+You made 3 guesses.
+Number of queries in round 1: 3
+Chosen Object: D
+Properties: 2,3,5
+Query: -1,2
+Answer: true
+Query: -1,2,-4
+Answer: true
+Query: -1,2,-3,-4
+Answer: false
+You guess: D
+You win!
+You made 3 guesses.
+Number of queries in round 2: 3
+Chosen Object: A
+Properties: 1,2,3,4,5
+Query: -1,2
+Answer: false
+Query: -1
+Answer: false
+Query: 1,-2
+Answer: false
+You guess: A
+You win!
+You made 3 guesses.
+Number of queries in round 3: 3
+Chosen Object: H
+Properties: 4,5,6
+Query: -1,2
+Answer: false
+Query: -1
+Answer: true
+Query: -1,-2,-4
+Answer: false
+You guess: H
+You win!
+You made 3 guesses.
+Number of queries in round 4: 3
+=================================
+Congratulations! You have played 5 rounds of games.
+The average number of guesses is 3.000000.
+The maximum number of guesses is 3.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Chosen Object: Jack Lemmon
+Properties: Bell Book and Candle,Buddy Buddy,Dad,Eluding Mr. Morp,Getting Away with Murder,Hamlet,How to Murder Your Wife,It Happened to Jane,JFK,Less Granny Logger,Luv,Macaroni,Mass Appeal,Missing,My Fellow Americans,Out to Sea,Save the Tiger,Short Cuts,Some Like It Hot,The Apartment,The April Fools,The Front Page,The Odd Couple,The Odd Couple II,The Out of Towners,The Wackiest Ship in the Army,The War Between Men and Women,Tribute,Under the Yum Yum Tree
+Query: -127 Hours,-1408,-1911,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Christmas Carol,-A Few Good Men,-A Million Ways to Die in the West,-Ace Two Seven,-Adore Not,-Alabama Moon,-Alice in Wonderland,-All the Wilderness,-America's Sweethearts,-An Onion Hash
+Answer: true
+Query: -127 Hours,-1408,-1911,-3 Needles,-3 Weeks to Daytona,-50 First Dates,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Bug's Life,-A Christmas Carol,-A Day in Court,-A Dream of Kings,-A Few Good Men,-A Home of Our Own,-A Merry Friggin' Christmas,-A Million Ways to Die in the West,-Ace Two Seven,-Adore Not,-Alabama Moon,-Alice in Wonderland,-All the Wilderness,-Along Came Polly,-Amelia,-America's Sweethearts,-An Onion Hash,-Bell Book and Candle
+Answer: false
+Query: -127 Hours,-1408,-1911,-3 Needles,-3 Weeks to Daytona,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Bug's Life,-A Christmas Carol,-A Dream of Kings,-A Few Good Men,-A Home of Our Own,-A Million Ways to Die in the West,-Ace Two Seven,-Adore Not,-Alabama Moon,-Alice in Wonderland,-All the Wilderness,-America's Sweethearts,-An Onion Hash
+Answer: true
+Query: -127 Hours,-1408,-1911,-3 Needles,-3 Weeks to Daytona,-50 First Dates,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Bug's Life,-A Christmas Carol,-A Dream of Kings,-A Few Good Men,-A Home of Our Own,-A Million Ways to Die in the West,-Ace Two Seven,-Adore Not,-Alabama Moon,-Alice in Wonderland,-All the Wilderness,-Along Came Polly,-Amelia,-America's Sweethearts,-An Onion Hash
+Answer: true
+Query: -127 Hours,-1408,-1911,-3 Needles,-3 Weeks to Daytona,-50 First Dates,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Bug's Life,-A Christmas Carol,-A Dream of Kings,-A Few Good Men,-A Home of Our Own,-A Merry Friggin' Christmas,-A Million Ways to Die in the West,-Ace Two Seven,-Adore Not,-Alabama Moon,-Alice in Wonderland,-All the Wilderness,-Along Came Polly,-Amelia,-America's Sweethearts,-An Onion Hash
+Answer: true
+Query: -127 Hours,-1408,-1911,-3 Needles,-3 Weeks to Daytona,-50 First Dates,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Bug's Life,-A Christmas Carol,-A Day in Court,-A Dream of Kings,-A Few Good Men,-A Home of Our Own,-A Merry Friggin' Christmas,-A Million Ways to Die in the West,-Ace Two Seven,-Adore Not,-Alabama Moon,-Alice in Wonderland,-All the Wilderness,-Along Came Polly,-Amelia,-America's Sweethearts,-An Onion Hash
+Answer: true
+You guess: Jack Lemmon
+You win!
+You made 6 guesses.
+Number of queries in round 0: 6
+Chosen Object: James Franco
+Properties: 127 Hours,About Cherry,An American Crime,As I Lay Dying,Black Dog, Red Dog,Camille,Child of God,City by the Sea,Date Night,Don Quixote: The Ingenious Gentleman of La Mancha,Even Wittier,Every Thing Will Be Fine,Good People,Homefront,Howl,I Am Michael,If Tomorrow Comes,Interior. Leather Bar.,Layover Ape,Lovelace,Maladies,Milk,Morgan 'Gator' Bodine,Oz the Great and Powerful,Palo Alto,Pineapple Express,Queen of the Desert,Richard Peter Johnson,Rise of the Planet of the Apes,Shadows & Lies,Spider-Man,Spider-Man 3,Spring Breakers,The Broken Tower,The Color of Time,The Heyday of the Insensitive Bastards,The Iceman,The Letter,The Sound and the Fury,The Wicker Man,Third Person,This Is the End,True Story,Yosemite,Your Highness
+Query: -127 Hours,-1408,-1911,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Christmas Carol,-A Few Good Men,-A Million Ways to Die in the West,-Ace Two Seven,-Adore Not,-Alabama Moon,-Alice in Wonderland,-All the Wilderness,-America's Sweethearts,-An Onion Hash
+Answer: false
+Query: -1408,-A Boneless Pig Knot,-A Few Good Men,-A Million Ways to Die in the West,-All the Wilderness
+Answer: true
+Query: -127 Hours,-1408,-1911,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Few Good Men,-A Million Ways to Die in the West,-Alabama Moon,-All the Wilderness,-An Onion Hash
+Answer: false
+Query: -127 Hours,-1408,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Few Good Men,-A Million Ways to Die in the West,-All the Wilderness
+Answer: false
+Query: -1408,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Few Good Men,-A Million Ways to Die in the West,-All the Wilderness
+Answer: true
+You guess: James Franco
+You win!
+You made 5 guesses.
+Number of queries in round 1: 5
+Chosen Object: Philip Seymour Hoffman
+Properties: A Late Quartet,A Most Wanted Man,Almost Famous,Along Came Polly,Before the Devil Knows You're Dead,Boogie Nights,Capote,Chad Stamp,Charlie Wilson's War,Cold Mountain,Magnolia,Moneyball,Next Stop Wonderland,Punch-Drunk Love,Red Dragon,State and Main,Synecdoche, New York,The Big Lebowski,The Hunger Games: Catching Fire,The Invention of Lying,The Talented Mr. Ripley,Three Sat,Twister
+Query: -127 Hours,-1408,-1911,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Christmas Carol,-A Few Good Men,-A Million Ways to Die in the West,-Ace Two Seven,-Adore Not,-Alabama Moon,-Alice in Wonderland,-All the Wilderness,-America's Sweethearts,-An Onion Hash
+Answer: true
+Query: -127 Hours,-1408,-1911,-3 Needles,-3 Weeks to Daytona,-50 First Dates,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Bug's Life,-A Christmas Carol,-A Day in Court,-A Dream of Kings,-A Few Good Men,-A Home of Our Own,-A Merry Friggin' Christmas,-A Million Ways to Die in the West,-Ace Two Seven,-Adore Not,-Alabama Moon,-Alice in Wonderland,-All the Wilderness,-Along Came Polly,-Amelia,-America's Sweethearts,-An Onion Hash,-Bell Book and Candle
+Answer: false
+Query: -127 Hours,-1408,-1911,-3 Needles,-3 Weeks to Daytona,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Bug's Life,-A Christmas Carol,-A Dream of Kings,-A Few Good Men,-A Home of Our Own,-A Million Ways to Die in the West,-Ace Two Seven,-Adore Not,-Alabama Moon,-Alice in Wonderland,-All the Wilderness,-America's Sweethearts,-An Onion Hash
+Answer: true
+Query: -127 Hours,-1408,-1911,-3 Needles,-3 Weeks to Daytona,-50 First Dates,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Bug's Life,-A Christmas Carol,-A Dream of Kings,-A Few Good Men,-A Home of Our Own,-A Million Ways to Die in the West,-Ace Two Seven,-Adore Not,-Alabama Moon,-Alice in Wonderland,-All the Wilderness,-Along Came Polly,-Amelia,-America's Sweethearts,-An Onion Hash
+Answer: false
+Query: -127 Hours,-1408,-1911,-3 Needles,-3 Weeks to Daytona,-50 First Dates,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Bug's Life,-A Christmas Carol,-A Dream of Kings,-A Few Good Men,-A Home of Our Own,-A Million Ways to Die in the West,-Ace Two Seven,-Adore Not,-Alabama Moon,-Alice in Wonderland,-All the Wilderness,-Amelia,-America's Sweethearts,-An Onion Hash
+Answer: true
+Query: -127 Hours,-1408,-1911,-3 Needles,-3 Weeks to Daytona,-50 First Dates,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Bug's Life,-A Christmas Carol,-A Dream of Kings,-A Few Good Men,-A Home of Our Own,-A Million Ways to Die in the West,-Ace Two Seven,-Adore Not,-Alabama Moon,-Alice in Wonderland,-All the Wilderness,Along Came Polly,-Amelia,-America's Sweethearts,-An Onion Hash,-Beetlejuice
+Answer: true
+You guess: Philip Seymour Hoffman
+You win!
+You made 6 guesses.
+Number of queries in round 2: 6
+Chosen Object: Toni Collette
+Properties: A Long Way Down,About a Boy,Changing Lanes,Elk Catch Cows,Emma,Enough Said,Evening,Foster,Fright Night,Glassland,Hector and the Search for Happiness,Hey Hey It's Esther Blueburger,Hitchcock,In Her Shoes,Jesus Henry Christ,Little Miss Sunshine,Lucky Them,Mary and Max,Mental,Shaft,Tammy,The Boxtrolls,The Dead Girl,The Hours,The Last Shot,The Night Listener,The Sixth Sense,The Way Way Back,Wielding Drums
+Query: -127 Hours,-1408,-1911,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Christmas Carol,-A Few Good Men,-A Million Ways to Die in the West,-Ace Two Seven,-Adore Not,-Alabama Moon,-Alice in Wonderland,-All the Wilderness,-America's Sweethearts,-An Onion Hash
+Answer: true
+Query: -127 Hours,-1408,-1911,-3 Needles,-3 Weeks to Daytona,-50 First Dates,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Bug's Life,-A Christmas Carol,-A Day in Court,-A Dream of Kings,-A Few Good Men,-A Home of Our Own,-A Merry Friggin' Christmas,-A Million Ways to Die in the West,-Ace Two Seven,-Adore Not,-Alabama Moon,-Alice in Wonderland,-All the Wilderness,-Along Came Polly,-Amelia,-America's Sweethearts,-An Onion Hash,-Bell Book and Candle
+Answer: true
+Query: -10 Things I Hate About You,-127 Hours,-1408,-1911,-25th Hour,-3 Needles,-3 Weeks to Daytona,-50 First Dates,-8MM,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Bug's Life,-A Christmas Carol,-A Cuban Yeti Mea,-A Dangerous Woman,-A Day in Court,-A Dream of Kings,-A Few Good Men,-A Global Affair,-A Home of Our Own,-A Long Way Down,-A Merry Friggin' Christmas,-A Million Ways to Die in the West,-Ace Two Seven,-Adore Not,-Alabama Moon,-Alice in Wonderland,-All the Wilderness,-Along Came Polly,-Alvin and the Chipmunks,-Amelia,-America's Sweethearts,-An Onion Hash,-Bell Book and Candle
+Answer: false
+Query: -127 Hours,-1408,-1911,-3 Needles,-3 Weeks to Daytona,-50 First Dates,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Bug's Life,-A Christmas Carol,-A Day in Court,-A Dream of Kings,-A Few Good Men,-A Global Affair,-A Home of Our Own,-A Long Way Down,-A Merry Friggin' Christmas,-A Million Ways to Die in the West,-Ace Two Seven,-Adore Not,-Alabama Moon,-Alice in Wonderland,-All the Wilderness,-Along Came Polly,-Alvin and the Chipmunks,-Amelia,-America's Sweethearts,-An Onion Hash,-Bell Book and Candle
+Answer: false
+Query: -127 Hours,-1408,-1911,-3 Needles,-3 Weeks to Daytona,-50 First Dates,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Bug's Life,-A Christmas Carol,-A Day in Court,-A Dream of Kings,-A Few Good Men,-A Home of Our Own,-A Long Way Down,-A Merry Friggin' Christmas,-A Million Ways to Die in the West,-Ace Two Seven,-Adore Not,-Alabama Moon,-Alice in Wonderland,-All the Wilderness,-Along Came Polly,-Amelia,-America's Sweethearts,-An Onion Hash,-Bell Book and Candle
+Answer: false
+You guess: Toni Collette
+You win!
+You made 5 guesses.
+Number of queries in round 3: 5
+Chosen Object: Adam Sandler
+Properties: 50 First Dates,Airheads,Bedtime Stories,Big Daddy,Billy Madison,Blended,Bulletproof,Click,Deuce Bigalow: Male Gigolo,Dirty Work,Eight Crazy Nights,Funny People,Grown Ups,Grown Ups 2,Happy Gilmore,Hotel Transylvania,Jack and Jill,Just Go with It,Kitten Lily,Men, Women & Children,Mixed Nuts,Mr Gene, Agent Man,Mr. Deeds,Pauly Shore Is Dead,Punch-Drunk Love,Reign Over Me,Spanglish,That's My Boy,The Animal,The Cobbler,The Hot Chick,The Longest Yard,The Waterboy,The Wedding Singer,You Don't Mess with the Zohan,Zookeeper
+Query: -127 Hours,-1408,-1911,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Christmas Carol,-A Few Good Men,-A Million Ways to Die in the West,-Ace Two Seven,-Adore Not,-Alabama Moon,-Alice in Wonderland,-All the Wilderness,-America's Sweethearts,-An Onion Hash
+Answer: true
+Query: -127 Hours,-1408,-1911,-3 Needles,-3 Weeks to Daytona,-50 First Dates,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Bug's Life,-A Christmas Carol,-A Day in Court,-A Dream of Kings,-A Few Good Men,-A Home of Our Own,-A Merry Friggin' Christmas,-A Million Ways to Die in the West,-Ace Two Seven,-Adore Not,-Alabama Moon,-Alice in Wonderland,-All the Wilderness,-Along Came Polly,-Amelia,-America's Sweethearts,-An Onion Hash,-Bell Book and Candle
+Answer: false
+Query: -127 Hours,-1408,-1911,-3 Needles,-3 Weeks to Daytona,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Bug's Life,-A Christmas Carol,-A Dream of Kings,-A Few Good Men,-A Home of Our Own,-A Million Ways to Die in the West,-Ace Two Seven,-Adore Not,-Alabama Moon,-Alice in Wonderland,-All the Wilderness,-America's Sweethearts,-An Onion Hash
+Answer: true
+Query: -127 Hours,-1408,-1911,-3 Needles,-3 Weeks to Daytona,-50 First Dates,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Bug's Life,-A Christmas Carol,-A Dream of Kings,-A Few Good Men,-A Home of Our Own,-A Million Ways to Die in the West,-Ace Two Seven,-Adore Not,-Alabama Moon,-Alice in Wonderland,-All the Wilderness,-Along Came Polly,-Amelia,-America's Sweethearts,-An Onion Hash
+Answer: false
+Query: -127 Hours,-1408,-1911,-3 Needles,-3 Weeks to Daytona,-50 First Dates,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Bug's Life,-A Christmas Carol,-A Dream of Kings,-A Few Good Men,-A Home of Our Own,-A Million Ways to Die in the West,-Ace Two Seven,-Adore Not,-Alabama Moon,-Alice in Wonderland,-All the Wilderness,-Amelia,-America's Sweethearts,-An Onion Hash
+Answer: false
+Query: -127 Hours,-1408,-1911,-3 Needles,-3 Weeks to Daytona,-50 First Dates,-A Beginner's Guide to Endings,-A Boneless Pig Knot,-A Bug's Life,-A Christmas Carol,-A Dream of Kings,-A Few Good Men,-A Home of Our Own,-A Million Ways to Die in the West,-Ace Two Seven,-Adore Not,-Alabama Moon,-Alice in Wonderland,-All the Wilderness,-America's Sweethearts,-An Onion Hash
+Answer: false
+You guess: Adam Sandler
+You win!
+You made 6 guesses.
+Number of queries in round 4: 6
+=================================
+Congratulations! You have played 5 rounds of games.
+The average number of guesses is 5.600000.
+The maximum number of guesses is 6.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Chosen Object: Lorena
+Properties: funked,lowse,prompt,score,sooth,waur,yon
+Query: -bats
+Answer: true
+Query: -bats,-bland
+Answer: true
+Query: -bats,-bland,-dread
+Answer: true
+Query: -bats,-bland,-dread,-funked
+Answer: false
+Query: -bats,-bland,-dread,funked,-lowse
+Answer: false
+Query: -bats,-bland,-dread,funked,lowse,prompt
+Answer: true
+Query: -bats,-bland,-dread,funked,lowse,prompt,-score
+Answer: false
+You guess: Lorena
+You win!
+You made 7 guesses.
+Number of queries in round 0: 7
+Chosen Object: Olivia
+Properties: bats,bland,dread,mild,prompt,suave,yon
+Query: -bats
+Answer: false
+Query: bats,-bland
+Answer: false
+Query: bats,bland,-blowzed
+Answer: true
+Query: bats,bland,-blowzed,-funked
+Answer: true
+Query: bats,bland,-blowzed,-dire,-dread,-funked
+Answer: false
+Query: bats,bland,-blowzed,-dire,-funked
+Answer: true
+You guess: Olivia
+You win!
+You made 6 guesses.
+Number of queries in round 1: 6
+Chosen Object: Christina
+Properties: funked,lowse,ope,prompt,suave,tongued,yon
+Query: -bats
+Answer: true
+Query: -bats,-bland
+Answer: true
+Query: -bats,-bland,-dread
+Answer: true
+Query: -bats,-bland,-dread,-funked
+Answer: false
+Query: -bats,-bland,-dread,funked,-lowse
+Answer: false
+Query: -bats,-bland,-dread,funked,lowse,prompt
+Answer: true
+Query: -bats,-bland,-dread,funked,lowse,prompt,-score
+Answer: true
+You guess: Christina
+You win!
+You made 7 guesses.
+Number of queries in round 2: 7
+Chosen Object: Wilson
+Properties: bats,feal,glazed,lowse,mild,ope,prompt,waved
+Query: -bats
+Answer: false
+Query: bats,-bland
+Answer: true
+Query: bats,-bland,-blowzed
+Answer: true
+Query: bats,-bland,-blowzed,dread,-feal
+Answer: false
+Query: bats,-bland,-blowzed,-feal
+Answer: false
+Query: bats,-bland,-blowzed,feal,glazed
+Answer: true
+Query: bats,-bland,-blowzed,feal,glazed,-lowse
+Answer: false
+You guess: Wilson
+You win!
+You made 7 guesses.
+Number of queries in round 3: 7
+Chosen Object: Elias
+Properties: bats,dire,dread,funked,tongued,yon
+Query: -bats
+Answer: false
+Query: bats,-bland
+Answer: true
+Query: bats,-bland,-blowzed
+Answer: true
+Query: bats,-bland,-blowzed,dread,-feal
+Answer: true
+Query: bats,-bland,-blowzed,dread,-feal,-lowse
+Answer: true
+Query: bats,-bland,-blowzed,-dire,dread,-feal,-lowse
+Answer: false
+You guess: Elias
+You win!
+You made 6 guesses.
+Number of queries in round 4: 6
+=================================
+Congratulations! You have played 5 rounds of games.
+The average number of guesses is 6.600000.
+The maximum number of guesses is 7.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Chosen Object: Gilbert
+Properties: aft,blunt,damned,dashed,famed,greige,hewn,leaved,less,lodged,neaped,pent,pique,scrap,ski,stringed,thrown,waved
+Query: -aft
+Answer: false
+Query: aft,-awed
+Answer: true
+Query: aft,-awed,-chirk
+Answer: true
+Query: aft,-awed,-blunt,-chirk,-damned
+Answer: false
+Query: aft,-awed,-blunt,-chirk
+Answer: false
+Query: aft,-awed,blunt,-chirk,-damned
+Answer: false
+Query: aft,-awed,blunt,-chirk,damned,dashed,famed,greige,-hewn
+Answer: false
+You guess: Gilbert
+You win!
+You made 7 guesses.
+Number of queries in round 0: 7
+Chosen Object: Benjiman
+Properties: aft,damned,flexed,flown,glazed,hoarse,leaved,liege,lone,neaped,pique,pocked,scrap,shorn,slick,tanked
+Query: -aft
+Answer: false
+Query: aft,-awed
+Answer: true
+Query: aft,-awed,-chirk
+Answer: true
+Query: aft,-awed,-blunt,-chirk,-damned
+Answer: false
+Query: aft,-awed,-blunt,-chirk
+Answer: true
+Query: aft,-awed,-blunt,-chirk,damned,-dank
+Answer: true
+Query: aft,-awed,-blunt,-bye,-chirk,damned,-dank
+Answer: true
+Query: aft,-awed,-blunt,-bye,-chirk,damned,-dank,-flexed
+Answer: false
+You guess: Benjiman
+You win!
+You made 8 guesses.
+Number of queries in round 1: 8
+Chosen Object: Juanita
+Properties: aft,awed,damned,dashed,frogged,hoarse,kraal,leaved,lone,mob,pent,ski,stringed,yare,yon
+Query: -aft
+Answer: false
+Query: aft,-awed
+Answer: false
+Query: aft,awed,-blunt,-bye
+Answer: true
+Query: aft,awed,-blunt,-bye,-chirk
+Answer: true
+Query: aft,awed,-blunt,-bye,-chirk,-dank
+Answer: true
+Query: aft,awed,-blunt,-bye,-chirk,-dank,-famed
+Answer: true
+Query: aft,awed,-blunt,-bye,-chirk,-damned,-dank,-famed
+Answer: false
+You guess: Juanita
+You win!
+You made 7 guesses.
+Number of queries in round 2: 7
+Chosen Object: Hobart
+Properties: aft,awed,chirk,damned,famed,flexed,glazed,hewn,hoarse,liege,mob,neaped,scrap,shorn,stringed,waved
+Query: -aft
+Answer: false
+Query: aft,-awed
+Answer: false
+Query: aft,awed,-blunt,-bye
+Answer: true
+Query: aft,awed,-blunt,-bye,-chirk
+Answer: false
+Query: aft,awed,-blunt,-bye,chirk,-damned
+Answer: false
+Query: aft,awed,-blunt,-bye,chirk,damned,-dashed
+Answer: true
+Query: aft,awed,-blunt,-bye,chirk,damned,-dashed,-famed
+Answer: false
+You guess: Hobart
+You win!
+You made 7 guesses.
+Number of queries in round 3: 7
+Chosen Object: Walker
+Properties: awed,blunt,chirk,damned,dashed,famed,flexed,hoarse,lone,pent,pique,scrap,shorn,tanked,thrown
+Query: -aft
+Answer: true
+Query: -aft,-chirk
+Answer: false
+Query: -aft,chirk,-damned
+Answer: false
+Query: -aft,chirk,damned,-dank
+Answer: true
+Query: -aft,-awed,chirk,damned,-dank
+Answer: false
+Query: -aft,awed,chirk,damned,-dank,-fold
+Answer: true
+Query: -aft,awed,blunt,chirk,damned,-dank,dashed,-famed,-fold
+Answer: false
+You guess: Walker
+You win!
+You made 7 guesses.
+Number of queries in round 4: 7
+=================================
+Congratulations! You have played 5 rounds of games.
+The average number of guesses is 7.200000.
+The maximum number of guesses is 8.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Chosen Object: Lacy
+Properties: cheap,chirk,crossed,feat,ghast,gules,liege,lit,rathe,then,tops,worse,wound
+Query: -alt,-ane,-ant,-arch,-bare,-barred,-blah,-blamed,-bleak,-blocked,-blond,-blonde,-bloomed,-blown,-both,-brood,-gules
+Answer: false
+Query: -ane,-ant,-bleak,-blocked,-bloomed,-brood
+Answer: true
+Query: -alt,-ane,-ant,-barred,-bleak,-blocked,-bloomed,-blown,-both,-brood
+Answer: true
+Query: -alt,-ane,-ant,-barred,-blamed,-bleak,-blocked,-blonde,-bloomed,-blown,-both,-brood
+Answer: true
+Query: -alt,-ane,-ant,-bare,-barred,-blah,-blamed,-bleak,-blocked,-blonde,-bloomed,-blown,-both,-brood
+Answer: true
+Query: -alt,-ane,-ant,-arch,-bare,-barred,-blah,-blamed,-bleak,-blocked,-blond,-blonde,-bloomed,-blown,-both,-brood
+Answer: true
+Query: -alt,-ane,-ant,-arch,-bare,-barred,-blah,-blamed,-bleak,-blocked,-blond,-blonde,-bloomed,-blown,-boiled,-both,-brood,-bye,gules,-left
+Answer: true
+Query: -alt,-ane,-ant,-arch,-backed,-bare,-barred,-blah,-blamed,-bleak,-blocked,-blond,-blonde,-bloomed,-blown,-boiled,-both,-brood,-bye,-cheap,gules,-left
+Answer: false
+Query: -alt,-ane,-ant,-arch,-bare,-barred,-blah,-blamed,-bleak,-blocked,-blond,-blonde,-bloomed,-blown,-boiled,-both,-brood,-bye,-cheap,gules,-left
+Answer: false
+You guess: Lacy
+You win!
+You made 9 guesses.
+Number of queries in round 0: 9
+Chosen Object: Lucious
+Properties: bobs,crowned,dere,dished,keyed,kitsch,leafed,pained,spruce,treed,whelked,wired
+Query: -alt,-ane,-ant,-arch,-bare,-barred,-blah,-blamed,-bleak,-blocked,-blond,-blonde,-bloomed,-blown,-both,-brood,-gules
+Answer: true
+Query: -ain,-all,-alt,-ane,-ant,-arch,-awed,-bare,-barred,-beige,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-bold,-both,-bought,-brood,-corked,-creole,-crutched,-flush,-gilt,-gules
+Answer: true
+Query: -ain,-all,-alt,-ane,-ant,-arch,-awed,-barbed,-bare,-barred,-bats,-beaut,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-both,-bought,-brief,-brood,-brusque,-buff,-corked,-creole,-crowned,-crutched,-done,-dud,-flush,-gilt,-grim,-gules
+Answer: false
+Query: -ain,-all,-alt,-ane,-ant,-arch,-awed,-bare,-barred,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-both,-bought,-brood,-corked,-creole,-crutched,-flush,-gilt,-grim,-gules
+Answer: true
+Query: -ain,-all,-alt,-ane,-ant,-arch,-awed,-bare,-barred,-bats,-beaut,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-both,-bought,-brood,-brusque,-corked,-creole,-crutched,-flush,-gilt,-grim,-gules
+Answer: true
+Query: -ain,-all,-alt,-ane,-ant,-arch,-awed,-bare,-barred,-bats,-beaut,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-both,-bought,-brood,-brusque,-corked,-creole,-crowned,-crutched,-done,-dud,-flush,-gilt,-grim,-gules
+Answer: false
+Query: -ain,-all,-alt,-ane,-ant,-arch,-awed,-bare,-barred,-bats,-beaut,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-both,-bought,-brood,-brusque,-corked,-creole,-crutched,-dud,-flush,-gilt,-grim,-gules
+Answer: true
+Query: -ain,-all,-alt,-ane,-ant,-arch,-awed,-bare,-barred,-bats,-beaut,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-both,-bought,-brood,-brusque,-corked,-creole,-crutched,-done,-dud,-flush,-gilt,-grim,-gules
+Answer: true
+Query: -ain,-all,-alt,-ane,-ant,-arch,-awed,-bare,-barred,-bats,-beaut,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-both,-bought,-brood,-brusque,-corked,-creole,crowned,-crutched,-done,-dud,-fain,-flush,-gilt,-grim,-gules
+Answer: true
+You guess: Lucious
+You win!
+You made 9 guesses.
+Number of queries in round 1: 9
+Chosen Object: Augusta
+Properties: cheek,clad,crocked,due,gleg,hued,mad,moot,snecked,such,surd,thrown
+Query: -alt,-ane,-ant,-arch,-bare,-barred,-blah,-blamed,-bleak,-blocked,-blond,-blonde,-bloomed,-blown,-both,-brood,-gules
+Answer: true
+Query: -ain,-all,-alt,-ane,-ant,-arch,-awed,-bare,-barred,-beige,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-bold,-both,-bought,-brood,-corked,-creole,-crutched,-flush,-gilt,-gules
+Answer: true
+Query: -ain,-all,-alt,-ane,-ant,-arch,-awed,-barbed,-bare,-barred,-bats,-beaut,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-both,-bought,-brief,-brood,-brusque,-buff,-corked,-creole,-crowned,-crutched,-done,-dud,-flush,-gilt,-grim,-gules
+Answer: true
+Query: -ain,-all,-alt,-ane,-ant,-apt,-arch,-awed,-barbed,-bare,-barred,-bats,-beaut,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-boned,-both,-bought,-brave,-braw,-brief,-brisk,-broch,-brood,-brusque,-buff,-burned,-bushed,-chic,-corked,-creole,-crowned,-crutched,-done,-drear,-dud,-flush,-gilt,-grim,-gules
+Answer: true
+Query: -ain,-all,-alt,-ane,-ant,-apt,-arch,-awed,-barbed,-bare,-barred,-bats,-beaut,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-boned,-both,-bought,-brave,-braw,-brief,-brisk,-broch,-brood,-brusque,-buff,-burned,-bushed,-bust,-chaste,-cheek,-chic,-corked,-cowled,-cramped,-creole,-crossed,-crowned,-crutched,-darned,-done,-drear,-drunk,-dud,-flush,-found,-gilt,-glib,-grim,-gules
+Answer: false
+Query: -ain,-all,-alt,-ane,-ant,-apt,-arch,-awed,-barbed,-bare,-barred,-bats,-beaut,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-boned,-both,-bought,-brave,-braw,-brief,-brisk,-broch,-brood,-brusque,-buff,-burned,-bushed,-bust,-chic,-corked,-cowled,-creole,-crowned,-crutched,-darned,-done,-drear,-dud,-flush,-found,-gilt,-grim,-gules
+Answer: true
+Query: -ain,-all,-alt,-ane,-ant,-apt,-arch,-awed,-barbed,-bare,-barred,-bats,-beaut,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-boned,-both,-bought,-brave,-braw,-brief,-brisk,-broch,-brood,-brusque,-buff,-burned,-bushed,-bust,-chic,-corked,-cowled,-cramped,-creole,-crossed,-crowned,-crutched,-darned,-done,-drear,-dud,-flush,-found,-gilt,-glib,-grim,-gules
+Answer: true
+Query: -ain,-all,-alt,-ane,-ant,-apt,-arch,-awed,-barbed,-bare,-barred,-bats,-beaut,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-boned,-both,-bought,-brave,-braw,-brief,-brisk,-broch,-brood,-brusque,-buff,-burned,-bushed,-bust,-chaste,-chic,-corked,-cowled,-cramped,-creole,-crossed,-crowned,-crutched,-darned,-done,-drear,-drunk,-dud,-flush,-found,-gilt,-glib,-grim,-gules
+Answer: true
+Query: -ain,-all,-alt,-ane,-ant,-apt,-arch,-awed,-barbed,-bare,-barred,-bats,-beaut,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-boned,-both,-bought,-brave,-braw,-brief,-brisk,-broch,-brood,-brusque,-buff,-burned,-bushed,-bust,-chaste,cheek,-chic,-corked,-cowled,-cramped,-creole,-crossed,-crowned,-crutched,-dank,-darned,-done,-drear,-drunk,-dud,-flush,-found,-gilt,-glib,-grim,-gules
+Answer: true
+Query: -ain,-all,-alt,-ane,-ant,-apt,-arch,-awed,-barbed,-bare,-barred,-bats,-beaut,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-boned,-both,-bought,-brave,-braw,-brief,-brisk,-broch,-brood,-brusque,-buff,-burned,-bushed,-bust,-chaste,cheek,-chic,-clad,-corked,-cowled,-cramped,-creole,-crossed,-crowned,-crutched,-dank,-darned,-done,-drear,-drunk,-dud,-flush,-found,-gilt,-glib,-grim,-gules
+Answer: false
+You guess: Augusta
+You win!
+You made 10 guesses.
+Number of queries in round 2: 10
+Chosen Object: Hyman
+Properties: bats,broke,damn,dash,dure,few,fresh,glazed,harsh,made,naught,rapt,shrunk,stray,worn
+Query: -alt,-ane,-ant,-arch,-bare,-barred,-blah,-blamed,-bleak,-blocked,-blond,-blonde,-bloomed,-blown,-both,-brood,-gules
+Answer: true
+Query: -ain,-all,-alt,-ane,-ant,-arch,-awed,-bare,-barred,-beige,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-bold,-both,-bought,-brood,-corked,-creole,-crutched,-flush,-gilt,-gules
+Answer: true
+Query: -ain,-all,-alt,-ane,-ant,-arch,-awed,-barbed,-bare,-barred,-bats,-beaut,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-both,-bought,-brief,-brood,-brusque,-buff,-corked,-creole,-crowned,-crutched,-done,-dud,-flush,-gilt,-grim,-gules
+Answer: false
+Query: -ain,-all,-alt,-ane,-ant,-arch,-awed,-bare,-barred,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-both,-bought,-brood,-corked,-creole,-crutched,-flush,-gilt,-grim,-gules
+Answer: true
+Query: -ain,-all,-alt,-ane,-ant,-arch,-awed,-bare,-barred,-bats,-beaut,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-both,-bought,-brood,-brusque,-corked,-creole,-crutched,-flush,-gilt,-grim,-gules
+Answer: false
+Query: -ain,-all,-alt,-ane,-ant,-arch,-awed,-bare,-barred,-beaut,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-both,-bought,-brood,-corked,-creole,-crutched,-flush,-gilt,-grim,-gules
+Answer: true
+Query: -ain,-all,-alt,-ane,-ant,-arch,-awed,-bare,-barred,-bats,-beaut,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-both,-bought,-brood,brusque,-calm,-corked,-creole,-crutched,-flush,-gilt,-grim,-gules
+Answer: false
+Query: -ain,-all,-alt,-ane,-ant,-arch,-awed,-bare,-barred,-bats,-beaut,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-both,-bought,-brood,-corked,-creole,-crutched,-flush,-gilt,-grim,-gules
+Answer: false
+You guess: Hyman
+You win!
+You made 8 guesses.
+Number of queries in round 3: 8
+Chosen Object: Mary
+Properties: beaut,fogged,keyed,leaved,masked,moire,numb,tight,trine,worse
+Query: -alt,-ane,-ant,-arch,-bare,-barred,-blah,-blamed,-bleak,-blocked,-blond,-blonde,-bloomed,-blown,-both,-brood,-gules
+Answer: true
+Query: -ain,-all,-alt,-ane,-ant,-arch,-awed,-bare,-barred,-beige,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-bold,-both,-bought,-brood,-corked,-creole,-crutched,-flush,-gilt,-gules
+Answer: true
+Query: -ain,-all,-alt,-ane,-ant,-arch,-awed,-barbed,-bare,-barred,-bats,-beaut,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-both,-bought,-brief,-brood,-brusque,-buff,-corked,-creole,-crowned,-crutched,-done,-dud,-flush,-gilt,-grim,-gules
+Answer: false
+Query: -ain,-all,-alt,-ane,-ant,-arch,-awed,-bare,-barred,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-both,-bought,-brood,-corked,-creole,-crutched,-flush,-gilt,-grim,-gules
+Answer: true
+Query: -ain,-all,-alt,-ane,-ant,-arch,-awed,-bare,-barred,-bats,-beaut,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-both,-bought,-brood,-brusque,-corked,-creole,-crutched,-flush,-gilt,-grim,-gules
+Answer: false
+Query: -ain,-all,-alt,-ane,-ant,-arch,-awed,-bare,-barred,-beaut,-beige,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-both,-bought,-brood,-corked,-creole,-crutched,-flush,-gilt,-grim,-gules
+Answer: false
+Query: -ain,-all,-alt,-ane,-ant,-arch,-awed,-bare,-barred,beaut,-beige,-bent,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-both,-bought,-brood,-corked,-creole,-crutched,-damned,-flush,-gilt,-grim,-gules
+Answer: true
+Query: -ace,-ain,-all,-alt,-ane,-ant,-arch,-awed,-bare,-barred,beaut,-beige,-bent,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-both,-bought,-brood,-corked,-creole,-crutched,-damned,-flush,-gilt,-grim,-gules
+Answer: true
+Query: -ace,-ain,-all,-alt,-ane,-ant,-arch,-awed,-bare,-barred,beaut,-beige,-bent,-birch,-bit,-blah,-blamed,-bleak,-blear,-blocked,-blond,-blonde,-bloomed,-blown,-blowzed,-blunt,-boiled,-bold,-both,-bought,-brood,-cauld,-corked,-creole,-crutched,-damned,-flush,-gilt,-grim,-gules
+Answer: true
+You guess: Mary
+You win!
+You made 9 guesses.
+Number of queries in round 4: 9
+=================================
+Congratulations! You have played 5 rounds of games.
+The average number of guesses is 9.000000.
+The maximum number of guesses is 10.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Chosen Object: Naomi
+Properties: aft,all,arched,blate,bobs,brash,brave,brusque,brute,coarse,cowled,crumb,crutched,damned,dinge,dowf,drunk,due,fab,fain,farm,fat,feal,forced,fringed,glare,glazed,grown,hex,huge,jimp,kind,lashed,lipped,lorn,loth,lown,mair,marked,moot,mown,next,pained,prest,proud,rash,ruffed,runed,scant,score,shod,sleek,starred,store,strait,striped,sunk,sure,thin,toom,tried,tum,wed,yon
+Query: -all,-alt,-apt,-awed,-barbed
+Answer: false
+Query: -all,-awed
+Answer: false
+Query: -awed
+Answer: true
+Query: -aft,all,-apt,-awed
+Answer: false
+Query: all,-apt,-awed
+Answer: true
+Query: aft,all,-apt,-arched,-awed,-bare
+Answer: false
+Query: aft,all,-apt,-awed,-bare
+Answer: true
+You guess: Naomi
+You win!
+You made 7 guesses.
+Number of queries in round 0: 7
+Chosen Object: Erna
+Properties: bare,birch,boon,coursed,crined,crutched,deal,due,dusk,eared,edge,feigned,flush,foul,greige,grum,halt,held,hewn,hex,langued,lit,lithe,lown,masked,mat,matte,mod,much,mum,numb,peart,pocked,pouched,quit,sad,scorched,score,seen,shaped,shrewd,skint,slant,sleek,slick,slub,snide,stewed,strict,surd,swept,thwart,tiled,touched,twee,vague,vain,waste,worse,worst
+Query: -all,-alt,-apt,-awed,-barbed
+Answer: true
+Query: -all,-alt,-ant,-apt,-awed,-barbed,-barred,-bats,-blame
+Answer: true
+Query: -ace,-all,-alt,-ant,-apt,-arch,-arched,-awed,-barbed,-barred,-bats,-blae,-blame
+Answer: true
+Query: -ace,-all,-alt,-ane,-ant,-apt,-arch,-arched,-awed,-barbed,-barred,-bats,-birch,-blae,-blame,-blear,-blonde
+Answer: false
+Query: -ace,-all,-alt,-ane,-ant,-apt,-arch,-arched,-awed,-barbed,-barred,-bats,-blae,-blame,-blear
+Answer: true
+Query: -ace,-all,-alt,-ane,-ant,-apt,-arch,-arched,-awed,-barbed,-barred,-bats,-blae,-blame,-blear,-blonde
+Answer: true
+Query: -ace,-all,-alt,-ane,-ant,-apt,-arch,-arched,-awed,-baked,-barbed,-barred,-bats,birch,-blae,-blame,-blate,-blear,-blonde,-brave
+Answer: true
+Query: -ace,-all,-alt,-ane,-ant,-apt,-arch,-arched,-awed,-baked,-barbed,-bare,-barred,-bats,birch,-blae,-blame,-bland,-blate,-blear,-blonde,-brave
+Answer: false
+Query: -ace,-all,-alt,-ane,-ant,-apt,-arch,-arched,-awed,-baked,-barbed,-barred,-bats,birch,-blae,-blame,-bland,-blate,-blear,-blonde,-brave
+Answer: true
+You guess: Erna
+You win!
+You made 9 guesses.
+Number of queries in round 1: 9
+Chosen Object: Oliver
+Properties: baked,barbed,bobs,brief,burred,cheap,cheek,clad,corked,cowled,crisp,dense,dread,dried,due,dull,eared,earned,eath,forte,frilled,frogged,gleg,hep,laith,liege,lorn,loud,lowse,mod,neaped,next,passed,plump,plus,poised,prest,prim,print,rathe,roast,runed,said,scaled,scalled,self,shed,skinned,slain,sown,stacked,staged,striped,stuck,stuffed,stung,suave,tart,taut,teen,thae,thin,told,toom,trig,twp,vile,wale,willed
+Query: -all,-alt,-apt,-awed,-barbed
+Answer: false
+Query: -all,-awed
+Answer: true
+Query: -all,-alt,-awed
+Answer: true
+Query: -all,-alt,-apt,-awed
+Answer: true
+Query: -all,-alt,-apt,-awed,-baked,barbed,-bats
+Answer: false
+Query: -all,-alt,-apt,-awed,barbed,bats,-blamed
+Answer: false
+Query: -all,-alt,-apt,-awed,barbed,-bats
+Answer: true
+Query: -all,-alt,-apt,-awed,baked,barbed,-bats,-bobs
+Answer: false
+You guess: Oliver
+You win!
+You made 8 guesses.
+Number of queries in round 2: 8
+Chosen Object: Antonio
+Properties: aft,awed,bleak,burred,cracked,crisp,crude,damp,dern,dried,drunk,dull,fab,famed,far,flawed,fledged,flip,fold,frail,gauche,grouse,hurt,leafed,loud,meet,murk,mzee,nigh,numb,pique,plump,plus,prone,raked,rapt,rath,rent,runed,sad,scalled,scorched,sec,shrill,slung,snecked,sooth,sought,sport,squint,stoned,store,stuck,sunk,swart,sweer,thrown,tight,tinned,toed,toothed,waved,winged,zonked
+Query: -all,-alt,-apt,-awed,-barbed
+Answer: false
+Query: -all,-awed
+Answer: false
+Query: -awed
+Answer: false
+Query: -all,-ane,awed,-barbed
+Answer: true
+Query: -aft,-ain,-all,-ane,awed,-barbed
+Answer: false
+Query: -ain,-all,-ane,awed,-barbed
+Answer: true
+Query: aft,-ain,-all,-ane,awed,-barbed,-bare
+Answer: true
+Query: aft,-ain,-all,-ane,-apt,awed,-barbed,-bare
+Answer: true
+You guess: Antonio
+You win!
+You made 8 guesses.
+Number of queries in round 3: 8
+Chosen Object: Chris
+Properties: birk,burned,charged,cool,corned,crossed,crutched,cusped,daft,damn,deal,eared,edge,flawed,flexed,gleg,gone,grab,grained,gules,gummed,hex,knurled,lame,lank,less,lipped,lithe,lowse,meek,meet,naught,next,numb,over,paced,pent,pitched,print,prompt,proud,refer,rife,scorched,seen,shorn,skinned,slight,snug,staid,stey,store,strung,swept,taught,toe,tongued,tops,trim,triste,twelfth,wed
+Query: -all,-alt,-apt,-awed,-barbed
+Answer: true
+Query: -all,-alt,-ant,-apt,-awed,-barbed,-barred,-bats,-blame
+Answer: true
+Query: -ace,-all,-alt,-ant,-apt,-arch,-arched,-awed,-barbed,-barred,-bats,-blae,-blame
+Answer: true
+Query: -ace,-all,-alt,-ane,-ant,-apt,-arch,-arched,-awed,-barbed,-barred,-bats,-birch,-blae,-blame,-blear,-blonde
+Answer: true
+Query: -ace,-aft,-all,-alt,-ane,-ant,-apt,-arch,-arched,-auld,-awed,-backed,-barbed,-bare,-barred,-bats,-birch,-blae,-blame,-blear,-blonde
+Answer: true
+Query: -ace,-aft,-all,-alt,-ane,-ant,-apt,-arch,-arched,-auld,-awed,-backed,-barbed,-bare,-barred,-bats,-bent,-birch,-blae,-blame,-blate,-blear,-blonde,-blowzed
+Answer: true
+Query: -ace,-aft,-all,-alt,-ane,-ant,-apt,-arch,-arched,-auld,-awed,-backed,-baked,-barbed,-bare,-barred,-bats,-beaut,-bent,-birch,-blae,-blame,-blate,-blear,-blonde,-blowzed
+Answer: true
+Query: -ace,-aft,-ain,-all,-alt,-ane,-ant,-apt,-arch,-arched,-auld,-awed,-backed,-baked,-barbed,-bare,-barred,-bats,-beaut,-bent,-birch,-blae,-blame,-blate,-blear,-blonde,-blowzed,-bought
+Answer: true
+Query: -ace,-aft,-ain,-all,-alt,-ane,-ant,-apt,-arch,-arched,-auld,-awed,-backed,-baked,-barbed,-bare,-barred,-bats,-beaut,-bent,-birch,-birk,-blae,-blame,-blate,-blear,-blonde,-blowzed,-bluff,-bought
+Answer: false
+Query: -ace,-aft,-ain,-all,-alt,-ane,-ant,-apt,-arch,-arched,-auld,-awed,-backed,-baked,-barbed,-bare,-barred,-bats,-beaut,-bent,-birch,-blae,-blame,-blate,-blear,-blonde,-blowzed,-bluff,-bought
+Answer: true
+You guess: Chris
+You win!
+You made 10 guesses.
+Number of queries in round 4: 10
+=================================
+Congratulations! You have played 5 rounds of games.
+The average number of guesses is 8.400000.
+The maximum number of guesses is 10.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Chosen Object: Alphonso
+Properties: barred,bit,blah,blamed,blown,bluff,bold,boned,coursed,cowled,crocked,cusped,damned,dank,dinge,due,eighth,flip,flown,frail,fringed,ginned,greige,hick,hoar,jimp,lashed,left,lobed,lown,mat,meek,milch,mzee,ninth,posh,rid,runed,sane,sap,sedged,seen,sewn,sixth,ski,skinned,slant,sloshed,spry,strewn,stringed,super,sworn,thin,tierced,tight,tinct,tops,waved,worst,wrapped,wroth,wud
+Query: -ace,-aft,-ain,-bit
+Answer: false
+Query: -ace,-aft
+Answer: true
+Query: -ace,-aft,-ain
+Answer: true
+Query: -ace,-aft,-ain,-alt,-awed,-bent,bit,-blond,-blowzed
+Answer: true
+Query: -ace,-aft,-ain,-alt,-ane,-ant,-auld,-awed,-bent,bit,-blah,-blond,-blowzed
+Answer: false
+Query: -ace,-aft,-ain,-alt,-ant,-awed,-bent,bit,-blah,-blond,-blowzed
+Answer: false
+Query: -ace,-aft,-ain,-alt,-ant,-awed,-bent,bit,-blond,-blowzed
+Answer: true
+Query: -ace,-aft,-ain,-alt,-ant,-apt,-awed,-bent,bit,blah,-blame,-blond,-blowzed
+Answer: true
+Query: -ace,-aft,-ain,-alt,-ant,-apt,-awed,-barred,-bent,bit,blah,-blame,-blond,-blowzed
+Answer: false
+You guess: Alphonso
+You win!
+You made 9 guesses.
+Number of queries in round 0: 9
+Chosen Object: Archie
+Properties: arched,beige,blae,bold,chaste,choice,clad,clean,crook,cupped,daft,dud,famed,feigned,fit,fou,foul,fremd,frore,funked,furred,girt,grab,greige,grouse,hoar,hogged,jade,lean,lush,milch,mim,must,neat,peaked,peart,prompt,quack,roast,scalled,shy,skew,spired,stalked,stray,stringed,super,teen,then,thrawn,through,toothed,trad,treed,vain,versed,waste,waur,webbed,whelked
+Query: -ace,-aft,-ain,-bit
+Answer: true
+Query: -ace,-aft,-ain,-all,-ant,-apt,-auld,-bit,-blear
+Answer: true
+Query: -ace,-aft,-ain,-all,-ant,-apt,-auld,-barbed,-barred,-beaut,-birch,-bit,-blear
+Answer: true
+Query: -ace,-aft,-ain,-all,-ane,-ant,-apt,-auld,-awed,-barbed,-barred,-beaut,-birch,-birk,-bit,-blear,-bobs
+Answer: true
+Query: -ace,-aft,-ain,-all,-ane,-ant,-apt,-auld,-awed,-backed,-barbed,-barred,-bats,-beaut,-birch,-birk,-bit,-blah,-blamed,-blear,-blonde,-bobs
+Answer: true
+Query: -ace,-aft,-ain,-all,-alt,-ane,-ant,-apt,-auld,-awed,-backed,-baked,-barbed,-barred,-bats,-beaut,-birch,-birk,-bit,-blah,-blamed,-bland,-blear,-blonde,-bobs,-bold
+Answer: false
+Query: -ace,-aft,-ain,-all,-ane,-ant,-apt,-auld,-awed,-backed,-barbed,-barred,-bats,-beaut,-birch,-birk,-bit,-blah,-blamed,-bland,-blear,-blonde,-bobs,-bold
+Answer: false
+Query: -ace,-aft,-ain,-all,-ane,-ant,-apt,-auld,-awed,-backed,-barbed,-barred,-bats,-beaut,-birch,-birk,-bit,-blah,-blamed,-bland,-blear,-blonde,-bobs
+Answer: true
+Query: -ace,-aft,-ain,-all,-ane,-ant,-apt,-auld,-awed,-backed,-barbed,-barred,-bats,-beaut,-birch,-birk,-bit,-blah,-blame,-blamed,-bland,-blear,-blonde,-bobs,bold,-boulle
+Answer: true
+Query: -ace,-aft,-ain,-all,-ane,-ant,-apt,-auld,-awed,-backed,-barbed,-barred,-bats,-beaut,-birch,-birk,-bit,-blae,-blah,-blame,-blamed,-bland,-blear,-blonde,-bobs,bold,-boulle
+Answer: false
+Query: -ace,-aft,-ain,-all,-ane,-ant,-apt,-auld,-awed,-backed,-barbed,-barred,-bats,-beaut,-birch,-birk,-bit,blae,-blah,-blame,-blamed,-bland,-blear,-blonde,-blunt,-bobs,bold,-boulle
+Answer: true
+You guess: Archie
+You win!
+You made 11 guesses.
+Number of queries in round 1: 11
+Chosen Object: Martin
+Properties: ant,both,brushed,burred,choice,cracked,crazed,crined,crocked,cur,cusped,damned,dinge,doiled,done,douce,dreich,dried,drunk,due,eighth,eyed,forte,frail,fraught,frogged,gauge,grouse,gules,gunned,keyed,lodged,lone,lorn,lown,masked,meet,metal,mob,mooned,near,once,posh,rapt,rath,ruffed,scarce,shill,slain,spare,spec,stale,switch,thrown,tinned,touched,tref,tried,trine,triste,trussed,vast,vile,well,wide,wroth
+Query: -ace,-aft,-ain,-bit
+Answer: true
+Query: -ace,-aft,-ain,-all,-ant,-apt,-auld,-bit,-blear
+Answer: false
+Query: -ace,-aft,-ain,-all,-bit,-blear
+Answer: true
+Query: -ace,-aft,-ain,-all,-apt,-bit,-blear
+Answer: true
+Query: -ace,-aft,-ain,-all,-ant,-apt,-bit,-blear
+Answer: false
+Query: -ace,-aft,-ain,-all,ant,-apt,-arched,-baked,-barbed,-barred,-beige,-bit,-blear
+Answer: true
+Query: -ace,-aft,-ain,-all,ant,-apt,-arched,-baked,-barbed,-bare,-barred,-bats,-beige,-bit,-blear
+Answer: true
+Query: -ace,-aft,-ain,-all,ant,-apt,-arched,-baked,-barbed,-bare,-barred,-bats,-beige,-bit,-blear,-both,-burned
+Answer: false
+Query: -ace,-aft,-ain,-all,ant,-apt,-arched,-baked,-barbed,-bare,-barred,-bats,-beige,-bit,-blear,-burned
+Answer: true
+Query: -ace,-aft,-ain,-all,ant,-apt,-arched,-baked,-barbed,-bare,-barred,-bats,-beige,-bit,-blear,both,-brushed,-burned
+Answer: false
+Query: -ace,-aft,-ain,-all,ant,-apt,-arched,-baked,-barbed,-bare,-barred,-bats,-beige,-bit,-blear,both,brushed,-burned,-burred
+Answer: false
+You guess: Martin
+You win!
+You made 11 guesses.
+Number of queries in round 2: 11
+Chosen Object: Susan
+Properties: ace,beaut,blae,blonde,boulle,bound,brusque,brute,burned,bust,chance,clad,corked,cramped,crined,crocked,dank,darned,dashed,doiled,dowf,dread,dried,drunk,earned,edge,eight,fell,frogged,gauche,gorged,heigh,hipped,kept,kitsch,lief,linked,lipped,moire,mown,neaped,oke,plump,quits,rapt,rush,schlock,shill,skew,spruce,stiff,sunk,sure,svelte,swish,tan,then,triste,trite,yare,yeld,yon
+Query: -ace,-aft,-ain,-bit
+Answer: false
+Query: -ace,-aft
+Answer: false
+Query: -aft
+Answer: true
+Query: ace,-aft,-alt,-backed,-bats,-birch
+Answer: true
+Query: ace,-aft,-ain,-alt,-ane,-ant,-arch,-backed,-bats,-birch
+Answer: true
+Query: ace,-aft,-ain,-alt,-ane,-ant,-arch,-arched,-backed,-barbed,-barred,-bats,-birch,-bit,-blate
+Answer: true
+Query: ace,-aft,-ain,-all,-alt,-ane,-ant,-arch,-arched,-auld,-backed,-barbed,-bare,-barred,-bats,-birch,-birk,-bit,-blate
+Answer: true
+Query: ace,-aft,-ain,-all,-alt,-ane,-ant,-arch,-arched,-auld,-backed,-baked,-barbed,-bare,-barred,-bats,-beaut,-birch,-birk,-bit,-blate,-brushed
+Answer: false
+Query: ace,-aft,-ain,-all,-alt,-ane,-ant,-arch,-arched,-auld,-backed,-baked,-barbed,-bare,-barred,-bats,-birch,-birk,-bit,-blate
+Answer: true
+Query: ace,-aft,-ain,-all,-alt,-ane,-ant,-arch,-arched,-auld,-backed,-baked,-barbed,-bare,-barred,-bats,-birch,-birk,-bit,-blate,-brushed
+Answer: true
+Query: ace,-aft,-ain,-all,-alt,-ane,-ant,-arch,-arched,-auld,-backed,-baked,-barbed,-bare,-barred,-bats,beaut,-birch,-birk,-bit,-blate,-braw,-brushed
+Answer: true
+You guess: Susan
+You win!
+You made 11 guesses.
+Number of queries in round 3: 11
+Chosen Object: Leta
+Properties: ane,ant,backed,birch,bit,bland,boiled,broke,brushed,brusque,calced,canned,choice,clipped,dash,deft,dense,doiled,edge,eild,fake,flawed,flip,foul,fresh,fringed,gauge,grim,hep,hipped,incog,knurled,laigh,mad,mat,milled,nae,neaped,own,peart,pique,plumb,poised,quare,runed,score,sewn,shaped,shy,sloshed,sown,staunch,such,sunk,talc,then,thick,trim,twp,used,waste,webbed,wired,worse
+Query: -ace,-aft,-ain,-bit
+Answer: false
+Query: -ace,-aft
+Answer: true
+Query: -ace,-aft,-ain
+Answer: true
+Query: -ace,-aft,-ain,-alt,-awed,-bent,bit,-blond,-blowzed
+Answer: true
+Query: -ace,-aft,-ain,-alt,-ane,-ant,-auld,-awed,-bent,bit,-blah,-blond,-blowzed
+Answer: false
+Query: -ace,-aft,-ain,-alt,-ant,-awed,-bent,bit,-blah,-blond,-blowzed
+Answer: false
+Query: -ace,-aft,-ain,-alt,-ant,-awed,-bent,bit,-blond,-blowzed
+Answer: false
+Query: -ace,-aft,-ain,all,-alt,ant,-awed,-bent,bit,-blame,-blond,-blowzed
+Answer: false
+Query: -ace,-aft,-ain,-alt,ant,-awed,-bent,bit,-blame,-blond,-blowzed
+Answer: true
+You guess: Leta
+You win!
+You made 9 guesses.
+Number of queries in round 4: 9
+=================================
+Congratulations! You have played 5 rounds of games.
+The average number of guesses is 10.200000.
+The maximum number of guesses is 11.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

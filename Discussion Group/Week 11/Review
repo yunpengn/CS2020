@@ -1,0 +1,21 @@
+supernode
+meet in the middle
+node duplication
+edge contraction
+
+
+Practice:
+Q1.
+1) Use sorted arrays
+2) Use a maximum heap to store the first half, another minimum heap to store the second half.
+The median is the average of the two roots
+insert O(logn)	findMedian O(1)
+
+Q2.
+1) 
+
+Q3.
+minmax path problem
+
+Q4.
+Augmented BFS
