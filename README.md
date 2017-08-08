@@ -4,7 +4,7 @@ __AY2016/2017 Semester 2<br>
 School of Computing<br>
 National University of Singapore__
 
-#### Taught by Seth Gilbert and Alan Chang
+#### Taught by [Seth Gilbert](http://www.comp.nus.edu.sg/~gilbert/) and [Alan Cheng Ho-lun](http://www.comp.nus.edu.sg/~hcheng/)
 
 ## Description
 This module is an accelerated version that combines CS1020 and CS2010. It continues the introduction in CS1010, and emphasises object-oriented programming with application to data structures. Topics covered include object-oriented problem modeling with concepts of objects, classes and methods, object-oriented problem formulation and problem solving, data structure design principles and implementation strageties, abstraction and encapsulation of data structures, object-oriented programming constructs, use of APIs and class libraries, exception handling, lists, linked lists, stacks, queues, hash tables, trees, graphs, and their algorithmic design, various forms of sorting and searching methods, recursive algorithms, and algorithm analysis.<br>
