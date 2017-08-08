@@ -27,4 +27,5 @@ This module is originated from _MIT 6.006 Introduction to Algorithms_.
 - Participation 10%
 
 ## Notice
-Due to changes in [CS curriculum](http://www.comp.nus.edu.sg/programmes/ug/cs/curr/) at NUS, this year is the last time that CS2020 will be offered. We would like to thank all the CS2020 staff in its history for providing such an excellent module and cultivating so many excellent programmers.
+- Due to changes in [CS curriculum](http://www.comp.nus.edu.sg/programmes/ug/cs/curr/) at NUS, this year is the last time that CS2020 will be offered.
+- Since there will be no more cohorts for CS2020 in the future, [Yunpeng](https://github.com/Beckid) has decided to make this repository public.
