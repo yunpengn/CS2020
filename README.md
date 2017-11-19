@@ -1,4 +1,4 @@
-# CS2020: Data Structure and Algorithms Accelerated
+# CS2020 Data Structure and Algorithms Accelerated
 
 __AY2016/2017 Semester 2<br>
 School of Computing<br>
