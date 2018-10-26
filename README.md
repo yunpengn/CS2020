@@ -29,3 +29,8 @@ This module is originated from _MIT 6.006 Introduction to Algorithms_.
 ## Notice
 - Due to changes in [CS curriculum](http://www.comp.nus.edu.sg/programmes/ug/cs/curr/) at NUS, this year is the last time that CS2020 will be offered.
 - Since there will be no more cohorts for CS2020 in the future (so there is no concern about plagiarism), [Yunpeng](https://github.com/yunpengn) has decided to make this repository public.
+
+## Licence
+
+[GNU General Public Licence 3.0](LICENSE)
+
